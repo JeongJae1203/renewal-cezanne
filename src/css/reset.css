@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/* Roboto CDN */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Noto Sans KR CDN */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font face */
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+:root {
+	--gray: #666666;
+	--dark-light-gray: #CCCCCC;
+	--silver: #C0C0C0;
+	--white: #FFFFFF;
+	--beige: #F5F5DC;
+	--red: #FF0000;
+	--blue: #0000FF;
+	--light-blue: #155CD6;
+	--skyblue: #87CEEB;
+	--royalblue: #4169E1;
+	--green: #008000;
+	--yellow: #FFFF00;
+	--orange: #FFA500;
+	--chocolate: #D2691E;
+	--burlywood: #DEB887;
+	--darkcyan: #008B8B;
+	--goldenrod: #DAA520;
+	--cornflowerblue: #6495ED;
+	--tomato: #FF6347;
+	--gray-bgcolor: #EBEBEB;
+	--default-transition: .35s;
+	--default-font-color: #555555;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; -webkit-box-sizing: inherit; }
+
+html { font-size: 10px; }
+body {
+	font-family: 'Pretendard-Regular', 'Noto Sans', 'Noto Sans KR', 'Dotum', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--default-font-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:lang(en) body {
+	font-family: 'Roboto', sans-serif;
+}
+
+a { text-decoration: none; color: inherit; }
+a:hover, a:focus { text-decoration: underline; }
+
+header, footer, main, section, article, nav, aside { display: block; }
+ul, ol, li, dl, dt, dd { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, h4, h5, h6, p, form, figure, figcaption { 
+	margin: 0; 
+	padding: 0; 
+	/* font: inherit; */
+}
+
+table { width: 100%; border-collapse: collapse; }
+
+img { max-width: 100%; vertical-align: middle; border: 0 none; font-size: 0; }
+img.small { max-width: 20px; }
+
+.cursor-pointer { cursor: pointer; }
+
+@media (max-width: 1024px) {
+	html { font-size: 9px; }
+}
+
+@media (max-width: 768px) {
+	html { font-size: 8px; }
+}
