@@ -3,7 +3,7 @@
 @import url(./font/font.css);
 
 :root {
-	--gray: #666666;
+	--gray: #808080;
 	--dark-light-gray: #CCCCCC;
 	--silver: #C0C0C0;
 	--white: #FFFFFF;
@@ -19,10 +19,17 @@
 	--chocolate: #D2691E;
 	--burlywood: #DEB887;
 	--darkcyan: #008B8B;
+	--gold: #FFD700;
 	--goldenrod: #DAA520;
-	--cornflowerblue: #6495ED;
+	--cornflowerblue: #6495ed; 
+	--crimson: #DC143C;
+	--brown: #A52A2A;
+	--navy: #000080;
+	--purple: #800080;
+	--pink: #FFC0CB;
 	--tomato: #FF6347;
 	--gray-bgcolor: #EBEBEB;
+	--default-border-color: #DDDDDD;
 	--default-transition: .35s;
 	--default-font-color: #555555;
 }
@@ -57,7 +64,7 @@ h1, h2, h3, h4, h5, h6, p, form, figure, figcaption {
 
 table { width: 100%; border-collapse: collapse; }
 
-img { max-width: 100%; vertical-align: middle; border: 0 none; font-size: 0; }
+img { max-width: 100%; vertical-align: middle; border: 0 none; }
 img.small { max-width: 20px; }
 
 .cursor-pointer { cursor: pointer; }
