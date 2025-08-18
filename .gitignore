@@ -1,5 +1,6 @@
 node_modules
-.dist
+dist
 .env
 build
 .DS_Store
+.cache
