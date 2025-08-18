@@ -24,20 +24,17 @@
 ## 화면 정의서
 
 ## git 명령어
-* git branch [branch명]
-	- 하위 브랜치 생성
-
-* git pull origin master
-	- master 브랜치의 코드 받아온다.
-
 * git checkout [branch명]
 	- 해당, branch명으로 이동
+
+* git add .
+	- 수정 및 작업한 파일 추가
 
 * git commit -m "커밋 메시지"
 	- 해당, 작업한 코드를 commit 한다.
 
-* git push origin master
-	- commit 상태의 코드를 master branch에 최신화한다.
+* git push origin [branch명]
+	- commit 상태의 코드를 branch명에 최신화한다.
 
 
 ### git branch name
@@ -46,31 +43,3 @@
 * hnlee : 하늘
 
 * hrjeon : 하람
-
-
-### git 사용 시 주의사항
-```
-반드시, 아래의 순서를 지킬 수 있도록 하세요.
-
-2번부터 진행하시면 됩니다.
-```
-1. git branch `본인 이니셜`
-	- 그럼, 본인 branch 생성
-	- 이건 생성해 놨으니 따로 할 필요 없습니다.
-
-2. git pull origin/master
-
-3. git switch `본인 이니셜`
-
-4. (만약, 작업한 코드가 있고, 본인 원격 branch에 올려야 한다.)
-	- git add .
-	- git commit -m "작업 내용 영어로"
-
-5. git push origin `본인 이니셜`
-	- ex) 수림 누나
-	```
-	git push origin srpark
-	```
-
-6. git push origin develop
-	- develop 원격 저장소에 저장해놓으면 나중에 master는 한 번에 merge 할 예정
