@@ -1,0 +1,80 @@
+@use '../common/variables' as *;
+
+
+.job {
+  position: relative;
+  padding: 1.5rem;
+  
+  .job__wrap {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 2rem;
+    
+    .job__item {
+      display: block;
+      padding: 2rem;
+      border: 1px solid $border-color;
+      border-radius: 6px;
+      box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, .1);
+      text-align: center;
+      transition: .5s;
+      cursor: pointer;
+
+      &:hover {
+        border: {
+          color: $main-color;
+        }
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        text-decoration: none;
+      }
+
+      .item__content {
+        margin-top: 1.5rem;
+
+        p {
+          font-size: 1.8rem;
+          color: #555;
+
+          + p {
+            margin-top: .5rem;
+          }
+
+          &.name {
+            font-size: 1.4rem;
+            color: $job-name-color;
+
+            + p {
+              margin-top: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Responsive
+@media all and (min-width: 768px) {
+  .job {
+    .job__wrap {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media all and (min-width: 992px) {
+  .job {
+    .job__wrap {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .job {
+    .job__wrap {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
