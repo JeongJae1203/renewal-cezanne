@@ -1,0 +1,28 @@
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @content;
+}
+
+@mixin button($bg-color, $color, $clazz: 'lg') {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  @if $clazz == 'lg' {
+    min-width: 30rem;
+    height: 5.2rem;
+    font: {
+      size: 1.8rem;
+      weight: 600;
+    }
+  }
+  background-color: $bg-color;
+  border: {
+    width: 0;
+    radius: 3px;
+  }
+  color: $color;
+  outline: none;
+  cursor: pointer;
+}

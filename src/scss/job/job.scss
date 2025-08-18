@@ -1,4 +1,5 @@
 @use '../common/variables' as *;
+@use '../common/mixins' as *;
 
 
 .job {
@@ -52,6 +53,86 @@
     }
   }
 }
+
+
+// Detail
+.job__detail {
+  .detail__wrap {
+    padding: {
+      top: 5rem;
+      bottom: 5rem;
+    }
+  }
+
+  .detail__header {
+    padding: {
+      bottom: 4rem;
+    }
+    border: {
+      bottom: 1px solid $dark-color;
+    }
+    text-align: center;
+
+    > div {
+      span {
+        display: inline-block;
+        font-size: 1.5rem;
+      }
+
+      .category {
+        color: $main-color;
+      }
+
+      .date {
+        position: relative;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          vertical-align: middle;
+          width: 1px;
+          height: 1.6rem;
+          margin: 0 1.5rem 0 1rem;
+          background-color: #555;
+        }
+      }
+    }
+
+    h3 {
+      margin: {
+        top: 2rem;
+        bottom: 2rem;
+      }
+
+      font: {
+        size: 2.8rem;
+        weight: 500;
+      }
+    }
+  }
+
+  .content {
+    padding: 2rem;
+  }
+
+  .detail__btn__container {
+    @include flexCenter();
+    padding: {
+      top: 3rem;
+    }
+    border: {
+      top: 1px solid $dark-color;
+    }
+
+    button {
+      @include button(#ECECEC, #535353, 'lg')
+    }
+  }
+}
+
+
+
+
 
 
 // Responsive
