@@ -26,22 +26,24 @@
     "autoprefixer": "^9.8.8",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-static-files-copy": "^2.6.0",
-    "postcss": "^8.5.6"
+    "postcss": "^8.5.6",
+    "sass": "^1.90.0",
+    "sass-loader": "^16.0.5"
   },
   "staticFiles": {
     "staticPath": [
-			{
-				"staticPath": "static",
-				"staticOutDir": "."
-			},
-			{
-				"staticPath": "src/images",
-				"staticOutDir": "/images"
-			}
-		]
+      {
+        "staticPath": "static",
+        "staticOutDir": "."
+      },
+      {
+        "staticPath": "src/images",
+        "staticOutDir": "/images"
+      }
+    ]
   },
   "browserslist": [
-		"> 1%",
-		"last 2 versions"
-	]
+    "> 1%",
+    "last 2 versions"
+  ]
 }
