@@ -71,7 +71,6 @@
     border: {
       bottom: 1px solid $dark-color;
     }
-    text-align: center;
 
     > div {
       span {
@@ -113,6 +112,33 @@
 
   .content {
     padding: 2rem;
+
+    > p {
+      font: {
+        size: 3rem;
+        weight: 600;
+        style: oblique;
+      }
+      text-align: center;
+    }
+
+    .con {
+      margin-top: 2rem;
+      padding: 20px;
+      background-color: #fff5ee;
+
+      ul {
+        > li {
+          + li {
+            margin-top: 1rem;
+          }
+
+          span {
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
   }
 
   .detail__btn__container {
