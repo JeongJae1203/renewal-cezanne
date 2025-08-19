@@ -6,3 +6,27 @@ $whiteColor:#fff;
 
 // breakpoint - 768px, 992px, 1200px
 
+// button reset
+button{
+  border:none; background-color:inherit;
+}
+
+#container{
+  .education-menu{
+    display:flex; flex-direction:column; gap:50px;
+    h3{
+      
+    }
+    .menu-btn{
+      .btn{
+        padding:5px 10px;
+        border-radius:3px;
+        background-color:#dedede;
+        &:hover{
+          background-color:#cdcdcd;
+        }
+      }
+    }
+  }
+  .education-contents{}
+}
