@@ -7,75 +7,119 @@
     <link rel="shortcut icon" href="../../../static/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../css/reset.css">
 		<link rel="stylesheet" href="../../css/common.css">
+		<link rel="stylesheet" href="../../scss/about/common.scss">
 		<link rel="stylesheet" href="../../scss/job/job.scss">
   </head>
   <body>
-    <div class="job">
-      <div class="job__top">
-
-      </div>
-      <div class="job__wrap">
-        <a href="./detail/j_detail.html" class="job__item">
-          <div class="item__img">
-            <img src="../../images/common/logo.png" alt="test">
+    <!-- Sub Visual -->
+    <div class="sub_visual">
+      <div class="inner">
+        <div class="sub_visual_text">
+          <h2>취업 현황</h2>
+          <p>
+            수강에서 끝나는 것이 아니라 전문 취업연계 시스템으로 수강생의 취업까지 책임집니다. <br>
+            유수한 기업의 인재로 취업한 대전세잔직업전문학교의 수료생들이 이를 증명합니다.
+          </p>
+        </div>
+        <div class="bread">
+          <ul>
+            <li><a href="../../../index.html"><i class="ri-home-4-line"></i></a></li>
+            <li><a href="./job.html">취업 센터</a></li>
+            <li><a href="#">취업 현황</a></li>
+          </ul>
+        </div>
+      </div> 
+    </div>
+    <!-- Contents Body -->
+    <div id="contents_body">
+      <div class="inner">
+        <div class="job">
+          <div class="job__top">
+            <div>
+              <span>total</span>
+              <strong data-count></strong>
+            </div>
+            <!--  -->
+            <!-- TODO : 검색하는 기능 추가 예정 -->
+            <div class="top__search">
+              <div class="input__wrap">
+                <input 
+                  type="text" 
+                  name="search" 
+                  id="search" 
+                  autocomplete="off"
+                  placeholder="검색"
+                >
+                <button type="button"><i class="ri-search-line"></i></button>
+              </div>
+            </div>
           </div>
-          <div class="item__content">
-            <p class="name">이름</p>
-            <p>회사명</p>
-            <p>입사를 축하드립니다.</p>
+          <div class="job__wrap">
+            <a href="./detail/j_detail.html" class="job__item">
+              <div class="item__img">
+                <img src="../../images/common/logo.png" alt="test">
+              </div>
+              <div class="item__content">
+                <p class="name">이름</p>
+                <p>회사명</p>
+                <p>입사를 축하드립니다.</p>
+              </div>
+            </a>
+            <a href="javascript:void(0);" class="job__item">
+              <div class="item__img">
+                <img src="../../images/common/logo.png" alt="test">
+              </div>
+              <div class="item__content">
+                <p class="name">이름</p>
+                <p>회사명</p>
+                <p>입사를 축하드립니다.</p>
+              </div>
+            </a>
+            <a href="javascript:void(0);" class="job__item">
+              <div class="item__img">
+                <img src="../../images/common/logo.png" alt="test">
+              </div>
+              <div class="item__content">
+                <p class="name">이름</p>
+                <p>회사명</p>
+                <p>입사를 축하드립니다.</p>
+              </div>
+            </a>
+            <a href="javascript:void(0);" class="job__item">
+              <div class="item__img">
+                <img src="../../images/common/logo.png" alt="test">
+              </div>
+              <div class="item__content">
+                <p class="name">이름</p>
+                <p>회사명</p>
+                <p>입사를 축하드립니다.</p>
+              </div>
+            </a>
+            <a href="javascript:void(0);" class="job__item">
+              <div class="item__img">
+                <img src="../../images/common/logo.png" alt="test">
+              </div>
+              <div class="item__content">
+                <p class="name">이름</p>
+                <p>회사명</p>
+                <p>입사를 축하드립니다.</p>
+              </div>
+            </a>
+            <a href="javascript:void(0);" class="job__item">
+              <div class="item__img">
+                <img src="../../images/common/logo.png" alt="test">
+              </div>
+              <div class="item__content">
+                <p class="name">이름</p>
+                <p>회사명</p>
+                <p>입사를 축하드립니다.</p>
+              </div>
+            </a>
           </div>
-        </a>
-        <a href="javascript:void(0);" class="job__item">
-          <div class="item__img">
-            <img src="../../images/common/logo.png" alt="test">
-          </div>
-          <div class="item__content">
-            <p class="name">이름</p>
-            <p>회사명</p>
-            <p>입사를 축하드립니다.</p>
-          </div>
-        </a>
-        <a href="javascript:void(0);" class="job__item">
-          <div class="item__img">
-            <img src="../../images/common/logo.png" alt="test">
-          </div>
-          <div class="item__content">
-            <p class="name">이름</p>
-            <p>회사명</p>
-            <p>입사를 축하드립니다.</p>
-          </div>
-        </a>
-        <a href="javascript:void(0);" class="job__item">
-          <div class="item__img">
-            <img src="../../images/common/logo.png" alt="test">
-          </div>
-          <div class="item__content">
-            <p class="name">이름</p>
-            <p>회사명</p>
-            <p>입사를 축하드립니다.</p>
-          </div>
-        </a>
-        <a href="javascript:void(0);" class="job__item">
-          <div class="item__img">
-            <img src="../../images/common/logo.png" alt="test">
-          </div>
-          <div class="item__content">
-            <p class="name">이름</p>
-            <p>회사명</p>
-            <p>입사를 축하드립니다.</p>
-          </div>
-        </a>
-        <a href="javascript:void(0);" class="job__item">
-          <div class="item__img">
-            <img src="../../images/common/logo.png" alt="test">
-          </div>
-          <div class="item__content">
-            <p class="name">이름</p>
-            <p>회사명</p>
-            <p>입사를 축하드립니다.</p>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
+    <script src="../../js/common/common.js"></script>
+    <script src="../../js/job/main.js"></script>
   </body>
 </html>

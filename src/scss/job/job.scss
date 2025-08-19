@@ -1,10 +1,79 @@
 @use '../common/variables' as *;
 @use '../common/mixins' as *;
 
+#contents_body { padding: 5rem 0; }
 
+// overriding
+.sub_visual {
+  background: {
+    image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/job/job_visual_bg.jpg);
+  };
+}
+
+
+// Job
 .job {
   position: relative;
-  padding: 1.5rem;
+
+  .job__top {
+    margin: {
+      bottom: 3rem;
+    }
+    
+    span,
+    strong {
+      font-size: 1.8rem;
+    }
+
+    strong {
+      margin-left: 1rem;
+      color: $main-color;
+    }
+
+    .top__search {
+      margin: {
+        top: 2rem;
+      }
+
+      .input__wrap {
+        position: relative;
+
+        input {
+          @include input() {
+            padding: 0 5rem 0 1.5rem;
+            transition: .5s;
+            
+            &:focus,
+            &:focus-visible {
+              border: {
+                color: $main-color;
+              }
+              outline: none;
+
+              + button {
+                color: $main-color;
+              }
+            }
+          }
+        }
+
+        button {
+          @include button(transparent, #000, 'md') {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 5rem;
+            height: 100%;
+            transition: .5s;
+          }
+
+          i {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
   
   .job__wrap {
     display: grid;
@@ -13,7 +82,7 @@
     
     .job__item {
       display: block;
-      padding: 2rem;
+      padding: 4rem 2rem;
       border: 1px solid $border-color;
       border-radius: 6px;
       box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, .1);
@@ -111,21 +180,39 @@
   }
 
   .content {
+    position: relative;
     padding: 2rem;
+
+    &::after {
+      position: absolute;
+      content: 'daejeon cezanne vocational school';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font: {
+        size: 5rem;
+        weight: 900;
+      }
+      text: {
+        align: center;
+        transform: uppercase;
+      }
+      color: rgba(221, 221, 221, .3);
+      z-index: -1;
+    }
 
     > p {
       font: {
-        size: 3rem;
+        family: 'Inklipquid', sans-serif;
+        size: 4rem;
         weight: 600;
-        style: oblique;
       }
-      text-align: center;
+      color: #82d3cd;
     }
 
     .con {
       margin-top: 2rem;
-      padding: 20px;
-      background-color: #fff5ee;
+      padding: 2rem 0;
 
       ul {
         > li {
@@ -164,6 +251,22 @@
 // Responsive
 @media all and (min-width: 768px) {
   .job {
+    .job__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .top__search {
+        margin: 0;
+
+        .input__wrap {
+          input {
+            min-width: 35rem;
+          }
+        }
+      }
+    }
+
     .job__wrap {
       grid-template-columns: repeat(2, 1fr);
     }

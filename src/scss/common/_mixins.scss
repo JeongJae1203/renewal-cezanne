@@ -25,4 +25,24 @@
   color: $color;
   outline: none;
   cursor: pointer;
+  @content;
+}
+
+@mixin input($size: 'md') {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  padding: 0 1.5rem;
+  border: {
+    width: 1px;
+    style: solid;
+    color: rgba(187, 187, 187, .73);
+    radius: 2px;
+  }
+  font: {
+    size: 1.5rem;
+    weight: 400;
+  }
+  color: #333;
+  @content;
 }

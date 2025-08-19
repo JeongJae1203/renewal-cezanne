@@ -1,9 +1,7 @@
-const container = document.querySelector('.detail__btn__container')
-    , button = container.querySelector('button');
+const job = document.querySelector('.job')
+  , top = job.querySelector('.job__top')
+  , countEl = top.querySelector('[data-count]')
+  , wrap = job.querySelector('.job__wrap')
+  , items = wrap.querySelectorAll('.job__item');
 
-button.addEventListener('click', (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-
-  location.href = '../../html/job/job.html';
-});
+countEl.textContent = items.length;
