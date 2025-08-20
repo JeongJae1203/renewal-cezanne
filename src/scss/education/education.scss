@@ -12,21 +12,92 @@ button{
 }
 
 #container{
-  .education-menu{
-    display:flex; flex-direction:column; gap:50px;
-    h3{
-      
-    }
+  .edu-menu{
+    display:flex; flex-direction:column; gap:40px;
+    padding:0 10px; margin:40px 0;
+    .menu-title{}
     .menu-btn{
       .btn{
-        padding:5px 10px;
-        border-radius:3px;
-        background-color:#dedede;
+        cursor:pointer;
+        display:block; transition:.3s;
+        width:100%; padding:5px 10px; border-radius:3px; margin:5px 0; color:$darkColor; background-color:#dedede;
         &:hover{
-          background-color:#cdcdcd;
+          color:$whiteColor; background-color:$darkColor;
         }
       }
     }
   }
-  .education-contents{}
+  .edu-contents{
+    display:flex; flex-wrap:wrap;
+    margin:40px 0;
+    .content{
+      flex:0 0 50%; display:flex; flex-wrap:wrap; align-content:space-between; justify-content:center;
+      padding:0 10px; margin:20px 0;
+      a{
+        display:block;
+        width:100%; text-align:center;
+        img{
+          width:100%; border:1px solid $darkColor; border-radius:10px;
+        }
+        h4{
+          padding:10px 0 5px;
+        }
+        p{
+          font-size:1.4rem;
+        }
+      }
+      .btn-join{
+        font-size:1.6rem; cursor:pointer;
+        padding:5px 15px; border-radius:5px; margin:10px; color:$whiteColor; background-color:$mainColor;
+        &:hover{ text-decoration:underline; }
+      }
+    }
+  }
+}
+
+// mobile
+@media screen and (min-width:768px){
+  #container{
+    .edu-menu{
+      .menu-btn{
+        display:flex; gap:5px;
+        .btn{
+          width:auto;
+        }
+      }
+    }
+    .edu-contents{
+      .content{
+        flex:0 0 25%;
+        padding:0 5px;
+        a{
+          h4{
+            padding:1.5rem 0 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 
+@media screen and (min-width:992px){
+  #container{
+    .edu-menu{}
+    .edu-contents{
+      .content{
+        padding:0 10px;
+        a{
+          h4{
+            padding:1.8rem 0 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 
+@media screen and (min-width:1200px){
+  
 }
