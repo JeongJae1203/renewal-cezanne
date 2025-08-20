@@ -275,6 +275,7 @@
 
 .interview__content {
   padding: 3rem 1rem;
+  border-bottom: 1px solid $border-color;
 
   .interview__item {
     .item__img {
@@ -284,8 +285,80 @@
         width: 100%;
       }
     }
+
+    .item__con {
+      margin-top: 1.5rem;
+
+      .cont__tit {
+        > * {
+          display: block;
+        }
+
+        span {
+          font: {
+            size: 1.8rem;
+          }
+        }
+
+        strong {
+          margin: {
+            top: 1rem;
+          }
+          font: {
+            size: 2rem;
+            weight: 500;
+          }
+        }
+      }
+
+      .detail {
+        position: relative;
+        display: inline-block;
+        margin-top: 2.5rem;
+        padding: 0 3rem 0 2.5rem;
+        font: {
+          family: 'Chosunilbo_myungjo', sans-serif;
+          size: 3rem;
+          weight: 400;
+          style: oblique;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          display: inline-block;
+          width: 2px;
+          height: 3rem;
+          margin-right: 1rem;
+          background-color: $main-color;
+          transform: translateY(-50%) rotate(40deg);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          display: inline-block;
+          width: 2px;
+          height: 3rem;
+          margin-right: 1rem;
+          background-color: $main-color;
+          transform: translateY(-50%) rotate(40deg);
+        }
+      }
+
+      > p {
+        margin-top: 2.5rem;
+        word-break: keep-all;
+        line-height: 1.5;
+      }
+    }
   }
 }
+
 
 
 // Responsive
@@ -313,13 +386,24 @@
   }
 
   .interview__content {
+    padding: 3rem;
+
     .interview__item {
-      display: flex;
-      gap: 1.5rem;
+      display: grid;
+      grid-template-columns: 28rem auto;
+      gap: 3rem;
 
       .item__img {
         img {
           width: auto;
+        }
+      }
+
+      .item__con {
+        margin: 0;
+
+        > p {
+          @include line-ellipsis(3);
         }
       }
     }

@@ -1,3 +1,9 @@
+/*
+* Mixin Name : flexCenter
+* Mixin Parameter : 
+* Mixin Description : flex 로 center 정의
+*
+*/
 @mixin flexCenter() {
   display: flex;
   align-items: center;
@@ -5,6 +11,12 @@
   @content;
 }
 
+/*
+* Mixin Name : button
+* Mixin Parameter : bg-color, color, clazz (Default : 'lg')
+* Mixin Description : 버튼 정의
+*
+*/
 @mixin button($bg-color, $color, $clazz: 'lg') {
   display: inline-flex;
   align-items: center;
@@ -28,6 +40,12 @@
   @content;
 }
 
+/*
+* Mixin Name : input
+* Mixin Parameter : size (Default : 'md')
+* Mixin Description : input 정의
+*
+*/
 @mixin input($size: 'md') {
   position: relative;
   width: 100%;
@@ -45,4 +63,18 @@
   }
   color: #333;
   @content;
+}
+
+/*
+* Mixin Name : line-ellipsis
+* Mixin Parameter : $line-number, $orient (Default : vertical)
+* Mixin Description : 라인 수에 맞춰 ellipsis (말줄임표) 정의
+*
+*/
+@mixin line-ellipsis($line-number, $orient: vertical) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-number;
+  -webkit-box-orient: $orient;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
