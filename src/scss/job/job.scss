@@ -403,7 +403,7 @@
         margin: 0;
 
         > p {
-          @include line-ellipsis(3);
+          @include line-ellipsis(2);
         }
       }
     }
