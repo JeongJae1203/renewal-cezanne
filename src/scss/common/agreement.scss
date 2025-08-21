@@ -91,6 +91,10 @@ $title-color: #1c4682;
     }
 
     .cont {
+      .sub {
+        padding-left: 1rem;
+      }
+
       strong {
         display: block;
         margin-bottom: 1.5rem;
@@ -99,17 +103,40 @@ $title-color: #1c4682;
         color: $title-color;
       }
 
-      > p {
+      h5 {
+        margin-bottom: 1rem;
         word-break: keep-all;
-        font-size: 1.6rem;
-        color: #333;
+        font: {
+          size: 1.8rem;
+        }
+        line-height: $line-height;
 
         &.sub {
-          padding-left: 1rem;
+          font: {
+            size: 1.6rem;
+            weight: 500;
+          }
         }
 
-        + p {
+        a {
+          color: $title-color;
+        }
+      }
+
+      > p {
+        word-break: keep-all;
+        font: {
+          size: 1.6rem;
+          weight: 300;
+        }
+        line-height: $line-height;
+
+        ~ p {
           margin-top: .5rem;
+        }
+
+        + h5 {
+          margin-top: 1rem;
         }
       }
 
@@ -132,12 +159,12 @@ $title-color: #1c4682;
 @media all and (min-width: 768px) {
   .content {
     .tab__menu {
-      max-width: 100rem;
+      max-width: $inner-width;
       margin: 0 auto 5rem;
     }
 
     .tab__content {
-      max-width: 100rem;
+      max-width: $inner-width;
       margin: 0 auto;
     }
   }
