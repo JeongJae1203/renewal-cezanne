@@ -19,8 +19,6 @@
 		<link rel="stylesheet" href="./src/scss/common.scss">
 	</head>
 	<body>
-		<!-- m_gnbBtn 클릭시(toggle)  body open class 추가 및 overflow:hidden; 
-		버튼은 X 버튼으로 변화 -->
 		<header>
 			<div id="utill">
 				<ul class="inner">
@@ -103,7 +101,7 @@
 					</div>
 
 					<!-- web gnb -->
-					<div class="webWrap" style="display: none;">	
+					<div class="webWrap">	
 						<div class="gnbNav">
 							<ul>
 								<li>
@@ -164,7 +162,7 @@
 						</div>
 						<!-- 사이트맵 -->
 						<div class="sitemapBtn">
-							<button type="button">
+							<button type="button" onclick="btnAni(this)"> 
 								<span class="bar1"></span>
 								<span class="bar2"></span>
 								<span class="bar3"></span>
@@ -243,5 +241,16 @@
 				</div>
 			</div>
 		</footer>
+		<!-- js -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script>
+			// navBtn 클릭시 하위메뉴 toggle
+			$(function(){
+				$(".m_gnbBtn").click(function(){
+					$(".m_gnb").slideToggle();
+					$('body').toggleClass("open");
+				});
+			});
+		</script>
 	</body>
 </html>
