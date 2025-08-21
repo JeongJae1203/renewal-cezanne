@@ -1,3 +1,5 @@
+// @use '../common.scss' as *;
+@import url(../../css/reset.css);
 // color
 $mainColor:#E6204B;
 $subColor:#4C46F6;
@@ -13,26 +15,30 @@ button{
 
 #container{
   .edu-menu{
-    display:flex; flex-direction:column; gap:40px;
-    padding:0 10px; margin:40px 0;
+    display:flex; flex-direction:column; gap:4rem;
+    padding:0 1rem; margin:3.5rem 0;
     .menu-title{}
     .menu-btn{
       .btn{
-        cursor:pointer;
-        display:block; transition:.3s;
-        width:100%; padding:5px 10px; border-radius:3px; margin:5px 0; color:$darkColor; background-color:#dedede;
+        cursor:pointer; font-size:1.3rem;
+        display:block; transition:var(--default-transition);
+        width:100%; padding:0.625rem; border-radius:3px; margin:0.5rem 0; color:$darkColor; background-color:var(--gray-bgcolor);
         &:hover{
           color:$whiteColor; background-color:$darkColor;
         }
+      }
+      // active 이벤트
+      .active{
+        color:$whiteColor; background-color:$darkColor;
       }
     }
   }
   .edu-contents{
     display:flex; flex-wrap:wrap;
-    margin:40px 0;
+    margin:3.5rem 0;
     .content{
       flex:0 0 50%; display:flex; flex-wrap:wrap; align-content:space-between; justify-content:center;
-      padding:0 10px; margin:20px 0;
+      padding:0 1.25rem; margin:2.5rem 0;
       a{
         display:block;
         width:100%; text-align:center;
@@ -40,36 +46,38 @@ button{
           width:100%; border:1px solid $darkColor; border-radius:10px;
         }
         h4{
-          padding:10px 0 5px;
+          padding:1.25rem 0 0.625rem;
         }
-        p{
+        span{
           font-size:1.4rem;
         }
       }
       .btn-join{
-        font-size:1.6rem; cursor:pointer;
-        padding:5px 15px; border-radius:5px; margin:10px; color:$whiteColor; background-color:$mainColor;
-        &:hover{ text-decoration:underline; }
+        cursor:pointer; font-size:1.3rem;
+        padding:0.625rem 1.875rem; border-radius:5px; margin:0.625rem; color:$whiteColor; background-color:$mainColor;
+        &:hover{
+          text-decoration:underline;
+        }
       }
     }
   }
 }
 
-// mobile
+
 @media screen and (min-width:768px){
   #container{
     .edu-menu{
       .menu-btn{
-        display:flex; gap:5px;
+        display:flex; gap:0.625rem;
         .btn{
-          width:auto;
+          width:auto; padding:0.625rem 1.25rem; margin:0;
         }
       }
     }
     .edu-contents{
       .content{
         flex:0 0 25%;
-        padding:0 5px;
+        padding:0 1.5rem;
         a{
           h4{
             padding:1.5rem 0 1rem;
@@ -80,24 +88,24 @@ button{
   }
 }
 
-// 
+
 @media screen and (min-width:992px){
+  
+}
+
+
+@media screen and (min-width:1200px){
   #container{
-    .edu-menu{}
+    .edu-menu{
+      padding:0 2.5rem;
+    }
     .edu-contents{
       .content{
-        padding:0 10px;
-        a{
-          h4{
-            padding:1.8rem 0 1.3rem;
-          }
+        padding:0 2.5rem;
+        .btn-join{
+          margin:1.5rem;
         }
       }
     }
   }
-}
-
-// 
-@media screen and (min-width:1200px){
-  
 }

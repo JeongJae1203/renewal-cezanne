@@ -1,0 +1,75 @@
+// @use '../common.scss' as *;
+@import url(../../css/reset.css);
+// color
+$mainColor:#E6204B;
+$subColor:#4C46F6;
+$darkColor:#202226;
+$whiteColor:#fff;
+
+// breakpoint - 768px, 992px, 1200px
+
+#container{
+  #stra-wrap{
+    margin:3.5rem 0;
+    .stra-info{
+      .stra-info-tag{
+        font-weight:500;
+      }
+      .stra-title{
+        font-size:2.6rem; font-weight:600;
+        margin:1.5rem 0; color:$darkColor;
+      }
+      .stra-text{
+        font-weight:200; line-height:2rem;
+      }
+    }
+  }
+  #stra-edu{
+    .stra-edu-title{
+      font-size:2.6rem; font-weight:600;
+    }
+    .stra-edu-list{
+      margin:1.5rem 0;
+      ul{
+        li{
+          span{
+            font-size:2rem;
+          }
+        }
+      }
+      &>span{
+        display:block;
+        margin:1rem;
+      }
+    }
+  }
+  #stra-int{
+    .stra-int-title{
+      .stra-int-table{
+        display:grid; grid-template-columns:repeat(4, 1fr);
+        
+      }
+    }
+  }
+}
+
+@media screen and (min-width:768px){
+  #container{
+    #stra-wrap{
+      .stra-info{
+        width:60%;
+        .stra-text{
+          font-weight:400; line-height:2.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:992px){
+  
+}
+
+@media screen and (min-width:1200px){
+
+}
