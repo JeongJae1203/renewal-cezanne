@@ -31,7 +31,7 @@
 	--gray-bgcolor: #EBEBEB;
 	--default-border-color: #DDDDDD;
 	--default-transition: .35s;
-	--default-font-color: #555555;
+	--default-font-color: #333;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
