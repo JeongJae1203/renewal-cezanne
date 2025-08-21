@@ -39,6 +39,7 @@
           display: inline-block;
           padding: .5rem 1.5rem;
           background: #E6204B;
+          // color: var(whiteColor);
           color: #fff;
           // font-weight: 500;
           margin-right: .5rem;
@@ -154,13 +155,15 @@
   .vision {
     margin: 5rem 0 0;
     padding: 5rem 0;
-    background-color: #f7f8f9;
+    background-color: #f7f8f9; // 배경색
 
     .inner {
-      display: flex;
     }
 
     dl {
+      display: grid;
+      grid-template-columns: 320px auto 200px;
+      gap: 10px;
       dt {
         margin-bottom: 1.6rem;
       }
@@ -178,54 +181,53 @@
 
 
 
-.swiper {
-  margin-bottom: 10rem;
-  h3 {
-    font-size: 2.6rem;
-  }
-  ol {
-    display: flex;
-    margin-top: 5rem;
-    .left {
-      flex: 1;
-      h4 {
-        font-size: 2.4rem;
-        font-weight: 500;
-        span {
-          padding: .5rem 1.3rem;
-          background: #E6204B;
-          color: #fff;
-          // font-weight: 300;
-          margin-right: .5rem;
-        }
-      }
-      a {
-        display: inline-block; margin-top: 1rem;
-        i { }
-      }
+// .swiper {
+//   margin-bottom: 10rem;
+//   h3 {
+//     font-size: 2.6rem;
+//   }
+//   ol {
+//     display: flex;
+//     margin-top: 5rem;
+//     .left {
+//       flex: 1;
+//       h4 {
+//         font-size: 2.4rem;
+//         span {
+//           padding: .5rem 1.3rem;
+//           background: #E6204B;
+//           color: #fff;
+//           // font-weight: 300;
+//           margin-right: .5rem;
+//         }
+//       }
+//       a {
+//         display: inline-block; margin-top: 1rem;
+//         i { }
+//       }
 
-    }
-    .right {
-      flex: 2;
-      display: flex;
-      p {
-        flex: 3;
-        padding-right: 5rem;
-        line-height: 1.5625;
-        word-break: keep-all;
-      }
-      span {
-        flex: 1; display: inline-block; text-align: right;
-        a {
-          font-size: 1.4rem;
-          display: inline-block;
-          padding: 0 2rem 1rem; border-bottom: 1px solid #E6204B;
-          text-decoration: none;
-          &:hover {
-            color: #E6204B;
-          }
-        }
-      }
-    }
-  }
-}
+//     }
+//     .right {
+//       flex: 2;
+//       display: flex;
+//       p {
+//         flex: 3;
+//         padding-right: 5rem;
+//         line-height: 1.5625;
+//         word-break: keep-all;
+//       }
+//       span {
+//         flex: 1; display: inline-block; text-align: right;
+//         a {
+//           font-size: 1.4rem;
+//           display: inline-block;
+//           padding: 0 2rem 1rem; border-bottom: 1px solid #E6204B;
+//           text-decoration: none;
+//           &:hover {
+//             color: #E6204B;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
