@@ -75,6 +75,13 @@
 .table__responsive {
   width: 100%;
   overflow-x: auto;
+
+  table {
+    th,
+    td {
+      white-space: nowrap;
+    }
+  }
 }
 
 /*
@@ -89,8 +96,12 @@ table {
     }
   }
 
+  .text__left {
+    text-align: left !important;
+  }
+
   .text__center {
-    text-align: center;
+    text-align: center  !important;
   }
 
   th,
