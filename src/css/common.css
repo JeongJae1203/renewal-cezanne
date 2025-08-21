@@ -6,8 +6,19 @@
 
 @media all and (min-width: 1200px) {
   .inner {
-    max-width: 144rem;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0;
+  }
+}
+
+@media all and (min-width:1440px) {
+  .inner {
+    padding:0;
+  }
+}
+
+@media all and (min-width:1921px) {
+  .inner {
+    max-width: 1440px;
   }
 }
