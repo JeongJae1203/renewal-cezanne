@@ -9,6 +9,8 @@ h1 {font-size: 3rem;}
 h2 {font-size: 2.8rem;}
 h3 {font-size: 2.6rem;}
 h4 {font-size: 2.4rem;}
+h5 {font-size: 2.2rem;}
+h6 {font-size: 2rem;}
 
 // button 
 button {
@@ -28,13 +30,16 @@ button {
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
-    z-index: 999;
+    z-index: 99;
     i {
       font-size: 3.5rem;
       color: var(--gray);
     }
   }
 }
+
+// m_gnbBtn 클릭시 body에 추가 
+.open {overflow: hidden;}
 
 // header
 header {
@@ -106,16 +111,17 @@ header {
         height: 5rem;
         border-radius: 50%;
         background: $mainColor;
-        cursor: pointer;
         span {
           display: block;
           width: 18px;
           height: 2px;
           background: var(--white);
           margin: 3px auto;
+          transition: .3s;
         }
       }
     }
+    .webWrap {display: none;}
   }
 } 
 
@@ -178,13 +184,13 @@ footer {
     }
     .famList {
       position: relative;
-      // overflow: hidden;
+      overflow: hidden;
       width: calc(100% - 16rem);
       height: 5.5rem;
       
       ul {
         position: absolute;
-        bottom: 0;
+        bottom: 1px;
         left: 0;
         width: 100%;
         display: flex;
@@ -192,15 +198,18 @@ footer {
         flex-direction: column-reverse;
         li{
           width: 100%;
+          &:first-child a {
+              border: 0;
+          }
           a {
             position: relative;
             display: block;
-            
             line-height: 5.5rem;
             font-size: 2rem;
             font-weight: 600;
             background: #fff;
             border: 1px solid #ddd;
+            margin-top: -1px;
             
             &::after{
               content: '';
@@ -287,39 +296,12 @@ footer {
 // breakpoint - web 768px, 992px, 1200px 
 @media (min-width:768px) {
 
-  // footer :: familySite
-  footer {
-    .familySite {
-      ul {
-        display: flex;
-        gap: 15px;
-        justify-content: space-around;
-        li a {
-          font-size: 1.8rem;
-          &::after {
-            display: none;
-          }
-        }
-      } 
-      a {
-        white-space: nowrap;
-        i {
-          font-size: 3.5rem;
-          color:var(--gray);
-        }
-      }
-      .arrbtn {
-        display: inline-block;
-        width: 4rem;
-        height: 4rem;
-      }
-    }
-
     #footer {
       .footerInfo {
         .inner {
           position: relative;
         }
+        .flogo {display: none;}
         address {
           margin-top: 0;
           font-size: 1.6rem;
@@ -332,7 +314,7 @@ footer {
       }
     }
   }
-}
+
 @media (min-width:992px) {
   header {
     position:relative;
@@ -352,7 +334,6 @@ footer {
     }
 
     #header {
-      
       padding: 0;
       .inner {
         height: 100%;
@@ -453,22 +434,62 @@ footer {
           }
         }
       }
+      .mobileWrap {display: none;}
     }
     
   }
   footer {
-    .footerInfo {
-      .inner {
-        display: flex;
-        .flogo {
-          width: 200px;
-          background-image: url('../images/common/footer_logo2.svg');
-          background-repeat: no-repeat;
-          background-size: contain;
-          span {display: none;}
+    // footer :: familySite
+    .familySite {
+      .arrbtn {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+      }
+      .famList {
+        ul {
+          display: flex;
+          gap: 15px;
+          justify-content: space-around;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          li {
+            width: auto;
+            > a {
+              border: 0;
+              font-size: 1.8rem;
+              &::after {
+                display: none;
+              }
+            }
+          }
+        } 
+      }
+      a {
+        white-space: nowrap;
+        i {
+          font-size: 3.5rem;
+          color:var(--gray);
         }
-        address {
-          padding-left: 4rem;
+      }
+      
+    }
+    #footer {
+      .footerInfo {
+        .inner {
+          padding: 2rem 0;
+          display: flex;
+          .flogo {
+            display: block;
+            width: 200px;
+            background-image: url('../images/common/footer_logo2.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            span {display: none;}
+          }
+          address {
+            padding-left: 4rem;
+          }
         }
       }
     }
