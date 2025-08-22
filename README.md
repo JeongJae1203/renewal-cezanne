@@ -60,6 +60,6 @@
 
 ```json
 "scripts": {
-  "build": "parcel build \"html/**/*.html\""
+  "build": "parcel build index.html \"src/html/**/**/*.html\" -d build --public-url ./"
 }
 ```

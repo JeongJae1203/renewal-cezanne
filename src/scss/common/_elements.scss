@@ -116,6 +116,14 @@ table {
 }
 
 
+/* Input wrap */
+.input__wrap {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+
 
 @media all and (min-width: 768px) {
   .common__top {
