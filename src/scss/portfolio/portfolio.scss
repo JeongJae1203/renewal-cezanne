@@ -44,7 +44,7 @@ button {
   margin: 5rem 0;
 }
 
-// sub_visual
+// sub_visual 포트폴리오 사진으로 바꾸기
 .sub_visual {
   background: {
     image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/about/visual_bg.jpg);
@@ -53,3 +53,19 @@ button {
     size: cover;
   }
 }
+
+// 전체 컨텐츠 위, 아래 여백
+#contents_body {
+  padding: 5rem 0;
+}
+
+// 포트폴리오
+
+// 포트폴리오 메뉴 버튼
+.menuBtn {
+  button {
+  }
+}
+
+// 데스크탑
+@media screen and (min-width:768px) {}

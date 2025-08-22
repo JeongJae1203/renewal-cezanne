@@ -9,6 +9,7 @@
     <!-- scss -->
 		<link rel="stylesheet" href="../../scss/common.scss">
 		<link rel="stylesheet" href="../../scss/about/common.scss">
+		<link rel="stylesheet" href="../../scss/portfolio/portfolio.scss">
   </head>
   <body>
     <div id="wrap">
@@ -165,22 +166,105 @@
           </div>
         </div>
 		  </header>
-      <div class="sub_visual">
-        <div class="inner">
-          <div class="sub_visual_text">
-            <h2>포트폴리오</h2>
-            <!-- 한줄 글쓰기 -->
-            <p>대전세잔직업전문학교는 디자인 교육에 전문적인 학교로서 테크놀로지와 어우러진 삶을 더욱 풍요롭고 아름답게 만드는 디자인 발전을 위해 최선을 다하고 있습니다.</p>
+      <div class="contents">
+        <div class="sub_visual">
+          <div class="inner">
+            <div class="sub_visual_text">
+              <h2>포트폴리오</h2>
+              <!-- 한줄 글쓰기 -->
+              <p>대전세잔직업전문학교는 디자인 교육에 전문적인 학교로서 테크놀로지와 어우러진 삶을 더욱 풍요롭고 아름답게 만드는 디자인 발전을 위해 최선을 다하고 있습니다.</p>
+            </div>
+            <div class="bread">
+              <ul>
+                <li><a href="../../../index.html"><i class="ri-home-4-line"></i></a></li>
+                <li><a href="./index.html">포트폴리오1</a></li>
+              </ul>
+            </div>
+          </div> 
+        </div> <!-- sub_visual -->
+        <!-- 포트폴리오 시작 -->
+        <div id="contents_body">
+          <div class="inner">
+            <div class="menuBtn">
+              <button type="button" id="All">전체</button>
+              <button type="button" id="web">웹 과정</button>
+              <button type="button" id="edit">편집 과정</button>
+              <button type="button" id="metaBus">메타버스 과정</button>
+            </div>
+            <div class="common__top">
+              <div>
+                  <span>total</span>
+                  <strong data-count></strong>
+              </div>
+              <!--   -->
+              <div class="top__search">
+                  <div class="input__wrap">
+                    <input 
+                        type="text" 
+                        name="search" 
+                        id="search" 
+                        autocomplete="off"
+                        placeholder="검색"
+                    >
+                    <button type="button"><i class="ri-search-line"></i></button>
+                  </div>
+              </div>
+            </div> <!-- common__top -->
+            <div class="portfolio">
+              <dl></dl>
+            </div>
+          </div> <!-- end : inner -->
+        </div> <!-- end : contents_body -->
+      </div> <!-- end : contents -->
+      
+      <!-- 푸터 -->
+      <footer>
+        <div class="familySite">
+          <div class="inner">
+            <p class="tit">FAMILY SITE</p>
+            <a href="#" type="button" class="arrbtn btnPrev"><i class="ri-arrow-left-s-line"></i></a>
+            <div class="famList">
+              <ul>
+                <li><a href="#">고용노동부 대전지방고용노동청</a></li>
+                <li><a href="#">대전고용센터</a></li>
+                <li><a href="#">직업훈련포털HRD-NET</a></li>
+                <li><a href="#">WORKNET</a></li>
+                <li><a href="#">CQ-NET</a></li>
+                <li><a href="#">Q-NET</a></li>
+                <li><a href="#">NCS국가직무능력표준</a></li>
+              </ul>
+            </div>
+            <a href="#" type="button" class="arrbtn btnNext"><i class="ri-arrow-right-s-line"></i></a>
           </div>
-          <div class="bread">
-            <ul>
-              <li><a href="../../../index.html"><i class="ri-home-4-line"></i></a></li>
-              <li><a href="./index.html">포트폴리오1</a></li>
+        </div>
+        <div id="footer">
+          <div class="footerMenu">
+            <ul class="inner">
+              <li><a href="../about/about.html">학교소개</a></li>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#" class="privacy">개인정보처리방침</a></li>
+              <li><a href="#">찾아오시는 길</a></li>
             </ul>
           </div>
-        </div> 
-      </div>
-    </div>
+          <div class="footerInfo">
+            <div class="inner">
+              <div class="flogo"><span>대전세잔직업전문학교</span></div>
+              <address>
+                <p>대전 중구 중앙로 137번길 36 대전세잔직업전문학교</p>
+                <p>사업자등록번호 : 305-90-66359</p>
+                <p><span class="f_white">Tel . 042)252-1153</span> Fax. 042)252-1105</p>
+                <small>&copy 대전세잔직업전문학교. All rights Reserved.</small>
+              </address>
+              <div class="sns">
+                <button type="button"><i class="ri-youtube-line"></i></button>
+                <button type="button"><i class="ri-facebook-fill"></i></button>
+                <button type="button"><i class="ri-instagram-line"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div> <!-- end : wrap -->
     <script src="../../js/portfolio/portfolio.js"></script>
   </body>
 </html>
