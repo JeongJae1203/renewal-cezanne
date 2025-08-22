@@ -15,8 +15,12 @@
 
 		<link rel="stylesheet" href="./src/css/reset.css">
 		<link rel="stylesheet" href="./src/css/common.css">
-
-		<link rel="stylesheet" href="./src/scss/common.scss">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+		<!-- <link rel="stylesheet" href="./src/scss/common.scss"> -->
+		<link rel="stylesheet" href="./src/scss/main.scss">
+		<!-- swiper -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  	<script src="./src/js/main.js"></script>
 	</head>
 	<body>
 		<header>
@@ -176,21 +180,136 @@
 			<div id="topBtn">
 				<button type="button"><i class="ri-arrow-up-line"></i></button>
 			</div>
-			<div id="slide">slide</div>
+			<div class="swiper main_visual">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide slide1" style="background-image: url('./src/images/main/visual_slide_01.jpg');">
+						<div class="inner">
+							<div class="h_slogan">
+								실무 중심 커리큘럼 & 취업 연계지원 훈련기관인<br>
+								대전세잔 직업전문학교와 함께 하세요.
+							</div>
+						</div> 
+					</div>
+					<div class="swiper-slide slide2" style="background-image: url('./src/images/main/visual_slide_02.jpg');">
+						<div class="inner">
+							<div class="h_slogan">
+								실무 중심 커리큘럼 & 취업 연계지원 훈련기관인<br>
+								대전세잔 직업전문학교와 함께 하세요.
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide slide3" style="background-image: url('./src/images/main/visual_slide_03.png');">
+						<div class="inner">
+							<div class="h_slogan">
+								실무 중심 커리큘럼 & 취업 연계지원 훈련기관인<br>
+								대전세잔 직업전문학교와 함께 하세요.
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide slide4" style="background-image: url('./src/images/main/visual_slide_04.png');">
+						<div class="inner">
+							<div class="h_slogan">
+								실무 중심 커리큘럼 & 취업 연계지원 훈련기관인<br>
+								대전세잔 직업전문학교와 함께 하세요.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
 			<div id="contents">
 				<div class="portfolio">
 					<div class="inner">
 						<h2>Portfolio</h2>
+						<div class="cardSlide_wrap">
+							card slide(swiper)
+						</div>
 					</div>
 				</div>
 				<div class="education">
 					<div class="inner">
-						<h2>세잔 교육과정</h2>
+						<div class="tabLayout">
+							<h2>세잔 교육과정</h2>
+							<p class="text">세잔직업전문학교의 전문적인 수업과정을 안내해드립니다.</p>
+							<div class="tabMenu">
+								<ul>
+									<li class="active"><a href="#">전체보기</a></li>
+									<li><a href="#">국가기간·전략사업</a></li>
+									<li><a href="#">근로자과정</a></li>
+									<li><a href="#">산업구조변화대응특화훈련</a></li>
+								</ul>
+							</div>
+							<div class="moreBtn"><a href="#">더보러가기</a></div>
+						</div>
+						<div class="tabListWrap scrollbar">
+							<p class="refer_text">좌우로 움직여서 확인하실 수 있습니다.</p>
+							<div class="tabList">
+								<div class="listBox">
+									<p class="listImg"><a href="#" class="listlink" style="background-image: url('./src/images/main/edu_img02.png');"></a></p>
+									<ul>
+										<li class="class">국비지원과정(내일배움카드)</li>
+										<li class="title">디지털퍼블리싱&웹디자인 전문가 양성</li>
+										<li class="date">2025.05.20 ~ 2025.06.19</li>
+									</ul>
+									<button type="button" class="go">수강신청바로가기</button>
+								</div>
+								<div class="listBox">
+									<p class="listImg"><a href="#" class="listlink" style="background-image: url('./src/images/main/edu_img02.png');"></a></p>
+									<ul>
+										<li class="class">국비지원과정(내일배움카드)</li>
+										<li class="title">디지털퍼블리싱&웹디자인 전문가 양성</li>
+										<li class="date">2025.05.20 ~ 2025.06.19</li>
+									</ul>
+									<button type="button" class="go">수강신청바로가기</button>
+								</div>
+								<div class="listBox">
+									<p class="listImg"><a href="#" class="listlink" style="background-image: url('./src/images/main/edu_img02.png');"></a></p>
+									<ul>
+										<li class="class">국비지원과정(내일배움카드)</li>
+										<li class="title">디지털퍼블리싱&웹디자인 전문가 양성</li>
+										<li class="date">2025.05.20 ~ 2025.06.19</li>
+									</ul>
+									<button type="button" class="go">수강신청바로가기</button>
+								</div>
+								<div class="listBox">
+									<p class="listImg"><a href="#" class="listlink" style="background-image: url('./src/images/main/edu_img02.png');"></a></p>
+									<ul>
+										<li class="class">국비지원과정(내일배움카드)</li>
+										<li class="title">디지털퍼블리싱&웹디자인 전문가 양성</li>
+										<li class="date">2025.05.20 ~ 2025.06.19</li>
+									</ul>
+									<button type="button" class="go">수강신청바로가기</button>
+								</div>
+								<div class="listBox">
+									<p class="listImg"><a href="#" class="listlink" style="background-image: url('./src/images/main/edu_img02.png');"></a></p>
+									<ul>
+										<li class="class">국비지원과정(내일배움카드)</li>
+										<li class="title">디지털퍼블리싱&웹디자인 전문가 양성</li>
+										<li class="date">2025.05.20 ~ 2025.06.19</li>
+									</ul>
+									<button type="button" class="go">수강신청바로가기</button>
+								</div>
+								
+							</div>
+						</div>
+
 					</div>
 				</div>
-				<div class="application">
+				<div class="consult">
 					<div class="inner">
-						<h4>일반/국비지원 과정 상담 신청 </h4>
+						<div class="consultHead">
+							<div class="title">
+								<h4>일반/국비지원 과정 상담 신청</h4>
+								<span class="text">상담신청은 온라인문의, 대표전화문의,<br>카카오톡 상담으로 안내해드립니다.</span>
+							</div>
+							<div class="gotoApply">
+								<span class="tel"><i class="ri-phone-fill icobg"></i> 042-252-1153</span>
+								<span><button type="button" class="icokakao">카카오톡</button></span>
+							</div>
+						</div>
+						<div class="consultForm">
+							상담신청 Form
+						</div>
 					</div>
 				</div>
 			</div>

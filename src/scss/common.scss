@@ -125,33 +125,6 @@ header {
   }
 } 
 
-// container 
-#container {
-  position:relative;
-  
-  #slide {
-    background: var(--silver);
-    height:50rem;
-  }
-  #contents { 
-    .inner {
-      padding: 5rem 2rem;
-    }
-  
-    .portfolio {
-    
-    }
-    .education {
-      background: $darkColor;
-      color: $whiteColor;
-    }
-  
-    .application {
-  
-    }
-  }
-}
-
 // footer 
 footer {
   .familySite {
@@ -255,6 +228,7 @@ footer {
       .inner {
         padding: 2rem;
       }
+      .flogo {display: none;} // 20250822 수정
       address {
         margin-top: 1.5rem;
         font-style: normal;
@@ -368,7 +342,11 @@ footer {
                 color: $mainColor;
                 border-bottom: 3px solid $mainColor;
               }
-              .subMenu {display: block;}
+              .subMenu { // 20250822 수정
+                display: block;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+              }
             }
 
             > a {
@@ -489,6 +467,7 @@ footer {
           }
           address {
             padding-left: 4rem;
+            margin: 0;
           }
         }
       }

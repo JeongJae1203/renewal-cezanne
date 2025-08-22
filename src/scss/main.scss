@@ -1,0 +1,268 @@
+@use './common.scss' as *;
+
+
+// container 
+#container {
+  position:relative;
+  #contents { 
+    .inner {
+      padding: 5rem 2rem;
+    }
+  
+    .portfolio {
+      .cardSlide_wrap {
+        padding: 5rem 0;
+      }
+    }
+    .education {
+      background: $darkColor;
+      color: $whiteColor;
+      .tabLayout {
+        .text {
+          margin: 1.5rem 0;
+          opacity: .5;
+          font-weight: 200;
+          line-height: 1.5;
+        }
+        .tabMenu {
+          ul {
+            li {
+              // &.active {
+              //   > a {
+              //     background:transparent;
+              //     color: $whiteColor;
+              //     border: 1px solid $mainColor;
+              //     text-decoration: none;
+              //     transform: scaleY(1.025);
+              //     margin: 0;
+              //   }
+              // }
+              > a {
+                display: block;
+                padding: 1.5rem 2rem;
+                border: 1px solid $whiteColor;
+                margin-bottom: -1px;
+                font-size: 1.8rem;
+                transition: .15s;
+                &:hover {
+                  background: $mainColor;
+                  border: 1px solid $mainColor;
+                  text-decoration: none;
+                  z-index: 10;
+                  transform: scale(1.025);
+                }
+              }
+            }
+          }
+        }
+        .moreBtn {display: none;}
+      }
+      .tabListWrap {
+        overflow-y: hidden;
+        overflow-x: auto;
+        .refer_text {
+          margin-top: 2rem;
+        }
+      }
+      .scrollbar {
+        &::-webkit-scrollbar {width: 100%; height: 6px; }
+        &::-webkit-scrollbar-thumb {background: rgba(255, 255, 255, .9); border-radius: 10px;}
+        &::-webkit-scrollbar-track {background: rgba(255, 255, 255, .3); border-radius: 10px;}
+      }
+      .tabList {
+        width: 1280px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        .listBox {
+          width: calc(100vw - 6rem);
+          margin: 1rem 0;
+          .listImg {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+            .listlink { 
+              display: block;
+              width: 100%;
+              min-height: 300px;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position:center;
+              transition: .8s;
+              &:hover {
+                transform: scale(1.2);
+                &::after {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  display: block;
+                  content: '';
+                  width: 100%;
+                  height: 100%;
+                  background: rgba(0,0,0,.5);
+                }
+              }
+            }
+          }
+          ul {
+            margin: 2rem 0;
+          }
+          .class {font-size: 1.4rem; color: #FBA8B8; font-weight: 300;}
+          .title {font-size: 1.6rem; padding: 0.8rem 0; font-weight: 600;}
+          .date {font-size: 1.4rem; font-weight: 100; opacity: .6;}
+          .go {
+            background-color: $mainColor;
+            width: 100%;
+            padding: 1.5rem 0;
+            color: $whiteColor;
+            border-radius: 2px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            &:hover {
+              
+            }
+          }
+        }
+      }
+    }
+    .consult {
+      .consultHead {
+        .title {
+          h4 {
+            padding-bottom: 2rem;
+          }
+          padding-bottom: 3rem;
+        }
+        .gotoApply {
+          span {
+            display: inline-block; 
+            width: calc((100%/2) - 1rem);
+            vertical-align: top;
+          }
+          .tel {
+            display: inline-block;
+            font-size: 2.8rem;
+            font-weight: 600;
+          }
+          .icobg {
+            background:#dbdbdb;
+            border-radius: 50%;
+            padding: 0.5rem;
+          }
+          button {
+            &.icokakao {
+              line-height: 4rem;
+              padding-left: 35px;
+              background-image: url('../images/main/ico_kakao.png');
+              background-repeat: no-repeat;
+              background-size: 30px;
+              background-position: 0 0;
+              font-size: 1.9rem;
+              font-weight: 600;
+            }
+            
+          }
+        }
+      }
+      .consultForm {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+
+// main swiper
+.main_visual {
+  height: 50rem;
+    .slide1 {background: pink;}
+    .slide2 {background: rgb(168, 255, 204);}
+    .slide3 {background: rgb(228, 255, 192);}
+    .slide4 {background: rgb(192, 217, 255);}
+    .swiper-pagination {
+      padding: 1rem 0;
+      width: 100%;
+      span {transform: scale(1.5); opacity: .5;}
+      .swiper-pagination-bullet-active {background: $mainColor;}
+    }
+    .inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      .h_slogan {
+        font-weight: 700;
+        color: $whiteColor;
+        font-size: 5rem;
+        text-align:center;
+      }
+    }
+}
+
+@media (min-width:768px) {
+  
+}
+
+@media (min-width:992px) {
+  #container {
+    #contents {
+      .education {
+        background: $darkColor;
+        color: $whiteColor;
+        .inner {
+          display: grid;
+          grid-template-columns: 260px 2fr;
+          gap: 50px;
+        }
+        .tabLayout {
+          .text {
+            margin: 1.5rem 0;
+            opacity: .5;
+          }
+          .tabMenu {
+            margin-top: 4rem;
+          }
+          .moreBtn {
+            display: block;
+            margin-top: 5rem;
+          }
+        }
+        .tabListWrap {
+          .refer_text {margin: 0;}
+        }
+        .tabList {
+          .listBox {
+            width: auto;
+            margin: 2rem 0;          
+          }
+        }
+      }
+      .consult {
+        .consultHead {
+          display:flex;
+          justify-content: space-between;
+          .title {
+            width: 65%;
+            display: flex;
+            .text {
+              padding-left: 5rem;
+            }
+          }
+          .gotoApply {
+            display: flex;
+            justify-content: space-around;
+            width: 35%;
+            padding-right: 2rem;
+            span {
+              width: auto;
+            }
+
+            button {
+              
+            }
+          }
+        }
+      }
+    } 
+  }  
+}
