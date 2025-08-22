@@ -1,0 +1,55 @@
+// color
+$mainColor : #E6204B;
+$subColor : #4C46F6;
+$darkColor : #202226;
+$whiteColor : #fff;
+
+// head
+h1 {font-size: 3rem;}
+h2 {font-size: 2.8rem;}
+h3 {font-size: 2.6rem;}
+h4 {font-size: 2.4rem;}
+h5 {font-size: 2.2rem;}
+h6 {font-size: 2rem;}
+
+// button 
+button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+// top Btn
+#topBtn {
+  button {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background:#d7d7d7;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    z-index: 99;
+    i {
+      font-size: 3.5rem;
+      color: var(--gray);
+    }
+  }
+}
+
+// m_gnbBtn 클릭시 body에 추가 
+.open {overflow: hidden;}
+.top {
+  margin: 5rem 0;
+}
+
+// sub_visual
+.sub_visual {
+  background: {
+    image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/about/visual_bg.jpg);
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+}
