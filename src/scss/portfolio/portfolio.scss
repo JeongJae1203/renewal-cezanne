@@ -60,12 +60,108 @@ button {
 }
 
 // 포트폴리오
+a {text-decoration: none;}
 
 // 포트폴리오 메뉴 버튼
 .menuBtn {
+  text-align: center;
   button {
+    font-size: 16px;
+    padding: 1rem 2rem;
+    border: 1px solid #d7d7d7;
+    border-radius: 20px;
+    &:hover {
+      // background: $mainColor;
+      // color: $whiteColor;
+    }
   }
 }
 
+
+// 포폴
+
+.portfolio-card__link {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  text-decoration: none;
+  color: inherit;
+  padding: 18px 0;
+  border-bottom: 1px solid #d7d7d7;
+  overflow: hidden;
+
+  // 검은 배경 오버레이 (카드 전체)
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba($darkColor, .2); // 카드 전체를 덮는 검은 반투명
+    opacity: 0;
+    transition: opacity .25s ease;
+    z-index: 2; // 텍스트, 이미지 위로 올라옴
+  }
+
+  // hover/포커스 시 어두워짐
+  &:hover::before,
+  &:focus-visible::before {
+    opacity: 1;
+  }
+}
+
+/* 이미지 + +아이콘 */
+.portfolio-card__media {
+  position: relative;
+  min-height: 180px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .plus-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: $whiteColor;
+    opacity: 0;
+    transition: opacity .25s ease;
+    z-index: 3; // 오버레이보다 위
+  }
+
+  .portfolio-card__link:hover & .plus-icon,
+  .portfolio-card__link:focus-visible & .plus-icon {
+    opacity: 1;
+  }
+}
+
+/* 텍스트 영역 */
+.portfolio-card__body {
+  position: relative;
+  z-index: 1; // 기본은 이미지 위지만, 오버레이(z-index:2)가 더 위라 hover시 어두워짐
+  display: grid;
+  gap: 6px;
+  // color: $darkColor; // 평상시 검정
+}
+
+// 768px 이상 가로 배치
+@media (min-width:768px) {
+  .portfolio-card__link {
+    grid-template-columns: 360px 1fr;
+    padding: 22px 0;
+  }
+  .portfolio-card__media { min-height: 200px; }
+  .portfolio-card__title { }
+  .portfolio-card__view { justify-self: end; margin-top: 16px; }
+}
+
+
+
 // 데스크탑
-@media screen and (min-width:768px) {}
+@media screen and (min-width:768px) {
+
+}
