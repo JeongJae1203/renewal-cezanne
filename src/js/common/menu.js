@@ -7,4 +7,17 @@ $(function() {
 
     $('body').toggleClass('open');
   });
+
+  const sitemapBtn = $('header .sitemapBtn > button')
+      , sitemap = $('#sitemap');
+
+  $('header .sitemapBtn').on('click', sitemapBtn, function(e) {
+    e.preventDefault();
+
+    sitemap.addClass('on');
+  });
+  
+  $('#sitemap').on('click', '.btn__close', function() {
+    sitemap.removeClass('on');
+  });
 });
