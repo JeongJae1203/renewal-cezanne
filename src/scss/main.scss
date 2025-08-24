@@ -8,10 +8,32 @@
     .inner {
       padding: 5rem 2rem;
     }
-  
     .portfolio {
+      position: relative;
+      .textbg {
+        position: absolute;
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--silver);
+        opacity:.3;
+        display: block;
+        line-height: 1rem;
+      }
+      .bg1 {
+        left: 1rem;
+        top: 10rem;
+      }
+      .bg2 {
+        right: 5%;
+        bottom: 10%;
+      }
       .cardSlide_wrap {
+        position: relative;
         padding: 5rem 0;
+        .slideArea {
+          height: 450px;
+          border: 1px solid red;
+        }
       }
     }
     .education {
@@ -27,16 +49,6 @@
         .tabMenu {
           ul {
             li {
-              // &.active {
-              //   > a {
-              //     background:transparent;
-              //     color: $whiteColor;
-              //     border: 1px solid $mainColor;
-              //     text-decoration: none;
-              //     transform: scaleY(1.025);
-              //     margin: 0;
-              //   }
-              // }
               > a {
                 display: block;
                 padding: 1.5rem 2rem;
@@ -61,7 +73,28 @@
         overflow-y: hidden;
         overflow-x: auto;
         .refer_text {
-          margin-top: 2rem;
+          position: relative;
+          margin-top: 1rem;
+          padding-left: 35px;
+          font-size: 1.4rem;
+          opacity: .5;
+          line-height: 30px;
+          .ico_slide {
+            position: absolute;
+            display: inline-block;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background-image: url('../images/main/ico_slide_hands.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            //animation:hand 3s infinite; 
+          }
+          @keyframes hand {
+          0% {top: 0; left: 0;}
+          50% {top: 0; left: 20px;}
+          100% {top: 0; left: 0;}
+        }
         }
       }
       .scrollbar {
@@ -119,9 +152,6 @@
             border-radius: 2px;
             font-size: 1.6rem;
             font-weight: 600;
-            &:hover {
-              
-            }
           }
         }
       }
@@ -193,19 +223,44 @@
       .h_slogan {
         font-weight: 700;
         color: $whiteColor;
-        font-size: 5rem;
+        font-size: 2.6rem;
+        line-height: 1.5;
         text-align:center;
       }
     }
 }
 
 @media (min-width:768px) {
-  
+  #container {
+    #contents { 
+      .portfolio {
+        .textbg {
+          font-size: 4.5rem;
+        }
+      }
+    }
+  }
+  .main_visual {
+    .inner {
+      .h_slogan {
+        font-size: 3.5rem;
+      }
+    }
+  }
 }
 
 @media (min-width:992px) {
   #container {
     #contents {
+      .portfolio {
+        .textbg {
+          font-size: 5.5rem;
+        }
+        .bg1 {
+          left: 1rem;
+          top: 10rem;
+        }
+      }
       .education {
         background: $darkColor;
         color: $whiteColor;
@@ -232,8 +287,7 @@
         }
         .tabList {
           .listBox {
-            width: auto;
-            margin: 2rem 0;          
+            width: auto;         
           }
         }
       }
