@@ -1,8 +1,8 @@
 $(function() {
-  const mobileBtn = $('header .mobileWrap > .m_gnbBtn > button')
+  const mobileBtn = $('header .m_gnbBtn > button')
       , mobileMenu = $('header .m_gnb');
 
-  $('header .mobileWrap').on('click', mobileBtn, function() {
+  $('#header .inner .m_gnbBtn').on('click', mobileBtn, function() {
     mobileMenu.slideToggle();
 
     $('body').toggleClass('open');
@@ -15,9 +15,11 @@ $(function() {
     e.preventDefault();
 
     sitemap.addClass('on');
+    $('body').addClass('open');
   });
   
   $('#sitemap').on('click', '.btn__close', function() {
     sitemap.removeClass('on');
+    $('body').removeClass('open');
   });
 });
