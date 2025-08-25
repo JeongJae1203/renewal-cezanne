@@ -223,8 +223,25 @@
 					<div class="inner">
 						<h2>Portfolio</h2>
 						<div class="cardSlide_wrap">
-							<div class="slideArea">
-								card slide(swiper)
+							<div class="swiper slideArea">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="./src/images/main/portfolio_img1.png" />
+									</div>
+									<div class="swiper-slide">
+										<img src="./src/images/main/portfolio_img2.png" />
+									</div>
+									<div class="swiper-slide">
+										<img src="./src/images/main/portfolio_img3.png" />
+									</div>
+									<div class="swiper-slide">
+										<img src="./src/images/main/portfolio_img4.png" />
+									</div>
+									<div class="swiper-slide">
+										<img src="./src/images/main/portfolio_img5.png" />
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
 							</div>
 						</div>
 					</div>
@@ -243,7 +260,7 @@
 									<li><a href="#">산업구조변화대응특화훈련</a></li>
 								</ul>
 							</div>
-							<div class="moreBtn"><a href="#">더보러가기</a></div>
+							<div class="moreBtn"><a href="#">더보러가기<i class="arr-icon1"></i></a></div>
 						</div>
 						<div class="tabListWrap scrollbar">
 							<p class="refer_text">
@@ -324,7 +341,7 @@
 			<div class="familySite">
 				<div class="inner">
 					<p class="tit">FAMILY SITE</p>
-					<a href="#" type="button" class="arrbtn btnPrev"><i class="ri-arrow-left-s-line"></i></a>
+					<button type="button" class="arrbtn btnPrev"><i class="ri-arrow-left-s-line"></i></button>
 					<div class="famList">
 						<ul>
 							<li><a href="#">고용노동부 대전지방고용노동청</a></li>
@@ -336,7 +353,7 @@
 							<li><a href="#">NCS국가직무능력표준</a></li>
 						</ul>
 					</div>
-					<a href="#" type="button" class="arrbtn btnNext"><i class="ri-arrow-right-s-line"></i></a>
+					<button type="button" class="arrbtn btnNext"><i class="ri-arrow-right-s-line"></i></button>
 				</div>
 			</div>
 			<div id="footer">
@@ -369,11 +386,16 @@
 		<!-- js -->
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 		<script>
-			// navBtn 클릭시 하위메뉴 toggle
 			$(function(){
+				// navBtn 클릭시 하위메뉴 toggle
 				$(".m_gnbBtn").click(function(){
 					$(".m_gnb").slideToggle();
 					$('body').toggleClass("open");
+				});
+
+				// familySite : mobile.ver toggle 
+				$(".famList").click(function(){
+					$(this).toggleClass("active");
 				});
 			});
 		</script>
