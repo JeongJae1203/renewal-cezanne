@@ -62,10 +62,16 @@ button {
   display: grid;
   grid-template-columns: 20rem 1fr;
   gap: 5rem;
+  // 왼쪽 회색 여백
   .portfolio-cont {
     background: #ECECEC;
-    h3 {}
-    span {}
+    // height: 30rem;
+    h3 { text-align: center; }
+    span {
+      display: block;
+      text-align: center;
+      // &::after
+    }
   }
   
   .portfolio-text {
@@ -92,6 +98,7 @@ button {
       }
     }
   
+    // 포트폴리오 소개
     .portfolio-into {
       margin-top: 2.6rem;
       li {
@@ -125,6 +132,23 @@ button {
     }
   }
 
+}
+
+// 상세페이지 이미지
+.portfolio-img {
+  // min-width: 30rem;
+  margin: 5rem 5rem 0rem 0;
+  img{
+
+    width: 100%;
+    height: 100%;
+  }
+  // background: {
+  //   image: url(../../images/p_detail/p_detail_img1.png);
+  //   repeat: no-repeat;
+  //   position: center;
+  //   size: contain;
+  // }
 }
 
 // 768px 이상 pc
