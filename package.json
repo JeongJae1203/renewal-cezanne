@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "renewal-cezanne",
   "scripts": {
-    "dev": "parcel index.html",
+    "dev": "parcel src/html/education/edu-contents/detail.html",
     "build": "parcel build index.html -d build --public-url .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

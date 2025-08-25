@@ -9,62 +9,101 @@ $whiteColor:#fff;
 // breakpoint - 768px, 992px, 1200px
 
 #container{
+  .back{
+    font-size:1.3rem;
+  }
   #stra-info{
-    margin:3.5rem 0;
-    .stra-wrap{
-      .stra-info-tag{
-        font-weight:500;
-      }
+    margin:3.5rem auto;
+    .stra-info-wrap{
+      .stra-info-tag{}
       .stra-title{
         font-size:2.6rem; font-weight:600;
         margin:1.5rem 0 3rem; color:$darkColor;
       }
       .stra-text{
-        font-weight:200; line-height:2rem;
+        font-weight:300; line-height:2rem;
       }
     }
   }
   #stra-edu{
-    // background-color:var();
+    padding:2.5rem 0; margin:3.5rem auto; color:$whiteColor; background-color:$darkColor;
     .stra-edu-title{
       font-size:2.6rem; font-weight:600;
+      padding:1.25rem 0;
     }
     .stra-edu-list{
-      margin:1.5rem 0;
-      display:grid; grid-template-columns:repeat(2, 1fr); gap:0.625rem;
+      display:grid; grid-template-columns:repeat(2, 1fr); justify-items:start; gap:10px;
+      padding:1.5rem 0;
       ul{
         li{
-          span{
-            font-size:1.825rem;
-          }
+          text-align:center; padding:0.625rem 1.25rem; margin:0.625rem 0; border-radius:50px; background-color:$mainColor;
         }
       }
-      &>span{
-        margin-left:1rem; line-height:2.25rem;
+      span{
+        p{
+          padding:0.625rem 1.25rem; margin:0.625rem 0;
+        }
       }
-    }
-    &>span{
-      display:block; border:1px solid $darkColor;
     }
   }
   #stra-int{
+    margin:3.5rem auto;
     .stra-int-wrap{
+      margin-bottom:2.5rem;
       .stra-int-title{
+        display:flex; align-items:center; gap:5px;
+        font-size:2.2rem; font-weight:500;
         margin-bottom:1.25rem;
-        span{
-          border:1px solid $mainColor; margin-right:1rem;
+        &::before{
+          display:inline-block; content:''; width:0.25rem; height:2.2rem; background-color:$mainColor;
         }
       }
       .stra-int.table{
-        .table.line-1{
-          background-color:var(--gray-bgcolor);
+        display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
+        padding:1px; background-color:var(--default-border-color);
+        .th{
+          text-align:center; font-weight:500;
+          padding:1.25rem 0.625rem; background-color:var(--gray-bgcolor);
         }
-        tr{
-          th,td{
-            text-align:center;
-            width:25%; padding:0.625rem 0; border:1px solid var(--default-border-color);
-          }
+        .td{
+          padding:1.25rem 0.625rem; background-color:$whiteColor;
         }
+      }
+    }
+    .stra-int-wrap2{
+      margin-bottom:2.5rem;
+      .stra-int-title{
+        display:flex; align-items:center; gap:5px;
+        font-size:2.2rem; font-weight:500;
+        margin-bottom:1.25rem;
+        &::before{
+          display:inline-block; content:''; width:0.25rem; height:2.2rem; background-color:$mainColor;
+        }
+      }
+    }
+    .stra-int-wrap3{
+      margin-bottom:2.5rem;
+      .stra-int-title{
+        display:flex; align-items:center; gap:5px;
+        font-size:2.2rem; font-weight:500;
+        margin-bottom:1.25rem;
+        &::before{
+          display:inline-block; content:''; width:0.25rem; height:2.2rem; background-color:$mainColor;
+        }
+        // 네모
+        /* &::before{
+          display:inline-block; content:''; width:0.625rem; height:0.625rem; background-color:$mainColor;
+        } */
+        // ???
+        /* display:flex; justify-content:space-between; align-items:center; gap:50px;
+        font-size:2.2rem; font-weight:500;
+        margin-bottom:1.25rem;
+        &::before{
+          display:inline-block; content:''; width:25%; height:1px; background-color:$mainColor;
+        }
+        &::after{
+          display:inline-block; content:''; width:25%; height:1px; background-color:$mainColor;
+        } */
       }
     }
   }
@@ -72,12 +111,14 @@ $whiteColor:#fff;
 
 @media screen and (min-width:768px){
   #container{
-    #stra-wrap{
-      .stra-info{
-        width:60%;
-        .stra-text{
-          font-weight:400; line-height:2.25rem;
-        }
+    #stra-info{
+      .stra-info-wrap{
+        max-width:65%;
+      }
+    }
+    #stra-edu{
+      .stra-edu-list{
+        grid-template-columns:repeat(1, 1fr 4fr);
       }
     }
   }
