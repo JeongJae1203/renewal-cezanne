@@ -66,3 +66,19 @@
 	font-style: normal;
 	font-weight: 900;
 }
+
+/* INKLIPQUID */
+@font-face {
+	font-family: "Inklipquid";
+	font-style: normal;
+	font-weight: 400;
+	src: url(./inklipquid/inklipquid.ttf) format('truetype');
+}
+
+/* Chosun */
+@font-face {
+	font-family: "Chosunilbo_myungjo";
+	font-style: normal;
+	font-weight: 400;
+	src: url(./chosun/ChosunCentennial.ttf) format('truetype');
+}

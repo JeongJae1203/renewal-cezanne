@@ -43,3 +43,23 @@
 * hnlee : 하늘
 
 * hrjeon : 하람
+
+
+### Parcel Bundler HTML 전부 Build 방법
+* glob 패턴 사용
+
+* package.json
+
+```json
+"scripts": {
+	"build": "parcel build html/*.html"
+}
+```
+
+* 하위 폴더까지 전부 빌드 시 ?
+
+```json
+"scripts": {
+  "build": "parcel build index.html \"src/html/**/**/*.html\" -d build --public-url ./"
+}
+```
