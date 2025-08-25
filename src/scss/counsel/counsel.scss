@@ -231,6 +231,9 @@ $background-color_4: #FBFBFB;
 				height: 4rem;
 				padding: 0 2rem;
 				border: 1px solid $border-color;
+				font: {
+					size: $content-font-size;
+				}
 				outline: none;
 			}
 
@@ -240,6 +243,9 @@ $background-color_4: #FBFBFB;
 				padding: 0 2rem;
 				border: 1px solid $border-color;
 				outline: none;
+				font: {
+					size: 1.6rem;
+				}
 				transition: .35s;
 
 				&:required {
@@ -265,6 +271,8 @@ $background-color_4: #FBFBFB;
 				border: 1px solid $border-color;
 				font: {
 					family: 'Pretendard GOV', sans-serif;
+					size: $content-font-size;
+					weight: 400;
 				}
 				outline: none;
 
@@ -356,7 +364,7 @@ $background-color_4: #FBFBFB;
 		background-color: #fff;
 		border: 1px solid $dark-color;
 		font: {
-			size: 1.6rem;
+			size: $content-font-size;
 			weight: 700;
 		}
 		transition: .35s;
