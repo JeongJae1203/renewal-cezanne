@@ -61,18 +61,22 @@ button {
 
 // 포트폴리오
 a {text-decoration: none;}
+a:hover {text-decoration: none;}
 
 // 포트폴리오 메뉴 버튼
 .menuBtn {
   text-align: center;
   button {
-    font-size: 16px;
+    font: inherit;
+    color: inherit;
     padding: 1rem 2rem;
-    border: 1px solid #d7d7d7;
+    margin-top: 1.5625rem;
+    word-break: keep-all;
+    border: 1px solid #ECECEC;
     border-radius: 20px;
     &:hover {
-      // background: $mainColor;
-      // color: $whiteColor;
+      background: $mainColor;
+      color: $whiteColor;
     }
   }
 }
@@ -80,22 +84,26 @@ a {text-decoration: none;}
 
 // 포폴
 
+.portfolio-card:first-child {
+  // border-top: 1px solid #ECECEC;
+}
 .portfolio-card__link {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
-  text-decoration: none;
-  color: inherit;
-  padding: 18px 0;
-  border-bottom: 1px solid #d7d7d7;
+  gap: 2rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid #ECECEC;
   overflow: hidden;
 
   // 검은 배경 오버레이 (카드 전체)
   &::before {
     content: "";
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba($darkColor, .2); // 카드 전체를 덮는 검은 반투명
     opacity: 0;
     transition: opacity .25s ease;
@@ -109,32 +117,51 @@ a {text-decoration: none;}
   }
 }
 
-/* 이미지 + +아이콘 */
-.portfolio-card__media {
+/* 이미지, + 아이콘 */
+.portfolio-card__img {
   position: relative;
-  min-height: 180px;
+  min-height: 150px;
+
+
+  &::before {
+    opacity: 0;
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba($whiteColor, .9);
+  }
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     display: block;
   }
-
+  
   .plus-icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3rem;
-    color: $whiteColor;
+    font-size: 4rem;
+    color: $mainColor;
+    // text-shadow: 0px 0px 3px $whiteColor; /* + 그림자 흰색 */
     opacity: 0;
-    transition: opacity .25s ease;
-    z-index: 3; // 오버레이보다 위
+    transition: opacity .25s;
+    z-index: 5; // 오버레이보다 위
+
   }
 
   .portfolio-card__link:hover & .plus-icon,
-  .portfolio-card__link:focus-visible & .plus-icon {
+  .portfolio-card__link:hover &::before,
+  .portfolio-card__link:focus-visible & .plus-icon,
+  .portfolio-card__link:focus-visible &::before {
     opacity: 1;
   }
 }
@@ -142,26 +169,30 @@ a {text-decoration: none;}
 /* 텍스트 영역 */
 .portfolio-card__body {
   position: relative;
-  z-index: 1; // 기본은 이미지 위지만, 오버레이(z-index:2)가 더 위라 hover시 어두워짐
+  z-index: 1; // 기본은 이미지 위
   display: grid;
-  gap: 6px;
-  // color: $darkColor; // 평상시 검정
+  gap: 10px;
+  line-height: 1.5625; 
+  word-break: keep-all;
+  margin-left: .5rem;
+  .portfolio-card__view {
+    // display: none;
+    color: $mainColor; text-align: end; 
+    margin-right: .5rem;
+  }
 }
 
 // 768px 이상 가로 배치
 @media (min-width:768px) {
   .portfolio-card__link {
-    grid-template-columns: 360px 1fr;
-    padding: 22px 0;
+    grid-template-columns: 40rem 1fr;
+    padding: 2rem 0;
   }
-  .portfolio-card__media { min-height: 200px; }
-  .portfolio-card__title { }
-  .portfolio-card__view { justify-self: end; margin-top: 16px; }
-}
-
-
-
-// 데스크탑
-@media screen and (min-width:768px) {
-
+  .portfolio-card__img {
+  }
+  .portfolio-card__title { margin-top: .4rem; }
+  .portfolio-card__name { font-size: 1.4rem;}
+  .portfolio-card__view { 
+    margin: 2rem .5rem 0 0; 
+  }
 }

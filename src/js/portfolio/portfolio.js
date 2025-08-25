@@ -1,3 +1,10 @@
+// a태그에 링크가 없는 경우
+document.addEventListener('click', (e) => {
+  if(e.target.matches('a[href="#"]')) {
+    e.preventDefault();
+  }
+});
+
 // ~바로가기 버튼
 document.addEventListener('DOMContentLoaded', () => {
   // 태그 불러오기
@@ -10,3 +17,4 @@ document.addEventListener('DOMContentLoaded', () => {
     location.href = '#';
   });
 })
+

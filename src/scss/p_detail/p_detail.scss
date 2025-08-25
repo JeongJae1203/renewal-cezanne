@@ -1,0 +1,149 @@
+// color
+$mainColor : #E6204B;
+$subColor : #4C46F6;
+$darkColor : #202226;
+$whiteColor : #fff;
+
+// head
+h1 {font-size: 3rem;}
+h2 {font-size: 2.8rem;}
+h3 {font-size: 2.6rem;}
+h4 {font-size: 2.4rem;}
+h5 {font-size: 2.2rem;}
+h6 {font-size: 2rem;}
+
+// button 
+button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+// top Btn
+#topBtn {
+  button {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background:#d7d7d7;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    z-index: 99;
+    i {
+      font-size: 3.5rem;
+      color: var(--gray);
+    }
+  }
+}
+
+// m_gnbBtn 클릭시 body에 추가 
+.open {overflow: hidden;}
+.top {
+  margin: 5rem 0;
+}
+
+// sub_visual 포트폴리오 사진으로 바꾸기
+.sub_visual {
+  background: {
+    image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/about/visual_bg.jpg);
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+}
+
+// 전체 컨텐츠 위, 아래 여백
+#contents_body {
+  padding: 5rem 0;
+}
+.portfolio {
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  gap: 5rem;
+  .portfolio-cont {
+    background: #ECECEC;
+    h3 {}
+    span {}
+  }
+  
+  .portfolio-text {
+    
+    // 대전세잔직업전문학교
+    .portfolio-title {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid $darkColor;
+      align-items: end;
+      padding-bottom: 2rem;
+      h3 {}
+      // 홈 아이콘
+      span {
+        display: inline-block;
+        text-align: end;
+        font-size: 3rem;
+        a {
+          display: inline-block;
+        }
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
+  
+    .portfolio-into {
+      margin-top: 2.6rem;
+      li {
+        display: grid;
+        grid-template-columns: 20rem 1fr;
+        gap: 1rem;
+        margin: 2rem 0;
+        align-items: center;
+        margin-top: 1.5625rem;
+        word-break: keep-all;
+        h4 {
+          position: relative;
+          &::after {
+            content: '';
+            display: block;
+            width: .2rem;
+            height: 2.3rem;
+            position: absolute;
+            top: 3px;
+            right: 0;
+            margin: 0 2rem;
+            background: #ECECEC;
+          }
+        }
+        p {font-size: 2rem;}
+        a {
+          // text-decoration: none;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+}
+
+// 768px 이상 pc
+@media (min-width:768px) {
+
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    gap: 10rem;
+    }
+
+
+  .portfolio-into {
+      li {
+        display: grid;
+        grid-template-columns: 25rem 1fr;
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+    }
+}
