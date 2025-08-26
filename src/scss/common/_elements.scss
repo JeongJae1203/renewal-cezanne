@@ -3,7 +3,7 @@
 @use './mixins' as *;
 
 
-#contents_body { padding: 5rem 0; }
+#contents_body { min-height: calc(100vh - 94px - 246px); padding: 5rem 0; }
 
 /*
 * Common - Top
