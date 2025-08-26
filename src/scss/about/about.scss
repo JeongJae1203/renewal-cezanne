@@ -163,22 +163,29 @@ button {
 }
 
 // 스와이퍼
-// 1200px 이하일 때 이미지 3, 6번 높이 작음, 8번 이미지 왼쪽 아래에 손가락 있음(이미지 전체 높이를 줄이면 보완가능)
+// 768px 이하일 때 이미지 3, 6번 높이 작음, 1번 안나옴
 .about_visual {
-  // height: 65rem; // 1200^
-  background: #ddd;
-  margin-bottom: 10rem;
+  height: 65rem;
+  
   .swiper-wrapper {
     .swiper-slide {
-      img {
-        width: 100%;
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          background: {
+            image: url(../../images/about/about_swiper_img#{$i}.png);
+            repeat: no-repeat;
+            position: center;
+            size: cover;
+          }
+        }
       }
     }
   }
   .swiper-button-next, .swiper-button-prev {
     color: $mainColor;
     background: rgba(255, 255, 255, 0.5);
-    padding: 3rem 2rem;
+    border-radius: 2px;
+    padding: 3.5rem 2rem;
   }
 }
 
@@ -247,28 +254,20 @@ button {
   }
 
   // 스와이퍼
-
-}
-
-// 1200px
-@media screen and (min-width:1200px) {
-  // 스와이퍼
-  .about_visual {
-    height: 65rem;
-  }
+  
 }
 
 /* scroll magic */
 .back-to-position { opacity: 0; transition: 1s; }
 .back-to-position.to-right { transform: translateX(-300px); } // 오른쪽으로 움직이면서 왼쪽에서 등장
-.back-to-position.to-left { transform: translateX(150px); } // 왼쪽으로 움직이면서 오른쪽에서 등장
+.back-to-position.to-left { transform: translateX(300px); } // 왼쪽으로 움직이면서 오른쪽에서 등장
 // show 클래스가 생기면
 .show .back-to-position { opacity: 1; transform: translateX(0); }
 
 .show .back-to-position.delay-0 { transition-delay: 0; }
-.show .back-to-position.delay-1 { transition-delay: .3s; }
-.show .back-to-position.delay-2 { transition-delay: .6s; }
-.show .back-to-position.delay-3 { transition-delay: .9s; }
-.show .back-to-position.delay-4 { transition-delay: 1.2s; }
-.show .back-to-position.delay-5 { transition-delay: 1.5s; }
-.show .back-to-position.delay-6 { transition-delay: 1.8s; }
+.show .back-to-position.delay-1 { transition-delay: .2s; }
+.show .back-to-position.delay-2 { transition-delay: .4s; }
+.show .back-to-position.delay-3 { transition-delay: .6s; }
+.show .back-to-position.delay-4 { transition-delay: .8s; }
+.show .back-to-position.delay-5 { transition-delay: 1s; }
+.show .back-to-position.delay-6 { transition-delay: 1.2s; }

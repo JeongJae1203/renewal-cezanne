@@ -47,7 +47,7 @@ button {
 // sub_visual 포트폴리오 사진으로 바꾸기
 .sub_visual {
   background: {
-    image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/about/visual_bg.jpg);
+    image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/portfolio/portfolio_visual_bg.jpg);
     repeat: no-repeat;
     position: center;
     size: cover;
@@ -84,10 +84,11 @@ a:hover {text-decoration: none;}
 
 
 // 포폴
-
 .portfolio-card:first-child {
   // border-top: 1px solid #ECECEC;
 }
+
+// 포트폴리오 리스트
 .portfolio-card__link {
   position: relative;
   display: grid;
@@ -96,8 +97,15 @@ a:hover {text-decoration: none;}
   padding: 1.8rem 0;
   border-bottom: 1px solid #ECECEC;
   overflow: hidden;
+}
 
-  // 검은 배경 오버레이 (카드 전체)
+/* 이미지, + 아이콘 */
+.portfolio-card__img {
+  position: relative;
+  min-height: 150px;
+  overflow: hidden;
+
+  // 검은 배경 오버레이
   &::before {
     content: "";
     position: absolute;
@@ -105,27 +113,16 @@ a:hover {text-decoration: none;}
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba($darkColor, .2); // 카드 전체를 덮는 검은 반투명
+    background: rgba($darkColor, .4); // 카드를 덮는 검은 반투명
     opacity: 0;
     transition: opacity .25s ease;
     z-index: 2; // 텍스트, 이미지 위로 올라옴
   }
 
-  // hover/포커스 시 어두워짐
-  &:hover::before,
-  &:focus-visible::before {
-    opacity: 1;
-  }
-}
-
-/* 이미지, + 아이콘 */
-.portfolio-card__img {
-  position: relative;
-  min-height: 150px;
-
-  &::before {
+  
+  &::after {
     opacity: 0;
-    transition: opacity .3s;
+    transition: opacity .5s;
     content: '';
     display: block;
     width: 5rem;
@@ -139,12 +136,14 @@ a:hover {text-decoration: none;}
     background: rgba($whiteColor, .9);
   }
 
+  // 포트폴리오 이미지
   img {
     width: 100%;
     height: 100%;
     display: block;
+    transition: transform 0.5s ease; /* 0.3초 동안 부드럽게 변화 */
   }
-  
+
   .plus-icon {
     position: absolute;
     top: 50%;
@@ -152,19 +151,28 @@ a:hover {text-decoration: none;}
     transform: translate(-50%, -50%);
     font-size: 4rem;
     color: $mainColor;
-    // text-shadow: 0px 0px 3px $whiteColor; /* + 그림자 흰색 */
     opacity: 0;
-    transition: opacity .25s;
+    transition: opacity .5s;
     z-index: 5; // 오버레이보다 위
-
   }
 
+  .portfolio-card__link:hover &::after,
+  .portfolio-card__link:focus-visible &::after,
   .portfolio-card__link:hover & .plus-icon,
   .portfolio-card__link:hover &::before,
   .portfolio-card__link:focus-visible & .plus-icon,
   .portfolio-card__link:focus-visible &::before {
     opacity: 1;
   }
+}
+
+// 호버시 이미지 확대
+.portfolio-card__img {
+  overflow: hidden;
+}
+.portfolio-card__link:hover .portfolio-card__img img {
+  transition: transform 0.4s ease; 
+  transform: scale(1.1); /* 120% 크기로 확대 */
 }
 
 .portfolio-card__view {
@@ -180,8 +188,8 @@ a:hover {text-decoration: none;}
 .portfolio-card__link:hover .portfolio-card__view {
   -webkit-animation-name: eff-move;  // hover 시 eff24-move 애니메이션 시작
   animation-name: eff-move;
-  -webkit-animation-duration: .5s; // 애니메이션 한 번 도는 데 0.4초 걸림
-  animation-duration: .5s;
+  -webkit-animation-duration: .6s; // 애니메이션 한 번 도는 데 0.6초 걸림
+  animation-duration: .6s;
   -webkit-animation-timing-function: linear; // 일정한 속도로 애니메이션 실행
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;  // 무한 반복
@@ -229,6 +237,7 @@ a:hover {text-decoration: none;}
   .portfolio-card__link {
     grid-template-columns: 40rem 1fr;
     padding: 2rem 0;
+    gap: 4.5rem;
   }
   .portfolio-card__img {}
   .portfolio-card__title { margin-top: .4rem; }
