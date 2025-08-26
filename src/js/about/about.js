@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // loop : 반복
     // autoplay : 자동재생
     loop: true,
-    autoplay: true,
+    autoplay: {
+      delay: 3000,
+    },
+    speed: 1000,
     pagination: {
       el: '.swiper-pagination',
     },
