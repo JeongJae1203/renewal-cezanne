@@ -136,6 +136,10 @@
       gap: 4rem;
 
       .gallery__item {
+        .item__img {
+          max-height: 21.75rem;
+        }
+
         span {
           white-space: unset;
         }
