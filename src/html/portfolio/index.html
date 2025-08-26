@@ -8,8 +8,13 @@
 		<link rel="stylesheet" href="../../css/common.css">
     <!-- scss -->
 		<link rel="stylesheet" href="../../scss/common.scss">
+    <link rel="stylesheet" href="../../scss/common/sitemap.scss">
 		<link rel="stylesheet" href="../../scss/about/common.scss">
 		<link rel="stylesheet" href="../../scss/portfolio/portfolio.scss">
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../../js/common/common.js"></script>
+    <script src="../../js/common/menu.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -23,7 +28,14 @@
         <div id="header">
           <div class="inner">
             <div class="logo"><a href="../../../index.html"><img src="../../images/common/logo.png" alt="대전세잔직업전문학교"></a></div>
-            
+            <!-- 모바일 메뉴보기 -->
+            <div class="m_gnbBtn">
+              <button type="button">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+              </button>
+            </div>
             <!-- mobile gnb -->
             <div class="mobileWrap">
               <div class="m_gnb">
@@ -40,7 +52,7 @@
                     <span>교육과정</span>
                     <div class="subMenu">
                       <ul class="inner">
-                        <li><a href="#">교육과정</a></li>
+                        <li><a href="../education/education.html">교육과정</a></li>
                       </ul>
                     </div>
                   </li>
@@ -56,9 +68,9 @@
                     <span>상담센터</span>
                     <div class="subMenu">
                       <ul class="inner">
-                        <li><a href="#">온라인 상담</a></li>
-                        <li><a href="#">카카오톡 상담</a></li>
-                        <li><a href="#">고객칭찬/불편접수</a></li>
+                        <li><a href="../counsel/index.html">온라인 상담</a></li>
+                        <li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+                        <li><a href="../counsel/receipt.html">고객칭찬/불편접수</a></li>
                       </ul>
                     </div>
                   </li>
@@ -66,7 +78,7 @@
                     <span>취업센터</span>
                     <div class="subMenu">
                       <ul class="inner">
-                        <li><a href="#">취업현황</a></li>
+                        <li><a href="../job/job.html">취업현황</a></li>
                       </ul>
                     </div>
                   </li>
@@ -74,23 +86,15 @@
                     <span>커뮤니티</span>
                     <div class="subMenu">
                       <ul class="inner">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">수강후기</a></li>
-                        <li><a href="#">세잔갤러리</a></li>
-                        <li><a href="#">공모전</a></li>
-                        <li><a href="#">자격정보</a></li>
+                        <li><a href="../community/notice.html">공지사항</a></li>
+                        <li><a href="../community/post.html">수강후기</a></li>
+                        <li><a href="../community/gallery.html">세잔갤러리</a></li>
+                        <li><a href="../community/competition.html">공모전</a></li>
+                        <li><a href="../community/qualification.html">자격정보</a></li>
                       </ul>
                     </div>
                     </li>
                 </ul>
-              </div>
-              <!-- 모바일 메뉴보기 -->
-              <div class="m_gnbBtn">
-                <button type="button">
-                  <span class="bar1"></span>
-                  <span class="bar2"></span>
-                  <span class="bar3"></span>
-                </button>
               </div>
             </div>
 
@@ -107,10 +111,10 @@
                     </div>
                   </li>
                   <li>
-                    <a href="#">교육과정</a>
+                    <a href="../education/education.html">교육과정</a>
                     <div class="subMenu">
                       <ul class="inner">
-                        <li><a href="#">교육과정</a></li>
+                        <li><a href="../education/education.html">교육과정</a></li>
                       </ul>
                     </div>
                   </li>
@@ -123,32 +127,32 @@
                     </div>
                   </li>
                   <li>
-                    <a href="#">상담센터</a>
+                    <a href="../counsel/index.html">상담센터</a>
                     <div class="subMenu">
                       <ul class="inner">
-                        <li><a href="#">온라인 상담</a></li>
-                        <li><a href="#">카카오톡 상담</a></li>
-                        <li><a href="#">고객칭찬/불편접수</a></li>
+                        <li><a href="../counsel/index.html">온라인 상담</a></li>
+                        <li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+                        <li><a href="../counsel/receipt.html">고객칭찬/불편접수</a></li>
                       </ul>
                     </div>
                   </li>
                   <li>
-                    <a href="#">취업센터</a>
+                    <a href="../job/job.html">취업센터</a>
                     <div class="subMenu">
                       <ul class="inner">
-                        <li><a href="#">취업현황</a></li>
+                        <li><a href="../job/job.html">취업현황</a></li>
                       </ul>
                     </div>
                   </li>
                   <li>
-                    <a href="#">커뮤니티</a>
+                    <a href="../community/notice.html">커뮤니티</a>
                     <div class="subMenu">
                       <ul class="inner">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">수강후기</a></li>
-                        <li><a href="#">세잔갤러리</a></li>
-                        <li><a href="#">공모전</a></li>
-                        <li><a href="#">자격정보</a></li>
+                        <li><a href="../community/notice.html">공지사항</a></li>
+                        <li><a href="../community/post.html">수강후기</a></li>
+                        <li><a href="../community/gallery.html">세잔갤러리</a></li>
+                        <li><a href="../community/competition.html">공모전</a></li>
+                        <li><a href="../community/qualification.html">자격정보</a></li>
                       </ul>
                     </div>
                     </li>
@@ -156,7 +160,7 @@
               </div>
               <!-- 사이트맵 -->
               <div class="sitemapBtn">
-                <button type="button" onclick="btnAni(this)"> 
+                <button type="button"> 
                   <span class="bar1"></span>
                   <span class="bar2"></span>
                   <span class="bar3"></span>
@@ -165,7 +169,7 @@
             </div>
           </div>
         </div>
-		  </header>
+      </header>
       <div class="contents">
         <div class="sub_visual">
           <div class="inner">

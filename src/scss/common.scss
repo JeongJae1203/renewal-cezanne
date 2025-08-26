@@ -86,56 +86,6 @@ header {
       align-items: center;
       height: 100%;
     }
-    .m_gnb {
-      display:none;
-      position: absolute;
-      top: 94px;
-      right: 0;
-      width: 100%;
-      height: calc(100vh - 94px);
-      background: $darkColor;
-      padding: 3rem;
-      z-index: 999;
-      > ul {
-        > li {
-          > span {
-            display: block;
-            color: $whiteColor;
-            font-size: 2rem;
-            width: 100%;
-            border-bottom:1px solid rgba(255,255,255,.7);
-            padding-bottom: 2rem;
-          }
-        }
-        .subMenu {
-          .inner {
-            display: block;
-            margin: 1.5rem 0 2.5rem 0;
-          }
-          li {
-            a {
-              display: block;
-              color: $whiteColor;
-              opacity: .6;
-              font-size: 1.8rem;
-              padding: 1rem 0;
-              &:hover {
-                opacity: 1;
-              }
-              &::before {
-                content: '';
-                display: inline-block;
-                vertical-align: middle;
-                width: 6px;
-                height: 2px;
-                background: var(--gray);
-                margin-right: 5px;
-              }
-            }
-          }
-        }
-      }
-    }
     .m_gnbBtn {
       button {
         width: 5rem;
