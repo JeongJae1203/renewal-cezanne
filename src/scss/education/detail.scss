@@ -1,0 +1,155 @@
+// @use '../common.scss' as *;
+@import url(../../css/reset.css);
+// color
+$mainColor:#E6204B;
+$subColor:#4C46F6;
+$darkColor:#202226;
+$whiteColor:#fff;
+
+// breakpoint - 768px, 992px, 1200px
+
+#container{
+  .back{
+    font-size:1.3rem;
+  }
+  #stra-info{
+    margin:3.5rem auto;
+    .stra-info-wrap{
+      .stra-info-tag{}
+      .stra-title{
+        font-size:2.6rem; font-weight:600;
+        margin:1.5rem 0 3rem; color:$darkColor;
+      }
+      .stra-text{
+        font-weight:300; line-height:2rem;
+        p{
+          margin-bottom:0.625rem;
+        }
+      }
+    }
+  }
+  #stra-edu{
+    padding:2.5rem 0; margin:3.5rem auto; color:$whiteColor; background-color:$darkColor;
+    .stra-edu-title{
+      font-size:2.6rem; font-weight:600;
+      padding:1.25rem 0;
+    }
+    .stra-edu-list{
+      display:grid; grid-template-columns:repeat(2, 1fr); justify-items:start; gap:10px;
+      padding:1.5rem 0;
+      ul{
+        li{
+          text-align:center; padding:0.625rem 1.25rem; margin:0.625rem 0; border-radius:50px; background-color:$mainColor;
+        }
+      }
+      span{
+        p{
+          padding:0.625rem 1.25rem; margin:0.625rem 0;
+        }
+      }
+    }
+  }
+  #stra-int{
+    margin:3.5rem auto;
+    .stra-int-wrap{
+      margin-bottom:2.5rem;
+      .stra-int-title{
+        display:flex; align-items:center; gap:5px;
+        font-size:2.2rem; font-weight:500;
+        margin-bottom:1.25rem;
+        &::before{
+          display:inline-block; content:''; width:0.25rem; height:2.2rem; background-color:$mainColor;
+        }
+      }
+      .stra-int.table{
+        display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
+        text-align:center; padding:1px; background-color:var(--default-border-color);
+        .th{
+          font-weight:500;
+          padding:1.25rem 0.625rem; background-color:var(--gray-bgcolor);
+        }
+        .td{
+          padding:1.25rem 0.625rem; background-color:$whiteColor;
+        }
+      }
+    }
+    .stra-int-wrap2{
+      margin-bottom:2.5rem;
+      .stra-int-title{
+        display:flex; align-items:center; gap:5px;
+        font-size:2.2rem; font-weight:500;
+        margin-bottom:1.25rem;
+        &::before{
+          display:inline-block; content:''; width:0.25rem; height:2.2rem; background-color:$mainColor;
+        }
+      }
+
+      // 
+      .stra-int-list1{
+        display:grid; grid-template-columns:repeat(1, 1fr 2fr 3fr 1fr); gap:1px;
+        padding:1px; background-color:$darkColor;
+        .th{
+          font-weight:500; text-align:center;
+          padding:1.25rem 0.625rem; background-color:var(--gray-bgcolor);
+        }
+        .td{
+          background-color:$whiteColor;
+          div{
+            border-bottom:1px solid $darkColor;
+            &:last-child{
+              border:none;
+            }
+          }
+        }
+      }
+    }
+    .stra-int-wrap3{
+      margin-bottom:2.5rem;
+      .stra-int-title{
+        display:flex; align-items:center; gap:5px;
+        font-size:2.2rem; font-weight:500;
+        margin-bottom:1.25rem;
+        &::before{
+          display:inline-block; content:''; width:0.25rem; height:2.2rem; background-color:$mainColor;
+        }
+        // 네모
+        /* &::before{
+          display:inline-block; content:''; width:0.625rem; height:0.625rem; background-color:$mainColor;
+        } */
+        // ???
+        /* display:flex; justify-content:space-between; align-items:center; gap:50px;
+        font-size:2.2rem; font-weight:500;
+        margin-bottom:1.25rem;
+        &::before{
+          display:inline-block; content:''; width:25%; height:1px; background-color:$mainColor;
+        }
+        &::after{
+          display:inline-block; content:''; width:25%; height:1px; background-color:$mainColor;
+        } */
+      }
+    }
+  }
+}
+
+@media screen and (min-width:768px){
+  #container{
+    #stra-edu{
+      .inner{
+        .stra-edu-list.list1{
+          grid-template-columns:repeat(2, 1fr 2fr);
+        }
+        .stra-edu-list.list2{
+          grid-template-columns:repeat(1, 1fr 4fr);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:992px){
+  
+}
+
+@media screen and (min-width:1200px){
+
+}
