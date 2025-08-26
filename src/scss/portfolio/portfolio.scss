@@ -1,0 +1,248 @@
+// color
+$mainColor : #E6204B;
+$subColor : #4C46F6;
+$darkColor : #202226;
+$whiteColor : #fff;
+
+// head
+h1 {font-size: 3rem;}
+h2 {font-size: 2.8rem;}
+h3 {font-size: 2.6rem;}
+h4 {font-size: 2.4rem;}
+h5 {font-size: 2.2rem;}
+h6 {font-size: 2rem;}
+
+// button 
+button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+// top Btn
+#topBtn {
+  button {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background:#d7d7d7;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    z-index: 99;
+    i {
+      font-size: 3.5rem;
+      color: var(--gray);
+    }
+  }
+}
+
+// m_gnbBtn 클릭시 body에 추가 
+.open {overflow: hidden;}
+.top {
+  margin: 5rem 0;
+}
+
+// sub_visual 포트폴리오 사진으로 바꾸기
+.sub_visual {
+  background: {
+    image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/portfolio/portfolio_visual_bg.jpg);
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+}
+
+// 전체 컨텐츠 위, 아래 여백
+#contents_body {
+  padding: 5rem 0;
+}
+
+// 포트폴리오
+a {text-decoration: none;}
+a:hover {text-decoration: none;}
+
+// 포트폴리오 메뉴 버튼
+.menuBtn {
+  text-align: center;
+  button {
+    font: inherit;
+    color: inherit;
+    padding: 1rem 2rem;
+    margin-top: 1.5625rem;
+    word-break: keep-all;
+    border: 1px solid #ECECEC;
+    border-radius: 20px;
+    &:hover {
+      background: $mainColor;
+      color: $whiteColor;
+      transition: .3s;
+    }
+  }
+}
+
+
+// 포폴
+.portfolio-card:first-child {
+  // border-top: 1px solid #ECECEC;
+}
+
+// 포트폴리오 리스트
+.portfolio-card__link {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid #ECECEC;
+  overflow: hidden;
+}
+
+/* 이미지, + 아이콘 */
+.portfolio-card__img {
+  position: relative;
+  min-height: 150px;
+  overflow: hidden;
+
+  // 검은 배경 오버레이
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($darkColor, .4); // 카드를 덮는 검은 반투명
+    opacity: 0;
+    transition: opacity .25s ease;
+    z-index: 2; // 텍스트, 이미지 위로 올라옴
+  }
+
+  
+  &::after {
+    opacity: 0;
+    transition: opacity .5s;
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba($whiteColor, .9);
+  }
+
+  // 포트폴리오 이미지
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.5s ease; /* 0.3초 동안 부드럽게 변화 */
+  }
+
+  .plus-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: $mainColor;
+    opacity: 0;
+    transition: opacity .5s;
+    z-index: 5; // 오버레이보다 위
+  }
+
+  .portfolio-card__link:hover &::after,
+  .portfolio-card__link:focus-visible &::after,
+  .portfolio-card__link:hover & .plus-icon,
+  .portfolio-card__link:hover &::before,
+  .portfolio-card__link:focus-visible & .plus-icon,
+  .portfolio-card__link:focus-visible &::before {
+    opacity: 1;
+  }
+}
+
+// 호버시 이미지 확대
+.portfolio-card__img {
+  overflow: hidden;
+}
+.portfolio-card__link:hover .portfolio-card__img img {
+  transition: transform 0.4s ease; 
+  transform: scale(1.1); /* 120% 크기로 확대 */
+}
+
+.portfolio-card__view {
+  overflow: visible; // 자식 요소가 넘칠 경우 보여줌
+  -webkit-transform: translateZ(0); // GPU 가속 트리거 (성능 향상)
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0); // GPU 가속 유지용 설정
+  -webkit-backface-visibility: hidden; // 뒷면이 보이지 않도록 설정
+  backface-visibility: hidden;
+  -webkit-transition: color .4s; // color 변화 시 0.4초 동안 부드럽게 전환
+  transition: color .4s;
+}
+.portfolio-card__link:hover .portfolio-card__view {
+  -webkit-animation-name: eff-move;  // hover 시 eff24-move 애니메이션 시작
+  animation-name: eff-move;
+  -webkit-animation-duration: .6s; // 애니메이션 한 번 도는 데 0.6초 걸림
+  animation-duration: .6s;
+  -webkit-animation-timing-function: linear; // 일정한 속도로 애니메이션 실행
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;  // 무한 반복
+  animation-iteration-count: infinite;
+  color: $mainColor;
+}
+
+@keyframes eff-move {
+  30% {
+    -webkit-transform: translate3d(0, -1px, 0) rotate(1deg);  // 위로 1px, 오른쪽으로 1도 회전 
+    transform: translate3d(0, -1px, 0) rotate(1deg)
+  }
+  50% {
+    -webkit-transform: translate3d(0, -.5px, 0) rotate(-.8deg);  // 약간 아래로, 왼쪽 회전
+    transform: translate3d(0, -.5px, 0) rotate(-.8deg)
+  }
+  80% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(-.5deg); // 다시 원위치로 가까워지면서 약간 왼쪽 회전
+    transform: translate3d(0, 0, 0) rotate(-.5deg)
+  }
+  100% {
+    -webkit-transform: rotate(0deg); // 최종적으로 회전 초기화
+    transform: rotate(0deg)
+  }
+}
+
+/* 텍스트 영역 */
+.portfolio-card__body {
+  position: relative;
+  z-index: 1; // 기본은 이미지 위
+  display: grid;
+  gap: 10px;
+  line-height: 1.5625; 
+  word-break: keep-all;
+  margin-left: .5rem;
+  .portfolio-card__view {
+    // display: none;
+    text-align: end; 
+    margin-right: .5rem;
+  }
+}
+
+// 768px 이상 가로 배치
+@media (min-width:768px) {
+  .portfolio-card__link {
+    grid-template-columns: 40rem 1fr;
+    padding: 2rem 0;
+    gap: 4.5rem;
+  }
+  .portfolio-card__img {}
+  .portfolio-card__title { margin-top: .4rem; }
+  .portfolio-card__name { font-size: 1.4rem; }
+  .portfolio-card__view { 
+    margin: 2rem .5rem 0 0; 
+  }
+}
