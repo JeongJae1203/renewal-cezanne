@@ -3,111 +3,388 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전기내선 설치, 유지보수, 배선설계 전문가</title>
+    <title>대전세잔직업전문학교 :: 전기내선 설치, 유지보수, 배선설계 전문가</title>
+    <link rel="shortcut icon" href="../../../../static/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../css/reset.css">
     <link rel="stylesheet" href="../../../css/common.css">
-    <link rel="stylesheet" href="../../../scss/about/common.scss">
+    <link rel="stylesheet" href="../../../scss/common.scss">
+		<link rel="stylesheet" href="../../../scss/common/sitemap.scss">
+		<link rel="stylesheet" href="../../../scss/about/common.scss">
     <link rel="stylesheet" href="../../../scss/education/detail.scss">
+    <!-- Common - Menu js -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/common/menu.js"></script>
   </head>
   <body>
+    <header>
+			<div id="utill">
+				<ul class="inner">
+					<li><a href="#">회원가입</a></li>
+					<li><a href="#">로그인</a></li>
+				</ul>
+			</div>
+			<div id="header">
+				<div class="inner">
+					<div class="logo"><a href="/"><img src="../../../images/common/logo.png" alt="대전세잔직업전문학교"></a></div>
+					<!-- 모바일 메뉴보기 -->
+					<div class="m_gnbBtn">
+						<button type="button">
+							<span class="bar1"></span>
+							<span class="bar2"></span>
+							<span class="bar3"></span>
+						</button>
+					</div>
+					<!-- mobile gnb -->
+					<div class="mobileWrap">
+						<div class="m_gnb">
+							<div class="m_gnb__ar">
+								<h2 class="tit">최고의 강사진과 맞춤형 관리 <br> 실무 중심 커리큘럼</h2>
+								<h3 class="subtit">전문가 양성 대전세잔직업전문학교</h3>
+							</div>
+							<div class="m_gnb__content">
+								<ul>
+									<li>
+										<span>학교소개</span>
+										<div class="subMenu">
+											<ul class="inner">
+												<li><a href="../../about/about.html">학교소개</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<span>교육과정</span>
+										<div class="subMenu">
+											<ul class="inner">
+												<li><a href="../education.html">교육과정</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<span>포트폴리오</span>
+										<div class="subMenu">
+											<ul class="inner">
+												<li><a href="../../portfolio/index.html">포트폴리오</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<span>상담센터</span>
+										<div class="subMenu">
+											<ul class="inner">
+												<li><a href="../../counsel/index.html">온라인 상담</a></li>
+												<li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+												<li><a href="../../counsel/receipt.html">고객칭찬/불편접수</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<span>취업센터</span>
+										<div class="subMenu">
+											<ul class="inner">
+												<li><a href="../../job/job.html">취업현황</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<span>커뮤니티</span>
+										<div class="subMenu">
+											<ul class="inner">
+												<li><a href="../../community/notice.html">공지사항</a></li>
+												<li><a href="../../community/post.html">수강후기</a></li>
+												<li><a href="../../community/gallery.html">세잔갤러리</a></li>
+												<li><a href="../../community/competition.html">공모전</a></li>
+												<li><a href="../../community/qualification.html">자격정보</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- web gnb -->
+					<div class="webWrap">	
+						<div class="gnbNav">
+							<ul>
+								<li>
+									<a href="../../about/about.html">학교소개</a>
+									<div class="subMenu">
+										<ul class="inner">
+											<li><a href="../../about/about.html">학교소개</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="../education.html">교육과정</a>
+									<div class="subMenu">
+										<ul class="inner">
+											<li><a href="../education.html">교육과정</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="../../portfolio/index.html">포트폴리오</a>
+									<div class="subMenu">
+										<ul class="inner">
+											<li><a href="../../portfolio/index.html">포트폴리오</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="../../counsel/index.html">상담센터</a>
+									<div class="subMenu">
+										<ul class="inner">
+											<li><a href="../../counsel/index.html">온라인 상담</a></li>
+											<li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+											<li><a href="../../counsel/receipt.html">고객칭찬/불편접수</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="../../job/job.html">취업센터</a>
+									<div class="subMenu">
+										<ul class="inner">
+											<li><a href="../../job/job.html">취업현황</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="../../community/notice.html">커뮤니티</a>
+									<div class="subMenu">
+										<ul class="inner">
+											<li><a href="../../community/notice.html">공지사항</a></li>
+											<li><a href="../../community/post.html">수강후기</a></li>
+											<li><a href="../../community/gallery.html">세잔갤러리</a></li>
+											<li><a href="../../community/competition.html">공모전</a></li>
+											<li><a href="../../community/qualification.html">자격정보</a></li>
+										</ul>
+									</div>
+									</li>
+							</ul>
+						</div>
+						<!-- 사이트맵 -->
+						<div class="sitemapBtn">
+							<button type="button">
+								<span class="bar1"></span>
+								<span class="bar2"></span>
+								<span class="bar3"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
     <div id="container">
+      <div id="topBtn">
+				<button type="button"><i class="ri-arrow-up-line"></i></button>
+			</div>
       <!-- stra-info -->
-      <div class="back inner">
-        <a href="../education.html">[목록으로 이동]</a>
-      </div>
-      <section id="stra-info" class="inner">
-        <div class="stra-info-wrap">
-          <span class="stra-info-tag">[산업구조변화대응특화훈련]</span>
-          <div class="stra-title">전기내선 설치, 유지보수, 배선설계 전문가</div>
-          <div class="stra-text">
-            <p>산업구조변화(빅데이터, IOT 등의 변화)에 대응하기 위해 ICT 융합 전기공사를 도입하여 전기와 정보통신기술이 융합된 설비에 대한 지식과 기술을 습득함으로써 변화하는 산업현장의 스마트 설비에 대한 시공, 유지, 보수, 안전관리를 할 수 있는 전문화된 기술인력을 양성하고 스마트하게 대응할 수 있는 전기기술자의 능력을 함양할 수 있습니다.</p>
-            <br>
-            <p>기존의 NCS 내선교과에 IT접목 교과를 접목하여 훈련과정을 구성하였습니다.</p>
-            <br>
-            <p>- 교육내용 : 일러스트레이터, 포토샵, 인디자인, HTML&CSS, 프리미어, 에프터이펙트, 포트폴리오 제작, 광고디자인 활용 및 제작, 영상편집 실무활용</p>
-            <p>- 교육대상 : 전기 분야로 취업을 희망하는 구직자.</p>
-          </div>
+      <div id="contents_body">
+        <div class="back inner">
+          <a href="../education.html">[목록으로 이동]</a>
         </div>
-      </section>
-      <!-- stra-edu -->
-      <section id="stra-edu">
-        <div class="inner">
-          <div class="stra-edu-title">과정 요강</div>
-          <div class="stra-edu-list">
-            <ul>
-              <li>개강일정</li>
-              <li>교육기간</li>
-              <li>훈련유형</li>
-              <li>NSC직종</li>
-            </ul>
-            <span>
-              <p>2025년</p>
-              <p>1일 7시간 840시간</p>
-              <p>산업구조변화대응특화훈련</p>
-              <p>내선공사(19010701)</p>
-            </span>
-            <ul>
-              <li>모집인원</li>
-              <li>교육문의</li>
-              <li>담당교사</li>
-            </ul>
-            <span>
-              <p>23명</p>
-              <p>042)252-1153-4</p>
-              <p>OOO</p>
-            </span>
-          </div>
-          <div class="stra-edu-list">
-            <ul>
-              <li>취득가능자격증</li>
-              <li>졸업 전후 진출분야</li>
-            </ul>
-            <span>
-              <p>전기기능사, 승강기기능사</p>
-              <p>전기공사현장, 건물관리, 승강기 유지관리, 배전반, 콘트롤판넬 제조 관리</p>
-            </span>
-          </div>
-        </div>
-      </section>
-      <!-- stra-int -->
-      <section id="stra-int" class="inner">
-        <div class="stra-int-wrap">
-          <div class="stra-int-title">NCS 직업기초능력</div>
-          <div class="stra-int table">
-            <div class="th">구분</div>
-            <div class="th">교과목</div>
-            <div class="th">학습모듈</div>
-            <div class="th">하위학습모듈</div>
-            <div class="td"><br></div>
-            <div class="td"><br></div>
-            <div class="td"><br></div>
-            <div class="td"><br></div>
-          </div>
-        </div>
-        <div class="stra-int-wrap2">
-          <div class="stra-int-title">NCS 전공교과</div>
-          <div class="stra-int-list1">
-            <div class="th">NO.</div>
-            <div class="th">교과목</div>
-            <div class="th">능력단위명</div>
-            <div class="th">수준</div>
-            <div class="td">1</div>
-            <div class="td">전기시공 및 관리</div>
-            <div class="td">
-              <div>배관 공사</div>
-              <div>배선공사</div>
-              <div>배관 배선 공사</div>
+        <section id="stra-info" class="inner">
+          <div class="stra-info-wrap">
+            <span class="stra-info-tag">[산업구조변화대응특화훈련]</span>
+            <div class="stra-title">전기내선 설치, 유지보수, 배선설계 전문가</div>
+            <div class="stra-text">
+              <p>산업구조변화(빅데이터, IOT 등의 변화)에 대응하기 위해 ICT 융합 전기공사를 도입하여 전기와 정보통신기술이 융합된 설비에 대한 지식과 기술을 습득함으로써 변화하는 산업현장의 스마트 설비에 대한 시공, 유지, 보수, 안전관리를 할 수 있는 전문화된 기술인력을 양성하고 스마트하게 대응할 수 있는 전기기술자의 능력을 함양할 수 있습니다.</p>
+              <br>
+              <p>기존의 NCS 내선교과에 IT접목 교과를 접목하여 훈련과정을 구성하였습니다.</p>
+              <br>
+              <p>- 교육내용 : 일러스트레이터, 포토샵, 인디자인, HTML&CSS, 프리미어, 에프터이펙트, 포트폴리오 제작, 광고디자인 활용 및 제작, 영상편집 실무활용</p>
+              <p>- 교육대상 : 전기 분야로 취업을 희망하는 구직자.</p>
             </div>
-            <div class="td">2</div>
           </div>
-        </div>
-        <div class="stra-int-wrap3">
-          <div class="stra-int-title">비NCS 교과</div>
-          <div class="stra-int-list2">
-            
+        </section>
+        <!-- stra-edu -->
+        <section id="stra-edu">
+          <div class="inner">
+            <div class="stra-edu-title">과정 요강</div>
+            <div class="stra-edu-list">
+              <ul>
+                <li>개강일정</li>
+                <li>교육기간</li>
+                <li>훈련유형</li>
+                <li>NSC직종</li>
+              </ul>
+              <span>
+                <p>2025년</p>
+                <p>1일 7시간 840시간</p>
+                <p>산업구조변화대응특화훈련</p>
+                <p>내선공사(19010701)</p>
+              </span>
+              <ul>
+                <li>모집인원</li>
+                <li>교육문의</li>
+                <li>담당교사</li>
+              </ul>
+              <span>
+                <p>23명</p>
+                <p>042)252-1153-4</p>
+                <p>OOO</p>
+              </span>
+            </div>
+            <div class="stra-edu-list">
+              <ul>
+                <li>취득가능자격증</li>
+                <li>졸업 전후 진출분야</li>
+              </ul>
+              <span>
+                <p>전기기능사, 승강기기능사</p>
+                <p>전기공사현장, 건물관리, 승강기 유지관리, 배전반, 콘트롤판넬 제조 관리</p>
+              </span>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <!-- stra-int -->
+        <section id="stra-int" class="inner">
+          <div class="stra-int-wrap">
+            <div class="stra-int-title">NCS 직업기초능력</div>
+            <div class="stra-int table">
+              <div class="th">구분</div>
+              <div class="th">교과목</div>
+              <div class="th">학습모듈</div>
+              <div class="th">하위학습모듈</div>
+              <div class="td"><br></div>
+              <div class="td"><br></div>
+              <div class="td"><br></div>
+              <div class="td"><br></div>
+            </div>
+          </div>
+          <div class="stra-int-wrap2">
+            <div class="stra-int-title">NCS 전공교과</div>
+            <div class="stra-int-list1">
+              <div class="th">NO.</div>
+              <div class="th">교과목</div>
+              <div class="th">능력단위명</div>
+              <div class="th">수준</div>
+              <div class="td">1</div>
+              <div class="td">전기시공 및 관리</div>
+              <div class="td">
+                <div>배관 공사</div>
+                <div>배선공사</div>
+                <div>배관 배선 공사</div>
+              </div>
+              <div class="td">2</div>
+            </div>
+          </div>
+          <div class="stra-int-wrap3">
+            <div class="stra-int-title">비NCS 교과</div>
+            <div class="stra-int-list2">
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Footer -->
+		<footer>
+			<div class="familySite">
+				<div class="inner">
+					<p class="tit">FAMILY SITE</p>
+					<button type="button" class="arrbtn btnPrev"><i class="ri-arrow-left-s-line"></i></button>
+					<div class="famList">
+						<ul>
+							<li><a href="#">고용노동부 대전지방고용노동청</a></li>
+							<li><a href="#">대전고용센터</a></li>
+							<li><a href="#">직업훈련포털HRD-NET</a></li>
+							<li><a href="#">WORKNET</a></li>
+							<li><a href="#">CQ-NET</a></li>
+							<li><a href="#">Q-NET</a></li>
+							<li><a href="#">NCS국가직무능력표준</a></li>
+						</ul>
+					</div>
+					<button type="button" class="arrbtn btnNext"><i class="ri-arrow-right-s-line"></i></button>
+				</div>
+			</div>
+			<div id="footer">
+				<div class="footerMenu">
+					<ul class="inner">
+						<li><a href="../../about/about.html">학교소개</a></li>
+						<li><a href="../../common/agreement.html">이용약관</a></li>
+						<li><a href="../../common/agreement.html" class="privacy">개인정보처리방침</a></li>
+						<li><a href="../../common/location.html">찾아오시는 길</a></li>
+					</ul>
+				</div>
+				<div class="footerInfo">
+					<div class="inner">
+						<div class="flogo"><span>대전세잔직업전문학교</span></div>
+						<address>
+							<p>대전 중구 중앙로 137번길 36 대전세잔직업전문학교</p>
+							<p>사업자등록번호 : 305-90-66359</p>
+							<p><span class="f_white">Tel . 042)252-1153</span> Fax. 042)252-1105</p>
+							<small>&copy 대전세잔직업전문학교. All rights Reserved.</small>
+						</address>
+						<div class="sns">
+							<button type="button"><i class="ri-youtube-line"></i></button>
+							<button type="button"><i class="ri-facebook-fill"></i></button>
+							<button type="button"><i class="ri-instagram-line"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Popup -->
+    <div id="sitemap" class="sitemap">
+      <div class="sitemap__container">
+				<div class="sitemap__ar">
+					<div class="sitemap__util">
+						<p><img src="../../../images/common/logo.png" alt=""></p>
+						<h2 class="tit">최고의 강사진과 맞춤형 관리 <br> 실무 중심 커리큘럼</h2>
+						<h3 class="subtit">전문가 양성 대전세잔직업전문학교</h3>
+					</div>
+					<div class="sitemap__content">
+						<button type="button" class="btn__close">
+              <i class="ri-close-large-line"></i>
+            </button>
+						<div class="sitemap__menu">
+							<div class="sitemap__item">
+								<h3 class="title">학교 소개</h3>
+								<ul>
+									<li><a href="../../about/about.html">학교 소개</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">교육 과정</h3>
+								<ul>
+									<li><a href="../education.html">교육 과정</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">포트폴리오</h3>
+								<ul>
+									<li><a href="../../portfolio/index.html">포트폴리오</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">상담 센터</h3>
+								<ul>
+									<li><a href="../../counsel/index.html">온라인 상담</a></li>
+									<li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+									<li><a href="../../counsel/receipt.html" target="_blank">고객 칭찬 / 불편 접수</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">취업 센터</h3>
+								<ul>
+									<li><a href="../../job/job.html">취업 현황</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">커뮤니티</h3>
+								<ul>
+									<li><a href="../../community/notice.html">공지사항</a></li>
+									<li><a href="../../community/post.html">수강 후기</a></li>
+									<li><a href="../../community/gallery.html">세잔 갤러리</a></li>
+									<li><a href="../../community/competition.html">공모전</a></li>
+									<li><a href="../../community/qualification.html">자격 정보</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+      </div>
+      <div class="sitemap__bg"></div>
     </div>
   </body>
 </html>

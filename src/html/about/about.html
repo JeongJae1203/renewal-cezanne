@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대전세잔직업전문학교 :: 학교 소개</title>
+    <link rel="shortcut icon" href="../../../static/favicon.png" type="image/x-icon">
     <!-- swiper cdn -->
     <link  rel="stylesheet"   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <!-- gsap cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <!-- scroll magic cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
     <link rel="stylesheet" href="../../css/reset.css">
 		<link rel="stylesheet" href="../../css/common.css">
     <!-- scss -->
 		<link rel="stylesheet" href="../../scss/common.scss">
 		<link rel="stylesheet" href="../../scss/about/common.scss">
+    <link rel="stylesheet" href="../../scss/common/sitemap.scss">
 		<link rel="stylesheet" href="../../scss/about/about.scss">
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../../js/common/common.js"></script>
+    <script src="../../js/common/menu.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -34,74 +35,78 @@
         <div id="header">
           <div class="inner">
             <div class="logo"><a href="../../../index.html"><img src="../../images/common/logo.png" alt="대전세잔직업전문학교"></a></div>
-            
+            <div class="m_gnbBtn">
+              <button type="button">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+              </button>
+            </div>
             <!-- mobile gnb -->
             <div class="mobileWrap">
               <div class="m_gnb">
-                <ul>
-                  <li>
-                    <span>학교소개</span>
-                    <div class="subMenu">
-                      <ul class="inner">
-                        <li><a href="./about.html">학교소개</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <span>교육과정</span>
-                    <div class="subMenu">
-                      <ul class="inner">
-                        <li><a href="#">교육과정</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <span>포트폴리오</span>
-                    <div class="subMenu">
-                      <ul class="inner">
-                        <li><a href="../portfolio/index.html">포트폴리오</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <span>상담센터</span>
-                    <div class="subMenu">
-                      <ul class="inner">
-                        <li><a href="#">온라인 상담</a></li>
-                        <li><a href="#">카카오톡 상담</a></li>
-                        <li><a href="#">고객칭찬/불편접수</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <span>취업센터</span>
-                    <div class="subMenu">
-                      <ul class="inner">
-                        <li><a href="#">취업현황</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <span>커뮤니티</span>
-                    <div class="subMenu">
-                      <ul class="inner">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">수강후기</a></li>
-                        <li><a href="#">세잔갤러리</a></li>
-                        <li><a href="#">공모전</a></li>
-                        <li><a href="#">자격정보</a></li>
-                      </ul>
-                    </div>
+                <div class="m_gnb__ar">
+                  <h2 class="tit">최고의 강사진과 맞춤형 관리 <br> 실무 중심 커리큘럼</h2>
+                  <h3 class="subtit">전문가 양성 대전세잔직업전문학교</h3>
+                </div>
+                <div class="m_gnb__content">
+                  <ul>
+                    <li>
+                      <span>학교소개</span>
+                      <div class="subMenu">
+                        <ul class="inner">
+                          <li><a href="./about.html">학교소개</a></li>
+                        </ul>
+                      </div>
                     </li>
-                </ul>
-              </div>
-              <!-- 모바일 메뉴보기 -->
-              <div class="m_gnbBtn">
-                <button type="button">
-                  <span class="bar1"></span>
-                  <span class="bar2"></span>
-                  <span class="bar3"></span>
-                </button>
+                    <li>
+                      <span>교육과정</span>
+                      <div class="subMenu">
+                        <ul class="inner">
+                          <li><a href="../education/education.html">교육과정</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <span>포트폴리오</span>
+                      <div class="subMenu">
+                        <ul class="inner">
+                          <li><a href="../portfolio/index.html">포트폴리오</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <span>상담센터</span>
+                      <div class="subMenu">
+                        <ul class="inner">
+                          <li><a href="../counsel/index.html">온라인 상담</a></li>
+                          <li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+                          <li><a href="../counsel/receipt.html">고객칭찬/불편접수</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <span>취업센터</span>
+                      <div class="subMenu">
+                        <ul class="inner">
+                          <li><a href="../job/job.html">취업현황</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <span>커뮤니티</span>
+                      <div class="subMenu">
+                        <ul class="inner">
+                          <li><a href="../community/notice.html">공지사항</a></li>
+                          <li><a href="../community/post.html">수강후기</a></li>
+                          <li><a href="../community/gallery.html">세잔갤러리</a></li>
+                          <li><a href="../community/competition.html">공모전</a></li>
+                          <li><a href="../community/qualification.html">자격정보</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -118,10 +123,10 @@
                     </div>
                   </li>
                   <li>
-                    <a href="#">교육과정</a>
+                    <a href="../education/education.html">교육과정</a>
                     <div class="subMenu">
                       <ul class="inner">
-                        <li><a href="#">교육과정</a></li>
+                        <li><a href="../education/education.html">교육과정</a></li>
                       </ul>
                     </div>
                   </li>
@@ -134,32 +139,32 @@
                     </div>
                   </li>
                   <li>
-                    <a href="#">상담센터</a>
+                    <a href="../counsel/index.html">상담센터</a>
                     <div class="subMenu">
                       <ul class="inner">
-                        <li><a href="#">온라인 상담</a></li>
-                        <li><a href="#">카카오톡 상담</a></li>
-                        <li><a href="#">고객칭찬/불편접수</a></li>
+                        <li><a href="../counsel/index.html">온라인 상담</a></li>
+                        <li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+                        <li><a href="../counsel/receipt.html">고객칭찬/불편접수</a></li>
                       </ul>
                     </div>
                   </li>
                   <li>
-                    <a href="#">취업센터</a>
+                    <a href="../job/job.html">취업센터</a>
                     <div class="subMenu">
                       <ul class="inner">
-                        <li><a href="#">취업현황</a></li>
+                        <li><a href="../job/job.html">취업현황</a></li>
                       </ul>
                     </div>
                   </li>
                   <li>
-                    <a href="#">커뮤니티</a>
+                    <a href="../community/notice.html">커뮤니티</a>
                     <div class="subMenu">
                       <ul class="inner">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">수강후기</a></li>
-                        <li><a href="#">세잔갤러리</a></li>
-                        <li><a href="#">공모전</a></li>
-                        <li><a href="#">자격정보</a></li>
+                        <li><a href="../community/notice.html">공지사항</a></li>
+                        <li><a href="../community/post.html">수강후기</a></li>
+                        <li><a href="../community/gallery.html">세잔갤러리</a></li>
+                        <li><a href="../community/competition.html">공모전</a></li>
+                        <li><a href="../community/qualification.html">자격정보</a></li>
                       </ul>
                     </div>
                     </li>
@@ -167,7 +172,7 @@
               </div>
               <!-- 사이트맵 -->
               <div class="sitemapBtn">
-                <button type="button" onclick="btnAni(this)"> 
+                <button type="button"> 
                   <span class="bar1"></span>
                   <span class="bar2"></span>
                   <span class="bar3"></span>
@@ -187,7 +192,7 @@
           <div class="bread">
             <ul>
               <li><a href="../../../index.html"><i class="ri-home-4-line"></i></a></li>
-              <li><a href="about.html">학교소개</a></li>
+              <li><a href="./about.html">학교소개</a></li>
             </ul>
           </div>
         </div> 
@@ -263,7 +268,7 @@
                 <dt>
                   <span>1</span> 현장 중심 직업교육</dt>
                 <dd><p>수요조사를 통한 지역산업체 맞춤형 직업훈련을 개선 및 보안, 실업자 훈련 및 재직자 직종훈련의 다양성 및 특성화 개발, 산학협력 및 산업체와의 교류의 일환으로 재직자 교육과정 향상</p></dd>
-                <dd><a type="button" href="./">교육과정 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
+                <dd><a type="button" href="../education/education.html">교육과정 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
               </dl>
               <dl class="back-to-position to-right delay-3">
                 <dt><span>2</span> 시설 및 장비의 현장화</dt>
@@ -273,18 +278,18 @@
               <dl class="back-to-position to-right delay-4">
                 <dt><span>3</span> 학생 능력 개발 강화</dt>
                 <dd><p>인력양성을 위한 교육과정 및 교수법 등을 개발, 훈련생 지원 및 체계적인 학사관리로 훈련생의 가치를 존중, 중도탈락 방지를 위한 훈련생 지원</p></dd>
-                <dd><a type="button" href="./">수강후기 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
+                <dd><a type="button" href="../community/post.html">수강후기 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
                 </dd>
               </dl>
               <dl class="back-to-position to-right delay-5">
                 <dt><span>4</span> 취업프로세스 강화</dt>
                 <dd><p>취업률 향상을 위한 보다 적극적이고 체계적인 시스템 구축, 취업 지원 및 사후관리 시스템 강화</p></dd>
-                <dd><a type="button" href="./">취업현황 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
+                <dd><a type="button" href="../job/job.html">취업현황 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
               </dl>
               <dl class="back-to-position to-right delay-6">
                 <dt><span>5</span> 교사 기준 및 능력 개발 강화</dt>
                 <dd><p>현장중심형 교사 채용, 교직원 능력개발을 위한 교육훈련 격려, 교사 평가 제도 확립</p></dd>
-                <dd><a type="button" href="./">수강후기 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
+                <dd><a type="button" href="../community/post.html">수강후기 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
               </dl>
             </div> <!-- end : right -->
           </div> <!-- end : inner -->
@@ -340,9 +345,9 @@
           <div class="footerMenu">
             <ul class="inner">
               <li><a href="./about.html">학교소개</a></li>
-              <li><a href="#">이용약관</a></li>
-              <li><a href="#" class="privacy">개인정보처리방침</a></li>
-              <li><a href="#">찾아오시는 길</a></li>
+              <li><a href="../common/agreement.html">이용약관</a></li>
+              <li><a href="../common/agreement.html" class="privacy">개인정보처리방침</a></li>
+              <li><a href="../common/location.html">찾아오시는 길</a></li>
             </ul>
           </div>
           <div class="footerInfo">
@@ -364,6 +369,68 @@
         </div>
       </footer>
     </div> <!-- end : wrap -->
+    <!-- Popup -->
+    <div id="sitemap" class="sitemap">
+      <div class="sitemap__container">
+				<div class="sitemap__ar">
+					<div class="sitemap__util">
+						<p><img src="../../images/common/logo.png" alt=""></p>
+						<h2 class="tit">최고의 강사진과 맞춤형 관리 <br> 실무 중심 커리큘럼</h2>
+						<h3 class="subtit">전문가 양성 대전세잔직업전문학교</h3>
+					</div>
+					<div class="sitemap__content">
+						<button type="button" class="btn__close">
+              <i class="ri-close-large-line"></i>
+            </button>
+						<div class="sitemap__menu">
+							<div class="sitemap__item">
+								<h3 class="title">학교 소개</h3>
+								<ul>
+									<li><a href="./about.html">학교 소개</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">교육 과정</h3>
+								<ul>
+									<li><a href="../education/education.html">교육 과정</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">포트폴리오</h3>
+								<ul>
+									<li><a href="../portfolio/index.html">포트폴리오</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">상담 센터</h3>
+								<ul>
+									<li><a href="../counsel/index.html">온라인 상담</a></li>
+									<li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+									<li><a href="../counsel/receipt.html" target="_blank">고객 칭찬 / 불편 접수</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">취업 센터</h3>
+								<ul>
+									<li><a href="../job/job.html">취업 현황</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">커뮤니티</h3>
+								<ul>
+									<li><a href="../community/notice.html">공지사항</a></li>
+									<li><a href="../community/post.html">수강 후기</a></li>
+									<li><a href="../community/gallery.html">세잔 갤러리</a></li>
+									<li><a href="../community/competition.html">공모전</a></li>
+									<li><a href="../community/qualification.html">자격 정보</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+      </div>
+      <div class="sitemap__bg"></div>
+    </div>
     <script src="../../js/about/about.js"></script>
   </body>
 </html>

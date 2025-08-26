@@ -1,90 +1,34 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>대전세잔직업전문학교 :: 포트폴리오 상세보기</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대전세잔직업전문학교 :: 포트폴리오 상세보기</title>
+    <link rel="shortcut icon" href="../../../static/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../css/reset.css">
-		<link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/common.css">
     <!-- scss -->
-		<link rel="stylesheet" href="../../scss/common.scss">
-		<link rel="stylesheet" href="../../scss/about/common.scss">
-		<link rel="stylesheet" href="../../scss/p_detail/p_detail.scss">
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <div id="utill">
-        <ul class="inner">
-          <li><a href="#">회원가입</a></li>
-          <li><a href="#">로그인</a></li>
-        </ul>
-      </div>
-      <div id="header">
-        <div class="inner">
-          <div class="logo"><a href="../../../index.html"><img src="../../images/common/logo.png" alt="대전세잔직업전문학교"></a></div>
-          
-          <!-- mobile gnb -->
-          <div class="mobileWrap">
-            <div class="m_gnb">
-              <ul>
-                <li>
-                  <span>학교소개</span>
-                  <div class="subMenu">
-                    <ul class="inner">
-                      <li><a href="../about/about.html">학교소개</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <span>교육과정</span>
-                  <div class="subMenu">
-                    <ul class="inner">
-                      <li><a href="#">교육과정</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <span>포트폴리오</span>
-                  <div class="subMenu">
-                    <ul class="inner">
-                      <li><a href="../portfolio/index.html">포트폴리오</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <span>상담센터</span>
-                  <div class="subMenu">
-                    <ul class="inner">
-                      <li><a href="#">온라인 상담</a></li>
-                      <li><a href="#">카카오톡 상담</a></li>
-                      <li><a href="#">고객칭찬/불편접수</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <span>취업센터</span>
-                  <div class="subMenu">
-                    <ul class="inner">
-                      <li><a href="#">취업현황</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <span>커뮤니티</span>
-                  <div class="subMenu">
-                    <ul class="inner">
-                      <li><a href="#">공지사항</a></li>
-                      <li><a href="#">수강후기</a></li>
-                      <li><a href="#">세잔갤러리</a></li>
-                      <li><a href="#">공모전</a></li>
-                      <li><a href="#">자격정보</a></li>
-                    </ul>
-                  </div>
-                  </li>
-              </ul>
-            </div>
-            <!-- 모바일 메뉴보기 -->
+    <link rel="stylesheet" href="../../scss/common.scss">
+    <link rel="stylesheet" href="../../scss/common/sitemap.scss">
+    <link rel="stylesheet" href="../../scss/about/common.scss">
+    <link rel="stylesheet" href="../../scss/p_detail/p_detail.scss">
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../../js/common/common.js"></script>
+    <script src="../../js/common/menu.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div id="utill">
+          <ul class="inner">
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">로그인</a></li>
+          </ul>
+        </div>
+        <div id="header">
+          <div class="inner">
+            <div class="logo"><a href="../../../index.html"><img src="../../images/common/logo.png" alt="대전세잔직업전문학교"></a></div>
             <div class="m_gnbBtn">
               <button type="button">
                 <span class="bar1"></span>
@@ -92,184 +36,313 @@
                 <span class="bar3"></span>
               </button>
             </div>
-          </div>
-
-          <!-- web gnb -->
-          <div class="webWrap">	
-            <div class="gnbNav">
-              <ul>
-                <li>
-                  <a href="../about/about.html">학교소개</a>
-                  <div class="subMenu">
-                    <ul class="inner">
-                      <li><a href="../about/about.html">학교소개</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <a href="#">교육과정</a>
-                  <div class="subMenu">
-                    <ul class="inner">
-                      <li><a href="#">교육과정</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <a href="../portfolio/index.html">포트폴리오</a>
-                  <div class="subMenu">
-                    <ul class="inner">
-                      <li><a href="../portfolio/index.html">포트폴리오</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <a href="#">상담센터</a>
-                  <div class="subMenu">
-                    <ul class="inner">
-                      <li><a href="#">온라인 상담</a></li>
-                      <li><a href="#">카카오톡 상담</a></li>
-                      <li><a href="#">고객칭찬/불편접수</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <a href="#">취업센터</a>
-                  <div class="subMenu">
-                    <ul class="inner">
-                      <li><a href="#">취업현황</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <a href="#">커뮤니티</a>
-                  <div class="subMenu">
-                    <ul class="inner">
-                      <li><a href="#">공지사항</a></li>
-                      <li><a href="#">수강후기</a></li>
-                      <li><a href="#">세잔갤러리</a></li>
-                      <li><a href="#">공모전</a></li>
-                      <li><a href="#">자격정보</a></li>
-                    </ul>
-                  </div>
-                  </li>
-              </ul>
+            <!-- mobile gnb -->
+            <div class="mobileWrap">
+              <div class="m_gnb">
+                <div class="m_gnb__ar">
+                  <h2 class="tit">최고의 강사진과 맞춤형 관리 <br> 실무 중심 커리큘럼</h2>
+                  <h3 class="subtit">전문가 양성 대전세잔직업전문학교</h3>
+                </div>
+                <div class="m_gnb__content">
+                  <ul>
+                    <li>
+                      <span>학교소개</span>
+                      <div class="subMenu">
+                        <ul class="inner">
+                          <li><a href="../about/about.html">학교소개</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <span>교육과정</span>
+                      <div class="subMenu">
+                        <ul class="inner">
+                          <li><a href="../education/education.html">교육과정</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <span>포트폴리오</span>
+                      <div class="subMenu">
+                        <ul class="inner">
+                          <li><a href="../portfolio/index.html">포트폴리오</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <span>상담센터</span>
+                      <div class="subMenu">
+                        <ul class="inner">
+                          <li><a href="../counsel/index.html">온라인 상담</a></li>
+                          <li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+                          <li><a href="../counsel/receipt.html">고객칭찬/불편접수</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <span>취업센터</span>
+                      <div class="subMenu">
+                        <ul class="inner">
+                          <li><a href="../job/job.html">취업현황</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <span>커뮤니티</span>
+                      <div class="subMenu">
+                        <ul class="inner">
+                          <li><a href="../community/notice.html">공지사항</a></li>
+                          <li><a href="../community/post.html">수강후기</a></li>
+                          <li><a href="../community/gallery.html">세잔갤러리</a></li>
+                          <li><a href="../community/competition.html">공모전</a></li>
+                          <li><a href="../community/qualification.html">자격정보</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <!-- 사이트맵 -->
-            <div class="sitemapBtn">
-              <button type="button" onclick="btnAni(this)"> 
-                <span class="bar1"></span>
-                <span class="bar2"></span>
-                <span class="bar3"></span>
-              </button>
+
+            <!-- web gnb -->
+            <div class="webWrap">	
+              <div class="gnbNav">
+                <ul>
+                  <li>
+                    <a href="../about/about.html">학교소개</a>
+                    <div class="subMenu">
+                      <ul class="inner">
+                        <li><a href="../about/about.html">학교소개</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="../education/education.html">교육과정</a>
+                    <div class="subMenu">
+                      <ul class="inner">
+                        <li><a href="../education/education.html">교육과정</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="../portfolio/index.html">포트폴리오</a>
+                    <div class="subMenu">
+                      <ul class="inner">
+                        <li><a href="../portfolio/index.html">포트폴리오</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="../counsel/index.html">상담센터</a>
+                    <div class="subMenu">
+                      <ul class="inner">
+                        <li><a href="../counsel/index.html">온라인 상담</a></li>
+                        <li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+                        <li><a href="../counsel/receipt.html">고객칭찬/불편접수</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="../job/job.html">취업센터</a>
+                    <div class="subMenu">
+                      <ul class="inner">
+                        <li><a href="../job/job.html">취업현황</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="../community/notice.html">커뮤니티</a>
+                    <div class="subMenu">
+                      <ul class="inner">
+                        <li><a href="../community/notice.html">공지사항</a></li>
+                        <li><a href="../community/post.html">수강후기</a></li>
+                        <li><a href="../community/gallery.html">세잔갤러리</a></li>
+                        <li><a href="../community/competition.html">공모전</a></li>
+                        <li><a href="../community/qualification.html">자격정보</a></li>
+                      </ul>
+                    </div>
+                    </li>
+                </ul>
+              </div>
+              <!-- 사이트맵 -->
+              <div class="sitemapBtn">
+                <button type="button"> 
+                  <span class="bar1"></span>
+                  <span class="bar2"></span>
+                  <span class="bar3"></span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
+      </header>
+      <!-- Container -->
+      <div id="contents">
+        <div class="sub_visual">
+          <div class="inner">
+            <div class="sub_visual_text">
+              <h2>포트폴리오</h2>
+              <!-- 한줄 글쓰기 -->
+              <p>대전세잔직업전문학교는 디자인 교육에 전문적인 학교로서 테크놀로지와 어우러진 삶을 더욱 풍요롭고 아름답게 만드는 디자인 발전을 위해 최선을 다하고 있습니다.</p>
+            </div>
+            <div class="bread">
+              <ul>
+                <li><a href="../../../index.html"><i class="ri-home-4-line"></i></a></li>
+                <li><a href="../portfolio/index.html">포트폴리오</a></li>
+              </ul>
+            </div>
+          </div> 
+        </div> <!-- end : sub_visual -->
+        <div id="contents_body">
+          <div class="inner">
+            <div class="portfolio-title">
+              <h3>대전세잔직업전문학교</h3>
+              <span><a href="../portfolio/index.html"><i class="ri-home-4-line"></i></a></span>
+            </div>
+            <div class="portfolio">
+              <div class="portfolio-img"><img src="../../images/p_detail/p_detail_img1.png" alt="포트폴리오 상세페이지 1"></div>
+              <div class="portfolio-cont">
+                <h3>PORTFOLIO</h3>
+                <!-- 포트폴리오 소개 -->
+                <ul class="portfolio-into">
+                  <li>
+                    <h4>학생 이름</h4>
+                    <p>유*은 수강생</p>
+                  </li>
+                  <li>
+                    <h4>과정</h4>
+                    <p>WEB 41기</p>
+                  </li>
+                  <li>
+                    <h4>과정명</h4>
+                    <p>웹디자인 & 멀티미디어 콘텐츠 제작A(포토샵, UX/UI디자인, 동영상 편집)</p>
+                  </li>
+                  <li>
+                    <h4>과정 기간</h4>
+                    <p> 2025-03-14 ~ 2025-08-12</p>
+                  </li>
+                  <li>
+                    <h4>URL</h4>
+                    <a href="#">포트폴리오 바로가기</a>
+                  </li>
+                </ul>
+              </div>
+            </div> <!-- end : portfolio -->
+          </div> <!-- end : inner -->
+        </div> <!-- end : contents_body -->
+      </div> <!-- end : contents -->
+      <div id="topBtn">
+        <button type="button"><i class="ri-arrow-up-line"></i></button>
       </div>
-    </header>
-    <div id="contents">
-      <div class="sub_visual">
+    </div> <!-- end : wrap -->
+    <footer>
+      <div class="familySite">
         <div class="inner">
-          <div class="sub_visual_text">
-            <h2>포트폴리오</h2>
-            <!-- 한줄 글쓰기 -->
-            <p>대전세잔직업전문학교는 디자인 교육에 전문적인 학교로서 테크놀로지와 어우러진 삶을 더욱 풍요롭고 아름답게 만드는 디자인 발전을 위해 최선을 다하고 있습니다.</p>
-          </div>
-          <div class="bread">
+          <p class="tit">FAMILY SITE</p>
+          <a href="#" type="button" class="arrbtn btnPrev"><i class="ri-arrow-left-s-line"></i></a>
+          <div class="famList">
             <ul>
-              <li><a href="../../../index.html"><i class="ri-home-4-line"></i></a></li>
-              <li><a href="../portfolio/index.html">포트폴리오</a></li>
+              <li><a href="#">고용노동부 대전지방고용노동청</a></li>
+              <li><a href="#">대전고용센터</a></li>
+              <li><a href="#">직업훈련포털HRD-NET</a></li>
+              <li><a href="#">WORKNET</a></li>
+              <li><a href="#">CQ-NET</a></li>
+              <li><a href="#">Q-NET</a></li>
+              <li><a href="#">NCS국가직무능력표준</a></li>
             </ul>
           </div>
-        </div> 
-      </div> <!-- end : sub_visual -->
-      <div id="contents_body">
-        <div class="inner">
-          <div class="portfolio-title">
-            <h3>대전세잔직업전문학교</h3>
-            <span><a href="../portfolio/index.html"><i class="ri-home-4-line"></i></a></span>
-          </div>
-          <div class="portfolio">
-            <div class="portfolio-img"><img src="../../images/p_detail/p_detail_img1.png" alt="포트폴리오 상세페이지 1"></div>
-            <div class="portfolio-cont">
-              <h3>PORTFOLIO</h3>
-              <!-- 포트폴리오 소개 -->
-              <ul class="portfolio-into">
-                <li>
-                  <h4>학생 이름</h4>
-                  <p>유*은 수강생</p>
-                </li>
-                <li>
-                  <h4>과정</h4>
-                  <p>WEB 41기</p>
-                </li>
-                <li>
-                  <h4>과정명</h4>
-                  <p>웹디자인 & 멀티미디어 콘텐츠 제작A(포토샵, UX/UI디자인, 동영상 편집)</p>
-                </li>
-                <li>
-                  <h4>과정 기간</h4>
-                  <p> 2025-03-14 ~ 2025-08-12</p>
-                </li>
-                <li>
-                  <h4>URL</h4>
-                  <a href="#">포트폴리오 바로가기</a>
-                </li>
-              </ul>
-            </div>
-          </div> <!-- end : portfolio -->
-        </div> <!-- end : inner -->
-      </div> <!-- end : contents_body -->
-    </div> <!-- end : contents -->
-    <div id="topBtn">
-      <button type="button"><i class="ri-arrow-up-line"></i></button>
-    </div>
-  </div> <!-- end : wrap -->
-  <footer>
-    <div class="familySite">
-      <div class="inner">
-        <p class="tit">FAMILY SITE</p>
-        <a href="#" type="button" class="arrbtn btnPrev"><i class="ri-arrow-left-s-line"></i></a>
-        <div class="famList">
-          <ul>
-            <li><a href="#">고용노동부 대전지방고용노동청</a></li>
-            <li><a href="#">대전고용센터</a></li>
-            <li><a href="#">직업훈련포털HRD-NET</a></li>
-            <li><a href="#">WORKNET</a></li>
-            <li><a href="#">CQ-NET</a></li>
-            <li><a href="#">Q-NET</a></li>
-            <li><a href="#">NCS국가직무능력표준</a></li>
+          <a href="#" type="button" class="arrbtn btnNext"><i class="ri-arrow-right-s-line"></i></a>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerMenu">
+          <ul class="inner">
+            <li><a href="../about/about.html">학교소개</a></li>
+            <li><a href="../common/agreement.html">이용약관</a></li>
+            <li><a href="../common/agreement.html" class="privacy">개인정보처리방침</a></li>
+            <li><a href="../common/location.html">찾아오시는 길</a></li>
           </ul>
         </div>
-        <a href="#" type="button" class="arrbtn btnNext"><i class="ri-arrow-right-s-line"></i></a>
-      </div>
-    </div>
-    <div id="footer">
-      <div class="footerMenu">
-        <ul class="inner">
-          <li><a href="../about/about.html">학교소개</a></li>
-          <li><a href="#">이용약관</a></li>
-          <li><a href="#" class="privacy">개인정보처리방침</a></li>
-          <li><a href="#">찾아오시는 길</a></li>
-        </ul>
-      </div>
-      <div class="footerInfo">
-        <div class="inner">
-          <div class="flogo"><span>대전세잔직업전문학교</span></div>
-          <address>
-            <p>대전 중구 중앙로 137번길 36 대전세잔직업전문학교</p>
-            <p>사업자등록번호 : 305-90-66359</p>
-            <p><span class="f_white">Tel . 042)252-1153</span> Fax. 042)252-1105</p>
-            <small>&copy 대전세잔직업전문학교. All rights Reserved.</small>
-          </address>
-          <div class="sns">
-            <button type="button"><i class="ri-youtube-line"></i></button>
-            <button type="button"><i class="ri-facebook-fill"></i></button>
-            <button type="button"><i class="ri-instagram-line"></i></button>
+        <div class="footerInfo">
+          <div class="inner">
+            <div class="flogo"><span>대전세잔직업전문학교</span></div>
+            <address>
+              <p>대전 중구 중앙로 137번길 36 대전세잔직업전문학교</p>
+              <p>사업자등록번호 : 305-90-66359</p>
+              <p><span class="f_white">Tel . 042)252-1153</span> Fax. 042)252-1105</p>
+              <small>&copy 대전세잔직업전문학교. All rights Reserved.</small>
+            </address>
+            <div class="sns">
+              <button type="button"><i class="ri-youtube-line"></i></button>
+              <button type="button"><i class="ri-facebook-fill"></i></button>
+              <button type="button"><i class="ri-instagram-line"></i></button>
+            </div>
           </div>
         </div>
       </div>
+    </footer>
+    <script src="../../js/p_detail/p_detail.js"></script>
+    <!-- Sitemap -->
+    <div id="sitemap" class="sitemap">
+      <div class="sitemap__container">
+				<div class="sitemap__ar">
+					<div class="sitemap__util">
+						<p><img src="../../images/common/logo.png" alt=""></p>
+						<h2 class="tit">최고의 강사진과 맞춤형 관리 <br> 실무 중심 커리큘럼</h2>
+						<h3 class="subtit">전문가 양성 대전세잔직업전문학교</h3>
+					</div>
+					<div class="sitemap__content">
+						<button type="button" class="btn__close">
+              <i class="ri-close-large-line"></i>
+            </button>
+						<div class="sitemap__menu">
+							<div class="sitemap__item">
+								<h3 class="title">학교 소개</h3>
+								<ul>
+									<li><a href="../about/about.html">학교 소개</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">교육 과정</h3>
+								<ul>
+									<li><a href="../education/education.html">교육 과정</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">포트폴리오</h3>
+								<ul>
+									<li><a href="../portfolio/index.html">포트폴리오</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">상담 센터</h3>
+								<ul>
+									<li><a href="../counsel/index.html">온라인 상담</a></li>
+									<li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+									<li><a href="../counsel/receipt.html" target="_blank">고객 칭찬 / 불편 접수</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">취업 센터</h3>
+								<ul>
+									<li><a href="../job/job.html">취업 현황</a></li>
+								</ul>
+							</div>
+							<div class="sitemap__item">
+								<h3 class="title">커뮤니티</h3>
+								<ul>
+									<li><a href="../community/notice.html">공지사항</a></li>
+									<li><a href="../community/post.html">수강 후기</a></li>
+									<li><a href="../community/gallery.html">세잔 갤러리</a></li>
+									<li><a href="../community/competition.html">공모전</a></li>
+									<li><a href="../community/qualification.html">자격 정보</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+      </div>
+      <div class="sitemap__bg"></div>
     </div>
-  </footer>
-  <script src="../../js/p_detail/p_detail.js"></script>
-</body>
+  </body>
 </html>
