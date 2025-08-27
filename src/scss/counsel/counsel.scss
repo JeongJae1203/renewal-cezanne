@@ -439,8 +439,9 @@ $background-color_4: #FBFBFB;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 6.6rem;
-            padding: 0;
+            height: 7rem;
+            padding: 0 2rem;
+						word-break: keep-all;
           }
         }
       }
