@@ -239,7 +239,7 @@ a:hover {text-decoration: none;}
     padding: 2rem 0;
     gap: 4.5rem;
   }
-  .portfolio-card__img {}
+  .portfolio-card__img { max-height: 21.3rem; }
   .portfolio-card__title { margin-top: .4rem; }
   .portfolio-card__name { font-size: 1.4rem; }
   .portfolio-card__view { 
