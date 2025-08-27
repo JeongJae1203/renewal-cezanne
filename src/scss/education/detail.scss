@@ -9,50 +9,67 @@ $whiteColor:#fff;
 // breakpoint - 768px, 992px, 1200px
 
 #container{
+  margin:3.75rem auto;
   .back{
     font-size:1.3rem;
   }
   #stra-info{
-    margin:3.5rem auto;
+    margin:2.5rem auto;
     .stra-info-wrap{
-      .stra-info-tag{}
       .stra-title{
         font-size:2.6rem; font-weight:600;
-        margin:1.5rem 0 3rem; color:$darkColor;
+        margin:1.25rem 0 5rem; color:$darkColor;
       }
       .stra-text{
         font-weight:300; line-height:2rem;
         p{
           margin-bottom:0.625rem;
+          &::before{
+            display:inline-block; content:''; width:0.625rem; height:0.625rem; border-radius:50%; margin-right:0.625rem; margin-bottom:0.25rem; background-color:$darkColor;
+          }
         }
       }
     }
   }
   #stra-edu{
-    padding:2.5rem 0; margin:3.5rem auto; color:$whiteColor; background-color:$darkColor;
-    .stra-edu-title{
-      font-size:2.6rem; font-weight:600;
-      padding:1.25rem 0;
-    }
-    .stra-edu-list{
-      display:grid; grid-template-columns:repeat(2, 1fr); justify-items:start; gap:10px;
-      padding:1.5rem 0;
-      ul{
-        li{
-          text-align:center; padding:0.625rem 1.25rem; margin:0.625rem 0; border-radius:50px; background-color:$mainColor;
-        }
+    padding:1.875rem 0; margin:3.75rem auto;
+    background-color:var(--gray-bgcolor);
+    .inner{
+      background-color:$whiteColor;
+      .stra-edu-title{
+        font-size:2.6rem; font-weight:600;
+        padding:1.25rem 0;
       }
-      span{
-        p{
-          padding:0.625rem 1.25rem; margin:0.625rem 0;
+      .stra-edu-list{
+        display:grid; grid-template-columns:repeat(1, auto 4fr); justify-items:start; gap:5px 5px;
+        ul{
+          border-bottom:1px solid $darkColor;
+          li{
+            padding:0.625rem 1.25rem; margin:0.625rem 0;
+            // border-radius:50px; color:$whiteColor; background-color:$mainColor;
+          }
+        }
+        span{
+          width:100%; border-bottom:1px solid $darkColor;
+          p{
+            padding:0.625rem 1.25rem; margin:0.625rem 0;
+          }
+        }
+        &.list1{
+          margin-bottom:0.625rem;
+        }
+        &.list2{
+          li{
+            // margin-bottom:0;
+          }
         }
       }
     }
   }
   #stra-int{
-    margin:3.5rem auto;
+    margin:3.75rem auto;
     .stra-int-wrap{
-      margin-bottom:2.5rem;
+      margin-bottom:3.75rem;
       .stra-int-title{
         display:flex; align-items:center; gap:5px;
         font-size:2.2rem; font-weight:500;
@@ -74,7 +91,7 @@ $whiteColor:#fff;
       }
     }
     .stra-int-wrap2{
-      margin-bottom:2.5rem;
+      margin-bottom:3.75rem;
       .stra-int-title{
         display:flex; align-items:center; gap:5px;
         font-size:2.2rem; font-weight:500;
@@ -84,7 +101,7 @@ $whiteColor:#fff;
         }
       }
 
-      // 
+      // detail2.html
       .stra-int-list1{
         display:grid; grid-template-columns:repeat(1, 1fr 2fr 3fr 1fr); gap:1px;
         padding:1px; background-color:$darkColor;
@@ -104,7 +121,7 @@ $whiteColor:#fff;
       }
     }
     .stra-int-wrap3{
-      margin-bottom:2.5rem;
+      margin-bottom:3.75rem;
       .stra-int-title{
         display:flex; align-items:center; gap:5px;
         font-size:2.2rem; font-weight:500;
@@ -112,20 +129,6 @@ $whiteColor:#fff;
         &::before{
           display:inline-block; content:''; width:0.25rem; height:2.2rem; background-color:$mainColor;
         }
-        // 네모
-        /* &::before{
-          display:inline-block; content:''; width:0.625rem; height:0.625rem; background-color:$mainColor;
-        } */
-        // ???
-        /* display:flex; justify-content:space-between; align-items:center; gap:50px;
-        font-size:2.2rem; font-weight:500;
-        margin-bottom:1.25rem;
-        &::before{
-          display:inline-block; content:''; width:25%; height:1px; background-color:$mainColor;
-        }
-        &::after{
-          display:inline-block; content:''; width:25%; height:1px; background-color:$mainColor;
-        } */
       }
     }
   }
@@ -136,10 +139,10 @@ $whiteColor:#fff;
     #stra-edu{
       .inner{
         .stra-edu-list.list1{
-          grid-template-columns:repeat(2, 1fr 2fr);
+          grid-template-columns:repeat(2, auto 1fr);
         }
         .stra-edu-list.list2{
-          grid-template-columns:repeat(1, 1fr 4fr);
+          grid-template-columns:repeat(1, auto 4fr);
         }
       }
     }
