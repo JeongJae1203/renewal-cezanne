@@ -30,7 +30,7 @@ spyEls.forEach((spyEl) => {
 
     triggerElement : spyEl,
 
-    triggerHook : .5
+    triggerHook : .9
   })
   // show 클래스를 추가/삭제
   .setClassToggle(spyEl, 'show') 

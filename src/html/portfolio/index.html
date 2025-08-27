@@ -194,136 +194,150 @@
         <!-- 포트폴리오 시작 -->
         <div id="contents_body">
           <div class="inner">
-            <div class="menuBtn">
-              <button type="button" id="All">전체</button>
-              <button type="button" id="web">웹 과정</button>
-              <button type="button" id="edit">편집 과정</button>
-              <button type="button" id="metaBus">메타버스 과정</button>
-            </div>
-            <div class="common__top">
-              <div>
-                  <span>total</span>
-                  <strong data-count></strong>
-              </div>
-              <!--   -->
-              <div class="top__search">
-                  <div class="input__wrap">
-                    <input 
-                        type="text" 
-                        name="search" 
-                        id="search" 
-                        autocomplete="off"
-                        placeholder="검색"
-                    >
-                    <button type="button"><i class="ri-search-line"></i></button>
-                  </div>
-              </div>
-            </div> <!-- common__top -->
-            <!-- portfolio -->
-            <section class="portfolio">
-              <ul class="portfolio__list">
-                <!-- 카드 1 -->
-                <li class="portfolio-card">
-                  <a href="../p_detail/p_detail.html" class="portfolio-card__link">
-                    <figure class="portfolio-card__img">
-                      <img src="../../images/portfolio/portfolio_img1.png" alt="WEB 41기 포트폴리오1">
-                      <!-- + 아이콘 -->
-                      <i class="ri-add-line plus-icon"></i>
-                    </figure>
-                    <!-- text -->
-                    <div class="portfolio-card__body">
-                      <h3 class="portfolio-card__title">WEB 41기</h3>
-                      <p class="portfolio-card__desc">
-                        웹디자인 & 멀티미디어 콘텐츠 제작A(포토샵, UIUX디자인, 동영상편집)
-                      </p>
-                      <p class="portfolio-card__date">2025-03-14 ~ 2025-08-12</p>
-                      <p class="portfolio-card__name">유*은 수강생</p>
-                      <span class="portfolio-card__view">view <i class="ri-arrow-right-long-line"></i></span>
-                    </div>
-                  </a>
+            <div class="common__tab">
+              <ul class="tab__list" data-tab-list>
+                <li class="active">
+                  <a href="#" class="portfolio__tab" data-target="tab1">전체</a>
                 </li>
-                <!-- 카드 2 -->
-                <li class="portfolio-card">
-                  <a href="../p_detail/p_detail2.html" class="portfolio-card__link">
-                    <figure class="portfolio-card__img">
-                      <img src="../../images/portfolio/portfolio_img2.png" alt="WEB 41기 포트폴리오2">
-                      <!-- + 아이콘 -->
-                      <i class="ri-add-line plus-icon"></i>
-                    </figure>
-                    <!-- text -->
-                    <div class="portfolio-card__body">
-                      <h3 class="portfolio-card__title">WEB 41기</h3>
-                      <p class="portfolio-card__desc">
-                        웹디자인 & 멀티미디어 콘텐츠 제작A(포토샵, UIUX디자인, 동영상편집)
-                      </p>
-                      <p class="portfolio-card__date">2025-03-14 ~ 2025-08-12</p>
-                      <p class="portfolio-card__name"> 강*린 수강생</p>
-                      <span class="portfolio-card__view">view <i class="ri-arrow-right-long-line"></i></span>
-                    </div>
-                  </a>
+                <li>
+                  <a href="#" class="portfolio__tab" data-target="tab2">웹 과정</a>
                 </li>
-                <!-- 카드 3 -->
-                <li class="portfolio-card">
-                  <a href="../p_detail/p_detail3.html" class="portfolio-card__link">
-                    <figure class="portfolio-card__img">
-                      <img src="../../images/portfolio/portfolio_img3.png" alt="WEB 37기 포트폴리오1">
-                      <!-- + 아이콘 -->
-                      <i class="ri-add-line plus-icon"></i>
-                    </figure>
-                    <!-- text -->
-                    <div class="portfolio-card__body">
-                      <h3 class="portfolio-card__title">WEB 37기</h3>
-                      <p class="portfolio-card__desc">
-                        한 번에 끝내는 프론트엔드 개발자
-                      </p>
-                      <p class="portfolio-card__date">2024-04-22 ~ 2024-10-23</p>
-                      <p class="portfolio-card__name">김*진 수강생</p>
-                      <span class="portfolio-card__view">view <i class="ri-arrow-right-long-line"></i></span>
-                    </div>
-                  </a>
+                <li>
+                  <a href="#" class="portfolio__tab" data-target="tab3">편집 과정</a>
                 </li>
-                <!-- 카드 4 -->
-                <li class="portfolio-card">
-                  <a href="#" class="portfolio-card__link">
-                    <figure class="portfolio-card__img">
-                      <img src="../../images/portfolio/portfolio_img4.png" alt="WEB 35기 포트폴리오1">
-                      <!-- + 아이콘 -->
-                      <i class="ri-add-line plus-icon"></i>
-                    </figure>
-                    <!-- text -->
-                    <div class="portfolio-card__body">
-                      <h3 class="portfolio-card__title">WEB 35기</h3>
-                      <p class="portfolio-card__desc">
-                        취업을 향한 도전 프론트엔드의 모든 것
-                      </p>
-                      <p class="portfolio-card__date">2024-01-02 ~ 2024-07-19</p>
-                      <p class="portfolio-card__name">우*호 수강생</p>
-                      <span class="portfolio-card__view">view <i class="ri-arrow-right-long-line"></i></span>
-                    </div>
-                  </a>
-                </li>
-                <!-- 카드 5 -->
-                <li class="portfolio-card">
-                  <a href="#" class="portfolio-card__link">
-                    <figure class="portfolio-card__img">
-                      <img src="../../images/portfolio/portfolio_img5.png" alt="WEB 35기 포트폴리오1">
-                      <!-- + 아이콘 -->
-                      <i class="ri-add-line plus-icon"></i>
-                    </figure>
-                    <!-- text -->
-                    <div class="portfolio-card__body">
-                      <h3 class="portfolio-card__title">WEB 35기</h3>
-                      <p class="portfolio-card__desc">
-                        취업을 향한 도전 프론트엔드의 모든 것
-                      </p>
-                      <p class="portfolio-card__date">2024-01-02 ~ 2024-07-19</p>
-                      <p class="portfolio-card__name">김*연 수강생</p>
-                      <span class="portfolio-card__view">view <i class="ri-arrow-right-long-line"></i></span>
-                    </div>
-                  </a>
+                <li>
+                  <a href="#" class="portfolio__tab" data-target="tab4">메타버스 과정</a>
                 </li>
               </ul>
-            </section> <!-- 포트폴리오 카드 -->
+            </div>
+            <div class="tab__contents">
+              <div id="tab1" class="tab__content active">
+                <div class="common__top">
+                  <div>
+                      <span>total</span>
+                      <strong data-count></strong>
+                  </div>
+                  <!--   -->
+                  <div class="top__search">
+                      <div class="input__wrap">
+                        <input 
+                            type="text" 
+                            name="search" 
+                            id="search" 
+                            autocomplete="off"
+                            placeholder="검색"
+                        >
+                        <button type="button"><i class="ri-search-line"></i></button>
+                      </div>
+                  </div>
+                </div> <!-- common__top -->
+                <!-- portfolio -->
+                <section class="portfolio">
+                  <ul class="portfolio__list">
+                    <!-- 카드 1 -->
+                    <li class="portfolio-card">
+                      <a href="../p_detail/p_detail.html" class="portfolio-card__link">
+                        <figure class="portfolio-card__img">
+                          <img src="../../images/portfolio/portfolio_img1.png" alt="WEB 41기 포트폴리오1">
+                          <!-- + 아이콘 -->
+                          <i class="ri-add-line plus-icon"></i>
+                        </figure>
+                        <!-- text -->
+                        <div class="portfolio-card__body">
+                          <h3 class="portfolio-card__title">WEB 41기</h3>
+                          <p class="portfolio-card__desc">
+                            웹디자인 & 멀티미디어 콘텐츠 제작A(포토샵, UIUX디자인, 동영상편집)
+                          </p>
+                          <p class="portfolio-card__date">2025-03-14 ~ 2025-08-12</p>
+                          <p class="portfolio-card__name">유*은 수강생</p>
+                          <span class="portfolio-card__view">view <i class="ri-arrow-right-long-line"></i></span>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- 카드 2 -->
+                    <li class="portfolio-card">
+                      <a href="../p_detail/p_detail2.html" class="portfolio-card__link">
+                        <figure class="portfolio-card__img">
+                          <img src="../../images/portfolio/portfolio_img2.png" alt="WEB 41기 포트폴리오2">
+                          <!-- + 아이콘 -->
+                          <i class="ri-add-line plus-icon"></i>
+                        </figure>
+                        <!-- text -->
+                        <div class="portfolio-card__body">
+                          <h3 class="portfolio-card__title">WEB 41기</h3>
+                          <p class="portfolio-card__desc">
+                            웹디자인 & 멀티미디어 콘텐츠 제작A(포토샵, UIUX디자인, 동영상편집)
+                          </p>
+                          <p class="portfolio-card__date">2025-03-14 ~ 2025-08-12</p>
+                          <p class="portfolio-card__name"> 강*린 수강생</p>
+                          <span class="portfolio-card__view">view <i class="ri-arrow-right-long-line"></i></span>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- 카드 3 -->
+                    <li class="portfolio-card">
+                      <a href="../p_detail/p_detail3.html" class="portfolio-card__link">
+                        <figure class="portfolio-card__img">
+                          <img src="../../images/portfolio/portfolio_img3.png" alt="WEB 37기 포트폴리오1">
+                          <!-- + 아이콘 -->
+                          <i class="ri-add-line plus-icon"></i>
+                        </figure>
+                        <!-- text -->
+                        <div class="portfolio-card__body">
+                          <h3 class="portfolio-card__title">WEB 37기</h3>
+                          <p class="portfolio-card__desc">
+                            한 번에 끝내는 프론트엔드 개발자
+                          </p>
+                          <p class="portfolio-card__date">2024-04-22 ~ 2024-10-23</p>
+                          <p class="portfolio-card__name">김*진 수강생</p>
+                          <span class="portfolio-card__view">view <i class="ri-arrow-right-long-line"></i></span>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- 카드 4 -->
+                    <li class="portfolio-card">
+                      <a href="#" class="portfolio-card__link">
+                        <figure class="portfolio-card__img">
+                          <img src="../../images/portfolio/portfolio_img4.png" alt="WEB 35기 포트폴리오1">
+                          <!-- + 아이콘 -->
+                          <i class="ri-add-line plus-icon"></i>
+                        </figure>
+                        <!-- text -->
+                        <div class="portfolio-card__body">
+                          <h3 class="portfolio-card__title">WEB 35기</h3>
+                          <p class="portfolio-card__desc">
+                            취업을 향한 도전 프론트엔드의 모든 것
+                          </p>
+                          <p class="portfolio-card__date">2024-01-02 ~ 2024-07-19</p>
+                          <p class="portfolio-card__name">우*호 수강생</p>
+                          <span class="portfolio-card__view">view <i class="ri-arrow-right-long-line"></i></span>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- 카드 5 -->
+                    <li class="portfolio-card">
+                      <a href="#" class="portfolio-card__link">
+                        <figure class="portfolio-card__img">
+                          <img src="../../images/portfolio/portfolio_img5.png" alt="WEB 35기 포트폴리오1">
+                          <!-- + 아이콘 -->
+                          <i class="ri-add-line plus-icon"></i>
+                        </figure>
+                        <!-- text -->
+                        <div class="portfolio-card__body">
+                          <h3 class="portfolio-card__title">WEB 35기</h3>
+                          <p class="portfolio-card__desc">
+                            취업을 향한 도전 프론트엔드의 모든 것
+                          </p>
+                          <p class="portfolio-card__date">2024-01-02 ~ 2024-07-19</p>
+                          <p class="portfolio-card__name">김*연 수강생</p>
+                          <span class="portfolio-card__view">view <i class="ri-arrow-right-long-line"></i></span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </section> <!-- 포트폴리오 카드 -->
+              </div>
+            </div>
           </div> <!-- end : inner -->
         </div> <!-- end : contents_body -->
       </div> <!-- end : contents -->
@@ -355,9 +369,9 @@
         <div class="footerMenu">
           <ul class="inner">
             <li><a href="../about/about.html">학교소개</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#" class="privacy">개인정보처리방침</a></li>
-            <li><a href="#">찾아오시는 길</a></li>
+            <li><a href="../common/agreement.html">이용약관</a></li>
+            <li><a href="../common/agreement.html" class="privacy">개인정보처리방침</a></li>
+            <li><a href="../common/location.html">찾아오시는 길</a></li>
           </ul>
         </div>
         <div class="footerInfo">
