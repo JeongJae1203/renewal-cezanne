@@ -282,11 +282,11 @@
         bottom: 0;
         ul > li {
           line-height: 1.5;
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           font-weight: 300;
         }
         .eduTitle {
-          font-size: 1.8rem;
+          font-size: 2rem;
           font-weight: 600;
           margin: 1rem 0;
         }
@@ -302,13 +302,28 @@
     bottom:-100%;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .75);
     color:#fff;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: .8s;
     text-align: center;
+    ul {
+      li {
+        &.go {
+          a {
+            display: inline-block;
+            border: 1px solid #fff;
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            font-size: 1.6rem;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
   }
 }
 

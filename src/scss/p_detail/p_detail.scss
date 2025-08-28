@@ -66,6 +66,7 @@ button {
   align-items: end;
   padding-bottom: 1.6rem;
   margin-bottom: 5rem;
+
   // 홈 아이콘
   span {
     display: inline-block;
@@ -85,6 +86,7 @@ button {
   display: flex;
   flex-direction: column-reverse;
   gap: 5rem;
+  
   // 상세페이지 이미지
   .portfolio-img {
     img{
@@ -107,8 +109,8 @@ button {
   span {
     display: block;
     text-align: center;
-    // &::after
   }
+
   // 포트폴리오 소개
   .portfolio-into {
     margin-top: 2.6rem;

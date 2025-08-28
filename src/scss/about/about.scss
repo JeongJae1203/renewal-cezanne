@@ -121,9 +121,16 @@
     }
   }
 }
+// 시설장비
+#equipment {
+  h3 {
+    margin: {
+      bottom: 4rem;
+    }
+  }
+}
 
 // 스와이퍼
-// 768px 이하일 때 이미지 3, 6번 높이 작음, 1번 안나옴
 .about_visual {
   height: 65rem;
   
@@ -151,7 +158,7 @@
             color: rgba(0, 0, 0, .6);
           }
           font: {
-            size: 1.6rem;
+            size: 1.7rem;
           }
           text-align: center;
           color: #fff;
@@ -211,7 +218,6 @@
   // 연혁
   .history {
     .inner {
-
       display: grid;
       grid-template-columns: 40rem auto;
       gap: 10px;
@@ -258,13 +264,6 @@
   }
 
   // 시설 장비
-  #equipment {
-    h3 {
-      margin: {
-        bottom: 4rem;
-      }
-    }
-  }
 
   // 스와이퍼
   
