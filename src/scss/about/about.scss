@@ -130,6 +130,7 @@
   .swiper-wrapper {
     .swiper-slide {
       .slide {
+        position: relative;
         width: 100%;
         height: 100%;
         background: {
@@ -137,6 +138,25 @@
           position: center;
           size: cover;
         };
+
+        &::before {
+          content: attr(data-desc);
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          display: block;
+          width: 100%;
+          height: 5rem;
+          background: {
+            color: rgba(0, 0, 0, .6);
+          }
+          font: {
+            size: 1.6rem;
+          }
+          text-align: center;
+          color: #fff;
+          line-height: 5rem;
+        }
 
         &.slide1 {
           background: {
