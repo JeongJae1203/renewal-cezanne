@@ -49,16 +49,20 @@
                 display: block;
                 padding: 1.5rem 2rem;
                 border: 1px solid $whiteColor;
-                margin-bottom: -1px;
+                margin: -1px 0;
                 font-size: 1.8rem;
                 transition: .15s;
-                &:hover {
-                  background: $mainColor;
-                  border: 1px solid $mainColor;
+
+                &:hover,
+                &:focus {
                   text-decoration: none;
-                  z-index: 10;
-                  transform: scale(1.025);
                 }
+              }
+
+              &.active {
+                background: $mainColor;
+                text-decoration: none;
+                z-index: 10;
               }
             }
           }
@@ -98,8 +102,11 @@
         &::-webkit-scrollbar-thumb {background: rgba(255, 255, 255, .9); border-radius: 10px;}
         &::-webkit-scrollbar-track {background: rgba(255, 255, 255, .3); border-radius: 10px;}
       }
+
       .tabList {
+        display: none;
         padding: 1rem 0 3rem 0;
+        &.active {display: block;}
         .listBox {
           margin: 1rem 0;
           .listImg {
@@ -158,11 +165,17 @@
               align: center;
               decoration: none;
             }
-            cursor: pointer;
           }
+        }
+        .swiper-scrollbar {
+          background: rgba(0,0,0,.5);
+        }
+        .swiper-scrollbar-drag {
+          background: rgba(255,255,255, .9);
         }
       }
     }
+
     .consult {
       .consultHead {
         .title {

@@ -109,86 +109,49 @@ header {
 // footer 
 footer {
   .familySite {
-    border-top: 1px solid var(--default-border-color);
-    // border-bottom: 1px solid var(--silver);
-    .inner {
-      display: flex;
-      align-items: center;
-      }  
-    .tit {
-      width: 16rem;
-      line-height: 5.5rem;
-      font-size: 2rem;
-      font-weight: 600;
-      color: $darkColor;
+    margin: 2rem 2rem 0;
+
+    .site_wrap {
       position: relative;
-      &::after {
-        content: '';
-        display: inline-block;
+      z-index: 95;  
+      .selected {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+        width: 100%;
+        height: 4.6rem;
+        line-height: 4.6rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: rgba(255,255,255,.8);
+        background:#353942;
+        border-radius: 3px;
+        box-sizing: border-box;
+        text-align: left;
+        i {font-size: 2rem;}
+      }
+      .siteList {
+        display: none;
         position: absolute;
-        top: 45%;
-        margin-left: 10px;
-        width: 3px;
-        height: 3px;
-        background: $darkColor;
+        bottom: 4.5rem;
+        max-height: 40rem;
+        width: 100%;
+        background:#353942;
+        border-radius: 3px 3px 0 0;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        a {
+          display: block;
+          padding:1.5rem 2rem;
+          color: rgba(255,255,255,.8);
+          text-decoration: none;
+          font-size: 1.4rem;
+          &:hover {
+            background:#272a31;
+          }
         }
       }
-    .arrbtn {
-      display: none;
+      .active {display: block;}
     }
-    .famList {
-      position: relative;
-      overflow: hidden;
-      width: calc(100% - 16rem);
-      height: 5.5rem;
-      ul {
-        position: absolute;
-        bottom: 1px;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-        li{
-          width: 100%;
-          &:first-child a {
-              border: 0;
-          }
-          a {
-            position: relative;
-            display: block;
-            padding-left: 1.5rem;
-            line-height: 5.5rem;
-            font-size: 2rem;
-            font-weight: 600;
-            background: #fff;
-            border: 1px solid #ddd;
-            margin-top: -1px;
-            text-decoration: none;
-            box-sizing: border-box;
-            
-            &::after{
-              content: '';
-              display: block;
-              position: absolute;
-              top: 45%;
-              margin-top: -6px;
-              right: 20px;
-              width: 10px;
-              height: 10px;
-              border-top: 3px solid var(--gray);
-              border-right: 3px solid var(--gray);
-              transform: rotate(135deg);
-            }
-            &:hover {
-              background: #ddd;
-              text-decoration: none;
-            }
-          }
-        }
-      } 
-    }
-    .active {overflow: visible;}
   }
   #footer {
     background: $darkColor;
@@ -254,25 +217,47 @@ footer {
 
 // breakpoint - web 768px, 992px, 1200px 
 @media (min-width:768px) {
-
-    #footer {
-      .footerInfo {
-        .inner {
-          position: relative;
+  #footer {
+    .fam_wrapper {
+      position: relative;
+      max-width: 1280px;
+      margin: 0 auto;
+      .familySite {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        bottom: 8px;
+        width: 25rem;
+        margin: 0;
+        .site_wrap {
+          .selected {
+            height: 4rem;
+            line-height: 4rem;
+            font-size: 1.4rem;
+          }
+          .siteList {
+            bottom :4rem;
+          }
         }
-        .flogo {display: none;}
-        address {
-          margin-top: 0;
-          font-size: 1.6rem;
-        }
-        .sns {
-          position: absolute;
-          right: 2rem;
-          top: 0;
-        }
+      } 
+    }
+    .footerInfo {
+      .inner {
+        position: relative;
+      }
+      .flogo {display: none;}
+      address {
+        margin-top: 0;
+        font-size: 1.5rem;
+      }
+      .sns {
+        position: absolute;
+        right: 2rem;
+        top: 0;
       }
     }
   }
+}
 
 @media (min-width:992px) {
   header {

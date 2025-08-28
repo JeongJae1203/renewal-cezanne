@@ -1,5 +1,5 @@
-// @use '../common.scss' as *;
-@import url(../../css/reset.css);
+@use '../common/import' as *;
+
 // color
 $mainColor:#E6204B;
 $subColor:#4C46F6;
@@ -35,28 +35,68 @@ button{
   }
   .edu-contents{
     display:flex; flex-wrap:wrap;
-    margin:3.5rem 0;
     .content{
       flex:0 0 50%; display:flex; flex-wrap:wrap; align-content:space-between; justify-content:center;
       padding:0 1.25rem; margin:2.5rem 0;
       a{
-        display:block;
-        width:100%; text-align:center;
-        img{
-          width:100%; border:1px solid $darkColor; border-radius:10px;
+        display: block;
+        width: 100%; 
+        text-align: center;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+
+          img {
+            border-color: $main-color;
+            box-shadow: 2px 0 16px rgba(230, 32, 75, .4);
+          }
         }
-        h4{
-          padding:1.25rem 0 0.625rem;
+
+        h4 {
+          font-size: 2rem;
+          word-break: keep-all;
         }
+
+        img {
+          width: 100%; 
+          border:1px solid $darkColor; 
+          border-radius:10px;
+          transition: .35s;
+        }
+
         span{
+          display: block;
+          margin: 1.5rem 0;
           font-size:1.4rem;
         }
       }
-      .btn-join{
-        cursor:pointer; font-size:1.3rem;
-        padding:0.625rem 1.875rem; border-radius:5px; margin:0.625rem; color:$whiteColor; background-color:$mainColor;
-        &:hover{
-          text-decoration:underline;
+
+      .btn-join {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 15rem;
+        height: 4rem;
+        margin-top: 1.5rem;
+        background-color: $main-color;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        font: {
+          size: 1.5rem;
+          weight: 500;
+        }
+        color: #fff;
+        text-decoration: none;
+        transition: .35s;
+
+        &:hover,
+        &:focus {
+          background-color: #fff;
+          border-color: $main-color;
+          color: $main-color;
+          text-decoration: none;
         }
       }
     }
@@ -78,11 +118,6 @@ button{
       .content{
         flex:0 0 25%;
         padding:0 1.5rem;
-        a{
-          h4{
-            padding:1.5rem 0 1rem;
-          }
-        }
       }
     }
   }
@@ -102,9 +137,6 @@ button{
     .edu-contents{
       .content{
         padding:0 2.5rem;
-        .btn-join{
-          margin:1.5rem;
-        }
       }
     }
   }

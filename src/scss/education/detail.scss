@@ -1,165 +1,200 @@
 @use '../common/import' as *;
 
-// color
-$mainColor:#E6204B;
-$subColor:#4C46F6;
-$darkColor:#202226;
-$whiteColor:#fff;
 
-// breakpoint - 768px, 992px, 1200px
-
-#container{
-  #stra-info{
-    .stra-info-wrap{
-      margin-bottom:6.25rem;
-      .back{
-        font-size:1.3rem;
-      }
-      .stra-title{
-        font-size:2.6rem; font-weight:600;
-        margin:1.25rem 0 5rem; color:$darkColor;
-      }
-      .stra-text{
-        font-weight:300; line-height:2rem;
-        p{
-          margin-bottom:0.625rem;
-          &::before{
-            display:inline-block; content:''; width:0.625rem; height:0.625rem; border-radius:50%; margin-right:0.625rem; margin-bottom:0.25rem; background-color:$darkColor;
-          }
-        }
-      }
+// 수정
+.frontend {
+  .subtit {
+    margin-bottom: 3rem;
+    font: {
+      size: 2.8rem;
+      weight: 200;
     }
-    .stra-info-img{
-      img{
-        height:100%;
-      }
+    color: #282828;
+  }
+
+  .visual__top {
+    background: {
+      color: rgba(0, 0, 0, .7);
+      image: url(../../images/main/edu_disital_img02.jpg);
+      size: cover;
+      position: center;
+      blend-mode: darken;
     }
   }
-  #stra-edu{
-    padding:1.875rem 0; margin:3.75rem auto;
-    background-color:var(--gray-bgcolor);
-    .inner{
-      .stra-edu-title{
-        font-size:2.6rem; font-weight:600;
-        padding:1.25rem 0;
+}
+
+.visual__top {
+  position: relative;
+  padding: 12rem 0 6rem;
+  overflow: hidden;
+  z-index: 1;
+
+  .visual__tit {
+    text-align: center;
+
+    > span {
+      text: {
+        align: center;
+        transform: uppercase;
       }
-      .stra-edu-list{
-        display:grid; grid-template-columns:repeat(1, auto 4fr); justify-items:start; gap:5px 5px;
-        ul{
-          border-bottom:1px solid $darkColor;
-          li{
-            padding:0.625rem 1.25rem; margin:0.625rem 0;
-          }
-        }
-        span{
-          width:100%; border-bottom:1px solid $darkColor;
-          p{
-            padding:0.625rem 1.25rem; margin:0.625rem 0;
-          }
-        }
-        &.list1{
-          margin-bottom:0.625rem;
-        }
-        &.list2{
-          ul{
-            li{
-              padding-bottom:2.5rem;
-            }
-          }
-        }
+      color: rgba(255, 255, 255, .5);
+    }
+
+    h2 {
+      margin: {
+        top: 2rem;
+        bottom: 4rem;
       }
+      font: {
+        size: 3.7rem;
+      }
+      span {
+        font-weight: 100;
+      }
+      color: #fff;
     }
   }
-  #stra-int{
-    margin:3.75rem auto;
-    .stra-int-wrap{
-      margin-bottom:3.75rem;
-      .stra-int-title{
-        display:flex; align-items:center; gap:5px;
-        font-size:2.2rem; font-weight:500;
-        margin-bottom:1.25rem;
-        &::before{
-          display:inline-block; content:''; width:0.25rem; height:2.2rem; background-color:$mainColor;
-        }
-      }
-      .stra-int.table{
-        display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
-        text-align:center; padding:1px; background-color:var(--default-border-color);
-        .th{
-          font-weight:500;
-          padding:1.25rem 0.625rem; background-color:var(--gray-bgcolor);
-        }
-        .td{
-          padding:1.25rem 0.625rem; background-color:$whiteColor;
-        }
-      }
-    }
-    .stra-int-wrap2{
-      margin-bottom:3.75rem;
-      .stra-int-title{
-        display:flex; align-items:center; gap:5px;
-        font-size:2.2rem; font-weight:500;
-        margin-bottom:1.25rem;
-        &::before{
-          display:inline-block; content:''; width:0.25rem; height:2.2rem; background-color:$mainColor;
-        }
-      }
 
-      // detail2.html
-      .stra-int-list1{
-        display:grid; grid-template-columns:repeat(1, 1fr 2fr 3fr 1fr); gap:1px;
-        padding:1px; background-color:$darkColor;
-        .th{
-          font-weight:500; text-align:center;
-          padding:1.25rem 0.625rem; background-color:var(--gray-bgcolor);
+  p {
+    line-height: 1.9;
+    text-align: center;
+    word-break: keep-all;
+    font-weight: 300;
+    color: #fff;
+
+    b {
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+}
+
+.class__info {
+  position: relative;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    > li {
+      padding: 3rem 2rem;
+      border: {
+        radius: 5px;
+      }
+      box-shadow: 6px 10px 30px rgba(16, 28, 93, .2);
+
+      .description {
+        position: relative;
+
+        b {
+          display: block;
+          margin-bottom: 2rem;
+          font: {
+            size: 1.4rem;
+            weight: 500;
+          }
+          color: #666;
         }
-        .td{
-          background-color:$whiteColor;
-          div{
-            border-bottom:1px solid $darkColor;
-            &:last-child{
-              border:none;
-            }
+        strong {
+          font: {
+            size: 3rem;
+            weight: 900;
           }
         }
-      }
-    }
-    .stra-int-wrap3{
-      margin-bottom:3.75rem;
-      .stra-int-title{
-        display:flex; align-items:center; gap:5px;
-        font-size:2.2rem; font-weight:500;
-        margin-bottom:1.25rem;
-        &::before{
-          display:inline-block; content:''; width:0.25rem; height:2.2rem; background-color:$mainColor;
+        span {
+          font: {
+            size: 1.4rem;
+          }
+        }
+        i {
+          position: absolute;
+          top: 0;
+          right: 0;
+          font-size: 3rem;
+          color: $main-color;
         }
       }
     }
   }
 }
 
-@media screen and (min-width:768px){
-  #container{
-    #stra-info{
-      display:grid; grid-template-columns:repeat(1, 1fr 1fr); gap:2.5rem;
-      .stra-info-wrap{
-        margin:0;
+.class__suggest {
+  margin-top: 6rem;
+
+  ul {
+    > li {
+      width: 100%;
+      padding: 3rem;
+      border-radius: 6px;
+      box-shadow: 6px 5px 15px rgba(16, 28, 93, .2);
+
+      ~ li {
+        margin-top: 2rem;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 9rem;
+        height: 2.4rem;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        border: 1px solid $main-color;
+        border-radius: 32px;
+        font-size: 12px;
+        font-weight: 800;
+        color: $main-color;
       }
     }
-    #stra-edu{
-      .inner{
-        .stra-edu-list{
-          gap:10px;
+  }
+}
+
+.job__faq__wrap {
+  margin-top: 8rem;
+
+  ul {
+    > li {
+      width: 100%;
+      padding: 3rem;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 6px 5px 15px rgba(16, 28, 93, .2);
+
+      ~ li {
+        margin-top: 1rem;
+      }
+
+      button {
+        position: relative;
+        display: block;
+        width: 100%;
+        font: {
+          size: 2.1rem;
+          weight: 800;
         }
-        .stra-edu-list.list1{
-          grid-template-columns:repeat(2, auto 1fr);
-        }
-        .stra-edu-list.list2{
-          grid-template-columns:repeat(1, auto 4fr);
-          ul{
-            li{
-              padding:0.625rem;
+        text-align: left;
+
+        + p {
+          position: relative;
+          margin-top: 2rem;
+          padding: 3rem 3rem 3rem 5rem;
+          background-color: #f2f3f5;
+          border-radius: 5px;
+          word-break: keep-all;
+          line-height: 1.5;
+
+          &::before {
+            content: 'A.';
+            position: absolute;
+            top: 3rem;
+            left: 2.5rem;
+            font: {
+              size: 1.6rem;
+              weight: 600;
             }
+            color: #ff0000;
           }
         }
       }
@@ -167,14 +202,50 @@ $whiteColor:#fff;
   }
 }
 
-@media screen and (min-width:992px){
-  
+
+@media all and (min-width: 768px) {
+  .visual__top {
+    p {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+  }
+
+  .class__info {
+    ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
 
-@media screen and (min-width:1200px){
-  #container{
-    #stra-info{
-      display:grid; grid-template-columns:repeat(1, 3fr 2fr); gap:5rem;
+@media all and (min-width: 992px) {
+  .class__info {
+    ul {
+      grid-template-columns: repeat(4, 1fr) 30rem;
+
+      > li {
+        padding: 2rem;
+
+        .description {
+          min-height: 11rem;
+
+          b {
+            margin-bottom: 1rem;
+          }
+          i {
+            top: auto;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .class__info {
+    ul {
+      grid-template-columns: 100%;
     }
   }
 }

@@ -22,4 +22,8 @@ $(function() {
     sitemap.removeClass('on');
     $('body').removeClass('open');
   });
+
+  $(".selected").click(function(){
+    $('.siteList').toggleClass("active");
+  });
 });

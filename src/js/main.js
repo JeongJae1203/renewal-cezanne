@@ -1,3 +1,5 @@
+import { createTab } from './function';
+
 document.addEventListener('DOMContentLoaded', () => {
   // a링크 기본 설정 값
   document.addEventListener('click', (e) => {
@@ -58,8 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 20,
       }
     }
-
-    
   });
 
+  const tabEls = document.querySelectorAll('.tabMenu ul li a'),
+        tabWrap = document.querySelector('.tabListWrap'),
+        tabContentEls = tabWrap.querySelectorAll('.tabList'),
+        clazz = 'active';
+
+  createTab(tabEls, tabWrap, tabContentEls, clazz);
 });

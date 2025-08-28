@@ -242,6 +242,36 @@ table {
   }
 }
 
+.detail__btn__container {
+  margin-top: 6rem;
+  padding-top: 3rem;
+  border-top: 1px solid $dark-color;
+  text-align: center;
+
+  .btn__list {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border: 1px solid $dark-color;
+    font: {
+      size: 1.6rem;
+      weight: 600;
+    }
+    color: $dark-color;
+    transition: .5s;
+    
+    &:hover,
+    &:focus {
+      background-color: $dark-color;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
 
 @media all and (min-width: 768px) {
   .common__top {

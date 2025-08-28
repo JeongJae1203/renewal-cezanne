@@ -16,6 +16,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../../js/common/common.js"></script>
     <script src="../../js/common/menu.js"></script>
+    <script src="../../js/education/main.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -198,95 +199,198 @@
         </div>
         <div id="contents_body">
           <div class="inner">
-            <div class="edu-menu">
-              <h3 class="menu-title">교육과정 안내</h3>
-              <div class="menu-btn">
-                <button class="btn btn-all active">전체</button>
-                <button class="btn btn-tag1">산업구조변화대응특화훈련</button>
-                <button class="btn btn-tag2">국가기간 및 전략산업</button>
-                <button class="btn btn-tag3">근로자과정</button>
-              </div>
-            </div>
-            <div class="edu-contents">
-              <div class="content con-tag1">
-                <a href="./edu-contents/detail.html">
-                  <img src="../../images/education/edu_img01.jpg" alt="광고컨텐츠디자인 제작 및 활용">
-                  <h4>광고컨텐츠디자인 제작 및 활용</h4>
-                  <span>[산업구조변화대응특화훈련]</span>
-                </a>
-                <button class="btn-join">수강신청</button>
-              </div>
-              <div class="content con-tag1">
-                <a href="./edu-contents/detail2.html">
-                  <img src="../../images/education/edu_img02.jpg" alt="전기내선 설치, 유지보수, 배선설계 전문가">
-                  <h4>전기내선 설치, 유지보수, 배선설계 전문가</h4>
-                  <span>[산업구조변화대응특화훈련]</span>
-                </a>
-                <button class="btn-join">수강신청</button>
-              </div>
-              <div class="content con-tag1">
-                <a href="#">
-                  <img src="../../images/education/edu_img03.jpg" alt="메타버스공간구축">
-                  <h4>메타버스공간구축</h4>
-                  <span>[산업구조변화대응특화훈련]</span>
-                </a>
-                <button class="btn-join">수강신청</button>
-              </div>
-              <div class="content con-tag1">
-                <a href="#">
-                  <img src="../../images/education/edu_img04.jpg" alt="프론트엔드 개발자 과정">
-                  <h4>프론트엔드 개발자 과정</h4>
-                  <span>[산업구조변화대응특화훈련]</span>
-                </a>
-                <button class="btn-join">수강신청</button>
-              </div>
-              <div class="content con-tag2">
-                <a href="#">
-                  <img src="../../images/education/edu_img05.jpg" alt="웹디자인 & 퍼블리셔">
-                  <h4>웹디자인 & 퍼블리셔</h4>
-                  <span>[국가기간•전략산업]</span>
-                </a>
-                <button class="btn-join">수강신청</button>
-              </div>
-              <div class="content con-tag3">
-                <a href="#">
-                  <img src="../../images/education/edu_img06.jpg" alt="1인 미디어 동영상 제작 및 편집">
-                  <h4>1인 미디어 동영상 제작 및 편집</h4>
-                  <span>[근로자과정]</span>
-                </a>
-                <button class="btn-join">수강신청</button>
-              </div>
-              <div class="content con-tag2">
-                <a href="#">
-                  <img src="../../images/education/edu_img07.jpg" alt="웹디자인 & 멀티미디어 컨텐츠 제작">
-                  <h4>웹디자인 & 멀티미디어 컨텐츠 제작</h4>
-                  <span>[국가기간•전략산업(스마트혼합)]</span>
-                </a>
-                <button class="btn-join">수강신청</button>
-              </div>
-              <div class="content con-tag2">
-                <a href="#">
-                  <img src="../../images/education/edu_img08.jpg" alt="웹 및 멀티미디어 컨텐츠 제작">
-                  <h4>웹 및 멀티미디어 컨텐츠 제작</h4>
-                  <span>[국가기간•전략산업(스마트혼합)]</span>
-                </a>
-                <button class="btn-join">수강신청</button>
-              </div>
-              <div class="content con-tag2">
-                <a href="#">
-                  <img src="../../images/education/edu_img09.jpg" alt="디지털 퍼블리싱 & 웹디자인 전문가">
-                  <h4>디지털 퍼블리싱 & 웹디자인 전문가</h4>
-                  <span>[국가기간•전략산업(스마트혼합)]</span>
-                </a>
-                <button class="btn-join">수강신청</button>
-              </div>
-              <div class="content con-tag2">
-                <a href="#">
-                  <img src="../../images/education/edu_img10.jpg" alt="디지털 퍼블리싱 & 웹디자인 전문가">
-                  <h4>디지털 퍼블리싱 & 웹디자인 전문가</h4>
-                  <span>[국가기간•전략산업]</span>
-                </a>
-                <button class="btn-join">수강신청</button>
+            <div class="common__tab" data-tab-container>
+              <ul class="tab__list">
+                <li class="active"><a href="#" data-target="tab1">전체</a></li>
+                <li><a href="#" data-target="tab2">산업구조변화대응특화훈련</a></li>
+                <li><a href="#" data-target="tab3">국가기간 및 전략산업</a></li>
+                <li><a href="#" data-target="tab4">근로자 과정</a></li>
+              </ul>
+              <div class="tab__contents">
+                <div id="tab1" class="tab__content active">
+                  <div class="edu-contents">
+                    <div class="content con-tag1">
+                      <a href="./edu-contents/detail.html">
+                        <img src="../../images/education/edu_img04.jpg" alt="프론트엔드 개발자 과정">
+                        <span>[산업구조변화대응특화훈련]</span>
+                        <h4>프론트엔드 개발자 과정</h4>
+                      </a>
+                      <a 
+                        href="https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20243001041071&amp;tracseTme=3&amp;crseTracseSe=C0061&amp;trainstCstmrId=500020062102" 
+                        target="_blank"
+                        class="btn-join"
+                      >수강신청</a>
+                    </div>
+                    <div class="content con-tag1">
+                      <a href="#">
+                        <img src="../../images/education/edu_img01.jpg" alt="광고컨텐츠디자인 제작 및 활용">
+                        <span>[산업구조변화대응특화훈련]</span>
+                        <h4>광고컨텐츠디자인 제작 및 활용</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag1">
+                      <a href="#">
+                        <img src="../../images/education/edu_img02.jpg" alt="전기내선 설치, 유지보수, 배선설계 전문가">
+                        <span>[산업구조변화대응특화훈련]</span>
+                        <h4>전기내선 설치, 유지보수, 배선설계 전문가</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag1">
+                      <a href="#">
+                        <img src="../../images/education/edu_img03.jpg" alt="메타버스공간구축">
+                        <span>[산업구조변화대응특화훈련]</span>
+                        <h4>메타버스공간구축</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag2">
+                      <a href="#">
+                        <img src="../../images/education/edu_img05.jpg" alt="웹디자인 & 퍼블리셔">
+                        <span>[국가기간•전략산업]</span>
+                        <h4>웹디자인 & 퍼블리셔</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag3">
+                      <a href="#">
+                        <img src="../../images/education/edu_img06.jpg" alt="1인 미디어 동영상 제작 및 편집">
+                        <span>[근로자과정]</span>
+                        <h4>1인 미디어 동영상 제작 및 편집</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag2">
+                      <a href="#">
+                        <img src="../../images/education/edu_img07.jpg" alt="웹디자인 & 멀티미디어 컨텐츠 제작">
+                        <span>[국가기간•전략산업(스마트혼합)]</span>
+                        <h4>웹디자인 & 멀티미디어 컨텐츠 제작</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag2">
+                      <a href="#">
+                        <img src="../../images/education/edu_img08.jpg" alt="웹 및 멀티미디어 컨텐츠 제작">
+                        <span>[국가기간•전략산업(스마트혼합)]</span>
+                        <h4>웹 및 멀티미디어 컨텐츠 제작</h4>
+                      </a>
+                      <a class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag2">
+                      <a href="#">
+                        <img src="../../images/education/edu_img09.jpg" alt="디지털 퍼블리싱 & 웹디자인 전문가">
+                        <span>[국가기간•전략산업(스마트혼합)]</span>
+                        <h4>디지털 퍼블리싱 & 웹디자인 전문가</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag2">
+                      <a href="#">
+                        <img src="../../images/education/edu_img10.jpg" alt="디지털 퍼블리싱 & 웹디자인 전문가">
+                        <span>[국가기간•전략산업]</span>
+                        <h4>디지털 퍼블리싱 & 웹디자인 전문가</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="tab2" class="tab__content">
+                  <div class="edu-contents">
+                    <div class="content con-tag1">
+                      <a href="./edu-contents/detail.html">
+                        <img src="../../images/education/edu_img04.jpg" alt="프론트엔드 개발자 과정">
+                        <span>[산업구조변화대응특화훈련]</span>
+                        <h4>프론트엔드 개발자 과정</h4>
+                      </a>
+                      <a 
+                        href="https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20243001041071&amp;tracseTme=3&amp;crseTracseSe=C0061&amp;trainstCstmrId=500020062102" 
+                        target="_blank"
+                        class="btn-join"
+                      >수강신청</a>
+                    </div>
+                    <div class="content con-tag1">
+                      <a href="#">
+                        <img src="../../images/education/edu_img01.jpg" alt="광고컨텐츠디자인 제작 및 활용">
+                        <span>[산업구조변화대응특화훈련]</span>
+                        <h4>광고컨텐츠디자인 제작 및 활용</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag1">
+                      <a href="#">
+                        <img src="../../images/education/edu_img02.jpg" alt="전기내선 설치, 유지보수, 배선설계 전문가">
+                        <span>[산업구조변화대응특화훈련]</span>
+                        <h4>전기내선 설치, 유지보수, 배선설계 전문가</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag1">
+                      <a href="#">
+                        <img src="../../images/education/edu_img03.jpg" alt="메타버스공간구축">
+                        <span>[산업구조변화대응특화훈련]</span>
+                        <h4>메타버스공간구축</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="tab3" class="tab__content">
+                  <div class="edu-contents">
+                    <div class="content con-tag2">
+                      <a href="#">
+                        <img src="../../images/education/edu_img05.jpg" alt="웹디자인 & 퍼블리셔">
+                        <span>[국가기간•전략산업]</span>
+                        <h4>웹디자인 & 퍼블리셔</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag2">
+                      <a href="#">
+                        <img src="../../images/education/edu_img07.jpg" alt="웹디자인 & 멀티미디어 컨텐츠 제작">
+                        <span>[국가기간•전략산업(스마트혼합)]</span>
+                        <h4>웹디자인 & 멀티미디어 컨텐츠 제작</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag2">
+                      <a href="#">
+                        <img src="../../images/education/edu_img08.jpg" alt="웹 및 멀티미디어 컨텐츠 제작">
+                        <span>[국가기간•전략산업(스마트혼합)]</span>
+                        <h4>웹 및 멀티미디어 컨텐츠 제작</h4>
+                      </a>
+                      <a class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag2">
+                      <a href="#">
+                        <img src="../../images/education/edu_img09.jpg" alt="디지털 퍼블리싱 & 웹디자인 전문가">
+                        <span>[국가기간•전략산업(스마트혼합)]</span>
+                        <h4>디지털 퍼블리싱 & 웹디자인 전문가</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                    <div class="content con-tag2">
+                      <a href="#">
+                        <img src="../../images/education/edu_img10.jpg" alt="디지털 퍼블리싱 & 웹디자인 전문가">
+                        <span>[국가기간•전략산업]</span>
+                        <h4>디지털 퍼블리싱 & 웹디자인 전문가</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="tab4" class="tab__content">
+                  <div class="edu-contents">
+                    <div class="content con-tag3">
+                      <a href="#">
+                        <img src="../../images/education/edu_img06.jpg" alt="1인 미디어 동영상 제작 및 편집">
+                        <span>[근로자과정]</span>
+                        <h4>1인 미디어 동영상 제작 및 편집</h4>
+                      </a>
+                      <a href="#" class="btn-join">수강신청</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -294,24 +398,6 @@
       </div>
       <!-- 푸터 -->
       <footer>
-        <div class="familySite">
-          <div class="inner">
-            <p class="tit">FAMILY SITE</p>
-            <a href="#" type="button" class="arrbtn btnPrev"><i class="ri-arrow-left-s-line"></i></a>
-            <div class="famList">
-              <ul>
-                <li><a href="#">고용노동부 대전지방고용노동청</a></li>
-                <li><a href="#">대전고용센터</a></li>
-                <li><a href="#">직업훈련포털HRD-NET</a></li>
-                <li><a href="#">WORKNET</a></li>
-                <li><a href="#">CQ-NET</a></li>
-                <li><a href="#">Q-NET</a></li>
-                <li><a href="#">NCS국가직무능력표준</a></li>
-              </ul>
-            </div>
-            <a href="#" type="button" class="arrbtn btnNext"><i class="ri-arrow-right-s-line"></i></a>
-          </div>
-        </div>
         <div id="footer">
           <div class="footerMenu">
             <ul class="inner">
@@ -320,6 +406,24 @@
               <li><a href="../common/agreement.html" class="privacy">개인정보처리방침</a></li>
               <li><a href="../common/location.html">찾아오시는 길</a></li>
             </ul>
+          </div>
+          <div class="fam_wrapper">
+            <div class="familySite">
+              <div class="site_wrap">
+                <button type="button" class="selected">
+                  <span>Family Site</span>
+                  <i class="ri-add-line"></i>
+                </button>
+                <div class="siteList">
+                  <a href="https://www.moel.go.kr/local/daejeon/index.do" target="_blank" alt="고용노동부 대전지방고용노동청">고용노동부 대전지방고용노동청</a>
+                  <a href="https://www.work.go.kr/daejeon/main.do" target="_blank" alt="대전고용센터">대전고용센터</a>
+                  <a href="https://www.work24.go.kr/cm/main.do" target="_blank" alt="고용24">고용24</a>
+                  <a href="https://c.q-net.or.kr/cmn/com/main.do" target="_blank" alt="CQ-NET">CQ-NET</a>
+                  <a href="https://www.q-net.or.kr/man001.do?gSite=Q&gIntro=Y" target="_blank" alt="Q-NET">Q-NET</a>
+                  <a href="https://www.ncs.go.kr/index.do" target="_blank" alt="NCS국가직무능력표준">NCS국가직무능력표준</a>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="footerInfo">
             <div class="inner">

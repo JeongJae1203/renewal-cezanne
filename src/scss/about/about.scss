@@ -170,6 +170,14 @@
               image: url(../../images/about/about_swiper_img#{$i}.png);
             }
           }
+
+          @if $i == 3 {
+            &.slide3 {
+              background: {
+                image: url(../../images/about/about_swiper_img3.jpg);
+              }
+            }
+          }
         }
       }
     }
