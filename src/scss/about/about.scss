@@ -74,9 +74,10 @@ button {
     }
   }
   .right {
-    line-height: 1.5625;
+    line-height: 1.8;
     word-break: keep-all;
     p {
+      font-size: 1.7rem;
       padding-bottom: 1rem;
     }
   }
@@ -166,7 +167,6 @@ button {
 // 768px 이하일 때 이미지 3, 6번 높이 작음, 1번 안나옴
 .about_visual {
   height: 65rem;
-  
   .swiper-wrapper {
     .swiper-slide {
       @for $i from 1 through 8 {

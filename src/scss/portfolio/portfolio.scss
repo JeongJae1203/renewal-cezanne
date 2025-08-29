@@ -64,9 +64,10 @@ a {text-decoration: none;}
 a:hover {text-decoration: none;}
 
 // 포트폴리오 메뉴 버튼
-.menuBtn {
+.tab__list {
   text-align: center;
-  button {
+  .license__tab {
+    display: inline-block;
     font: inherit;
     color: inherit;
     padding: 1rem 2rem;
@@ -82,6 +83,9 @@ a:hover {text-decoration: none;}
   }
 }
 
+.tab__content {display: none;}
+
+.tab__content.active {display: block;}
 
 // 포폴
 .portfolio-card:first-child {
@@ -139,7 +143,6 @@ a:hover {text-decoration: none;}
   // 포트폴리오 이미지
   img {
     width: 100%;
-    height: 100%;
     display: block;
     transition: transform 0.5s ease; /* 0.3초 동안 부드럽게 변화 */
   }
@@ -172,47 +175,27 @@ a:hover {text-decoration: none;}
 }
 .portfolio-card__link:hover .portfolio-card__img img {
   transition: transform 0.4s ease; 
-  transform: scale(1.1); /* 120% 크기로 확대 */
+  transform: scale(1.2); /* 120% 크기로 확대 */
 }
 
 .portfolio-card__view {
-  overflow: visible; // 자식 요소가 넘칠 경우 보여줌
-  -webkit-transform: translateZ(0); // GPU 가속 트리거 (성능 향상)
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0); // GPU 가속 유지용 설정
-  -webkit-backface-visibility: hidden; // 뒷면이 보이지 않도록 설정
-  backface-visibility: hidden;
-  -webkit-transition: color .4s; // color 변화 시 0.4초 동안 부드럽게 전환
   transition: color .4s;
 }
 .portfolio-card__link:hover .portfolio-card__view {
   -webkit-animation-name: eff-move;  // hover 시 eff24-move 애니메이션 시작
-  animation-name: eff-move;
-  -webkit-animation-duration: .6s; // 애니메이션 한 번 도는 데 0.6초 걸림
-  animation-duration: .6s;
-  -webkit-animation-timing-function: linear; // 일정한 속도로 애니메이션 실행
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;  // 무한 반복
+  animation-name: eff-move; 
+  animation-duration: .6s; // 애니메이션 한 번 도는 데 0.6초 걸림
+  animation-timing-function: linear; // 일정한 속도로 애니메이션 실행
   animation-iteration-count: infinite;
-  color: $mainColor;
+  color: $mainColor;  
 }
 
 @keyframes eff-move {
-  30% {
-    -webkit-transform: translate3d(0, -1px, 0) rotate(1deg);  // 위로 1px, 오른쪽으로 1도 회전 
-    transform: translate3d(0, -1px, 0) rotate(1deg)
-  }
   50% {
-    -webkit-transform: translate3d(0, -.5px, 0) rotate(-.8deg);  // 약간 아래로, 왼쪽 회전
-    transform: translate3d(0, -.5px, 0) rotate(-.8deg)
-  }
-  80% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(-.5deg); // 다시 원위치로 가까워지면서 약간 왼쪽 회전
-    transform: translate3d(0, 0, 0) rotate(-.5deg)
+    transform: translateX(-8px) 
   }
   100% {
-    -webkit-transform: rotate(0deg); // 최종적으로 회전 초기화
-    transform: rotate(0deg)
+    transform: translateX(0)
   }
 }
 
@@ -238,6 +221,7 @@ a:hover {text-decoration: none;}
     grid-template-columns: 40rem 1fr;
     padding: 2rem 0;
     gap: 4.5rem;
+    height: 25.5rem;
   }
   .portfolio-card__img {}
   .portfolio-card__title { margin-top: .4rem; }
